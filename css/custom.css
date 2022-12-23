@@ -38,7 +38,7 @@
     --trans-light: rgba(226, 218, 218, 0.4);
     --trans-dark: rgba(44, 44, 44, 0.4);
     --border-style: 1px solid rgb(169, 169, 169);
-    --backdrop-filter: blur(5px) saturate(150%);
+    --backdrop-filter: blur(5px) saturate(130%);
   }
   
   /* 首页文章卡片 */
@@ -248,4 +248,15 @@ h6::before {
   color: var(--theme-color);
   -webkit-animation: ccc 6s linear infinite;
   animation: ccc 6s linear infinite;
+}
+
+/* 夜间模式菜单栏发光字 */
+[data-theme="dark"] #nav .site-page,
+[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
+  text-shadow: 0 0 2px var(--theme-color) !important;
+}
+
+/* 手机端适配 */
+[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
+  text-shadow: 0 0 2px var(--theme-color) !important;
 }
