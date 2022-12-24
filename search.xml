@@ -293,5 +293,16 @@
     </entry>
     
     
+    
+    <entry>
+      <title>网址导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
+      
+        <content type="html"><![CDATA[<div class="site-card-group"><a class="site-card" href="https://www.baidu.com/"><div class="img"><img src="https://picbed.alandodo.cn/img/a1.jpg"/></div><div class="info"><img src="https://picbed.alandodo.cn/img/d1.jpg"/><span class="title">百度</span><span class="desc">中文搜索引擎</span></div></a><a class="site-card" href="https://www.dotcpp.com/"><div class="img"><img src="https://picbed.alandodo.cn/img/a2.jpg"/></div><div class="info"><img src="https://picbed.alandodo.cn/img/d1.jpg"/><span class="title">C语言网</span><span class="desc">C语言程序设计专业网站</span></div></a></div>]]></content>
+      
+    </entry>
+    
+    
   
 </search>
