@@ -5,10 +5,10 @@
     
     <entry>
       <title>【VMware虚拟机】Windows11下载安装激活教程</title>
-      <link href="/2022/12/28/2022-12-28-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
-      <url>/2022/12/28/2022-12-28-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%95%99%E7%A8%8B/</url>
+      <link href="/2022/12/28/2022-12-26-Hexo+Github%E6%90%AD%E5%BB%BA/"/>
+      <url>/2022/12/28/2022-12-26-Hexo+Github%E6%90%AD%E5%BB%BA/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>1.本章内容教大家下载安装激活VMware虚拟机，目前只安装了Windows11，所以只推出Windows11的安装教程，其他系统安装大类相同。<br>2.同样该教程需要的安装包放到了…，接下来我们一起来安装自己的虚拟机吧！</p><h1 id="环境与工具准备"><a href="#环境与工具准备" class="headerlink" title="环境与工具准备"></a>环境与工具准备</h1><ul><li>有40G以上的多余内存空间，后续如果安装东西多且需求大的话可能需要更大空间</li><li>与本地账户不同的微软账号（微软默认为邮箱注册，当然你也可以选择使用手机号注册，点击下方的“改为使用电话号码”，就可以使用电话号码注册，国家要选择中国+86），也就是说需要一个没有绑定自己电脑的邮箱或者电话号码<h1 id="VMware软件的安装"><a href="#VMware软件的安装" class="headerlink" title="VMware软件的安装"></a>VMware软件的安装</h1><h1 id="Windows11系统的配置"><a href="#Windows11系统的配置" class="headerlink" title="Windows11系统的配置"></a>Windows11系统的配置</h1><h1 id="安装完成后的优化"><a href="#安装完成后的优化" class="headerlink" title="安装完成后的优化"></a>安装完成后的优化</h1></li></ul>]]></content>
+        <content type="html"><![CDATA[<hr><h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>1.我这名菜鸟程序员的学习路程，写这篇博客是为了大家尽量避免踩坑，博客搭建的过程中出bug是难免的，希望大家静下心来，寻找问题的最优解。<br>2.遇到任何问题，优先在本页面搜索，检查是否步骤正确，遇到难以问题的可以优先在评论区留言，注意留言时填写正确的邮箱，以确保能收到站长的回信。<br>3.实在解决不了的问题可以添加站长的联系方式，备注个人信息，在我能力范围内帮您解决。接下来我们开始动手搭建博客吧！<br>4.<strong>另外加一条，博主建立了qq群（691290218），输入验证问题alandodo.cn进群，文章中的安装包可以便捷提取.</strong></p><h1 id="2-环境与基础工具准备"><a href="#2-环境与基础工具准备" class="headerlink" title="2.环境与基础工具准备"></a>2.环境与基础工具准备</h1><ul><li>本教程主要面对的是Windows10以上的用户</li><li>Node.js（必备）</li><li>Git（必备）</li><li>Hexo（必备）</li><li>文本编辑器（可选）（推荐使用VSCode）</li><li>GitHub账号（必备）</li><li>域名（推荐买一个域名）</li><li>云服务器（可选）<br>有了这些东西就可以搭建出博客啦，当然如果想要优化博客，就需要其他工具了<h1 id="3-Node-js的配置"><a href="#3-Node-js的配置" class="headerlink" title="3.Node.js的配置"></a>3.Node.js的配置</h1>1.打开Node官网（<a href="https://nodejs.org/en/download/releases/" title="Node.js">Node.js</a>），下载和自己系统相配的Node的安装程序，根据自己的系统进行选择。点击Downloads进行<strong>安装包</strong>下载。<p class='p red'>使用手机热点，自己联网很慢的</p><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m1.jpg" alt=""><br>2.大部分人应该是<strong>微软的64位，选择msi位安装程序</strong>，否则会出现安装问题。按照个人经验，可以选个低一些的版本。也可以根据我的版本选择，目前没有不兼容的问题。<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m2.jpg" alt=""><br>3.为了避免不必要的麻烦，C盘空间足够一般默认【C:/Program Files/nodejs/】安装即可，(不需要添加勾选项)如果想切换其他盘或者把环境变量切换到自定义路径也可以，具体教程百度(亲身经历坑比较多0.0！)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m7.png" alt=""><br>4.安装完成后，检查是否安装成功。在键盘按下win + R键，输入CMD，然后回车，打开CMD窗口，执行以下命令，看到版本信息，则说明安装成功。<details class="folding-tag" cyan open><summary> 测试 </summary>              <div class='content'>              <p>node -v<br>npm -v</p>              </div>            </details><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/99d4b3af359d470154869b13b7c8ed4.png" alt=""><h1 id="4-Git配置"><a href="#4-Git配置" class="headerlink" title="4.Git配置"></a>4.Git配置</h1><h2 id="下载Git（Git官网）"><a href="#下载Git（Git官网）" class="headerlink" title="下载Git（Git官网）"></a>下载Git（<a href="https://git-scm.com/" title="Git官网">Git官网</a>）</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m3.jpg" alt=""><p class='p red'>自行下载安装的程序</p><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m4.png" alt=""><br><strong>默认就好，我们的博客不需要那么多的git功能，下面这个界面我们选择第二个，虽然这个影响不大，但是如果有小伙伴在github部署，那么还是比较友好的。</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m5.png" alt=""><br><strong>无脑一路Next即可，如有需求自行百度</strong><h1 id="5-博客初始化"><a href="#5-博客初始化" class="headerlink" title="5.博客初始化"></a>5.博客初始化</h1>选择要建立博客的位置，这里我选择在C盘建立了一个Blog文件夹，进入文件夹右键空白区域GIt Bash Here，如果没有,打开显示更多选项寻找。<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m8.png" alt=""><h2 id="安装Hexo文件"><a href="#安装Hexo文件" class="headerlink" title="安装Hexo文件"></a>安装Hexo文件</h2><details class="folding-tag" cyan open><summary> 执行以下的命令，等待安装完成 </summary>              <div class='content'>              <p>npm install -g hexo-cli</p>              </div>            </details><p class='p red'>安装完后可以输入hexo -v验证是否安装成功</p><strong>注意复制完之后，在Git Bash中右键Paste粘贴，如果没有镜像这一步下载可能会稍微慢一点。</strong><h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><details class="folding-tag" cyan open><summary> 执行以下命令，等待完成 </summary>              <div class='content'>              <p>hexo init blog-demo</p>              </div>            </details><strong>这里的blog-demo是项目名称，可以自己命名</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m6.jpg" alt=""><br><strong>出现这些文件就说明成功</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m9.jpg" alt=""><br><strong>注意是在blog-demo文件夹内打开Git Bash</strong><details class="folding-tag" cyan open><summary> 使用以下命令，生成相应的文件 </summary>              <div class='content'>              <p>hexo g</p>              </div>            </details><strong>执行完毕之后，我们会发现目录中多出了public文件，这个就是真正的hexo帮助我们转换的静态网页，每一次我们执行这个命令，就会重新生成并覆盖原来的public文件</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m11.jpg" alt=""><details class="folding-tag" cyan open><summary> 执行以下命令，开启本地服务，可以查看已经生成的网页 </summary>              <div class='content'>              <p>hexo s</p>              </div>            </details><strong>复制该网址，就可以看到生成的网页啦</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m12.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m13.webp" alt=""><br><strong>注意在Git Bash中Ctrl + c 退出本地预览</strong><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h1 id="VS-Code配置"><a href="#VS-Code配置" class="headerlink" title="VS Code配置"></a>VS Code配置</h1></li></ul>]]></content>
       
       
       <categories>
@@ -30,10 +30,10 @@
     
     <entry>
       <title>【VMware虚拟机】Windows11下载安装激活教程</title>
-      <link href="/2022/12/28/2022-12-26-Hexo+Github%E6%90%AD%E5%BB%BA/"/>
-      <url>/2022/12/28/2022-12-26-Hexo+Github%E6%90%AD%E5%BB%BA/</url>
+      <link href="/2022/12/28/2022-12-28-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/12/28/2022-12-28-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<hr><h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><p>1.我这名菜鸟程序员的学习路程，写这篇博客是为了大家尽量避免踩坑，博客搭建的过程中出bug是难免的，希望大家静下心来，寻找问题的最优解。<br>2.遇到任何问题，优先在本页面搜索，检查是否步骤正确，遇到难以问题的可以优先在评论区留言，注意留言时填写正确的邮箱，以确保能收到站长的回信。<br>3.实在解决不了的问题可以添加站长的联系方式，备注个人信息，在我能力范围内帮您解决。接下来我们开始动手搭建博客吧！<br>4.<strong>另外加一条，博主建立了qq群（691290218），输入验证问题alandodo.cn进群，文章中的安装包可以便捷提取.</strong></p><h1 id="2-环境与基础工具准备"><a href="#2-环境与基础工具准备" class="headerlink" title="2.环境与基础工具准备"></a>2.环境与基础工具准备</h1><ul><li>本教程主要面对的是Windows10以上的用户</li><li>Node.js（必备）</li><li>Git（必备）</li><li>Hexo（必备）</li><li>文本编辑器（可选）（推荐使用VSCode）</li><li>GitHub账号（必备）</li><li>域名（推荐买一个域名）</li><li>云服务器（可选）<br>有了这些东西就可以搭建出博客啦，当然如果想要优化博客，就需要其他工具了<h1 id="3-Node-js的配置"><a href="#3-Node-js的配置" class="headerlink" title="3.Node.js的配置"></a>3.Node.js的配置</h1>1.打开Node官网（<a href="https://nodejs.org/en/download/releases/" title="Node.js">Node.js</a>），下载和自己系统相配的Node的安装程序，根据自己的系统进行选择。点击Downloads进行<strong>安装包</strong>下载。<p class='p red'>使用手机热点，自己联网很慢的</p><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m1.jpg" alt=""><br>2.大部分人应该是<strong>微软的64位，选择msi位安装程序</strong>，否则会出现安装问题。按照个人经验，可以选个低一些的版本。也可以根据我的版本选择，目前没有不兼容的问题。<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m2.jpg" alt=""><br>3.为了避免不必要的麻烦，C盘空间足够一般默认【C:/Program Files/nodejs/】安装即可，(不需要添加勾选项)如果想切换其他盘或者把环境变量切换到自定义路径也可以，具体教程百度(亲身经历坑比较多0.0！)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m7.png" alt=""><br>4.安装完成后，检查是否安装成功。在键盘按下win + R键，输入CMD，然后回车，打开CMD窗口，执行以下命令，看到版本信息，则说明安装成功。<details class="folding-tag" cyan open><summary> 测试 </summary>              <div class='content'>              <p>node -v<br>npm -v</p>              </div>            </details><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/99d4b3af359d470154869b13b7c8ed4.png" alt=""><h1 id="4-Git配置"><a href="#4-Git配置" class="headerlink" title="4.Git配置"></a>4.Git配置</h1><h2 id="下载Git（Git官网）"><a href="#下载Git（Git官网）" class="headerlink" title="下载Git（Git官网）"></a>下载Git（<a href="https://git-scm.com/" title="Git官网">Git官网</a>）</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m3.jpg" alt=""><p class='p red'>自行下载安装的程序</p><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m4.png" alt=""><br><strong>默认就好，我们的博客不需要那么多的git功能，下面这个界面我们选择第二个，虽然这个影响不大，但是如果有小伙伴在github部署，那么还是比较友好的。</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m5.png" alt=""><br><strong>无脑一路Next即可，如有需求自行百度</strong><h1 id="5-博客初始化"><a href="#5-博客初始化" class="headerlink" title="5.博客初始化"></a>5.博客初始化</h1>选择要建立博客的位置，这里我选择在C盘建立了一个Blog文件夹，进入文件夹右键空白区域GIt Bash Here，如果没有,打开显示更多选项寻找。<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m8.png" alt=""><h2 id="安装Hexo文件"><a href="#安装Hexo文件" class="headerlink" title="安装Hexo文件"></a>安装Hexo文件</h2><details class="folding-tag" cyan open><summary> 执行以下的命令，等待安装完成 </summary>              <div class='content'>              <p>npm install -g hexo-cli</p>              </div>            </details><p class='p red'>安装完后可以输入hexo -v验证是否安装成功</p><strong>注意复制完之后，在Git Bash中右键Paste粘贴，如果没有镜像这一步下载可能会稍微慢一点。</strong><h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><details class="folding-tag" cyan open><summary> 执行以下命令，等待完成 </summary>              <div class='content'>              <p>hexo init blog-demo</p>              </div>            </details><strong>这里的blog-demo是项目名称，可以自己命名</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m6.jpg" alt=""><br><strong>出现这些文件就说明成功</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m9.jpg" alt=""><br><strong>注意是在blog-demo文件夹内打开Git Bash</strong><details class="folding-tag" cyan open><summary> 使用以下命令，生成相应的文件 </summary>              <div class='content'>              <p>hexo g</p>              </div>            </details><strong>执行完毕之后，我们会发现目录中多出了public文件，这个就是真正的hexo帮助我们转换的静态网页，每一次我们执行这个命令，就会重新生成并覆盖原来的public文件</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m11.jpg" alt=""><details class="folding-tag" cyan open><summary> 执行以下命令，开启本地服务，可以查看已经生成的网页 </summary>              <div class='content'>              <p>hexo s</p>              </div>            </details><strong>复制该网址，就可以看到生成的网页啦</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m12.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m13.webp" alt=""><br><strong>注意在Git Bash中Ctrl + c 退出本地预览</strong><h1 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h1><h1 id="VS-Code配置"><a href="#VS-Code配置" class="headerlink" title="VS Code配置"></a>VS Code配置</h1></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>1.本章内容教大家下载安装激活VMware虚拟机，目前只安装了Windows11，所以只推出Windows11的安装教程，其他系统安装大类相同。<br>2.同样该教程需要的安装包放到了…，接下来我们一起来安装自己的虚拟机吧！</p><h1 id="环境与工具准备"><a href="#环境与工具准备" class="headerlink" title="环境与工具准备"></a>环境与工具准备</h1><ul><li>有40G以上的多余内存空间，后续如果安装东西多且需求大的话可能需要更大空间</li><li>与本地账户不同的微软账号（微软默认为邮箱注册，当然你也可以选择使用手机号注册，点击下方的“改为使用电话号码”，就可以使用电话号码注册，国家要选择中国+86），也就是说需要一个没有绑定自己电脑的邮箱或者电话号码<h1 id="VMware软件的安装"><a href="#VMware软件的安装" class="headerlink" title="VMware软件的安装"></a>VMware软件的安装</h1><h1 id="Windows11系统的配置"><a href="#Windows11系统的配置" class="headerlink" title="Windows11系统的配置"></a>Windows11系统的配置</h1><h1 id="安装完成后的优化"><a href="#安装完成后的优化" class="headerlink" title="安装完成后的优化"></a>安装完成后的优化</h1></li></ul>]]></content>
       
       
       <categories>
@@ -45,7 +45,7 @@
       
         <tags>
             
-            <tag> Hexo </tag>
+            <tag> 虚拟机 </tag>
             
         </tags>
       
@@ -257,9 +257,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于作者</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -268,9 +268,9 @@
     
     
     <entry>
-      <title>关于作者</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -323,11 +323,11 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>网址导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="site-card-group"><a class="site-card" href="https://www.baidu.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">百度</span><span class="desc">中文搜索引擎</span></div></a><a class="site-card" href="https://www.dotcpp.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">C语言网</span><span class="desc">C语言程序设计专业网站</span></div></a><a class="site-card" href="https://www.csdn.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">CSDN</span><span class="desc">专业开发者社区</span></div></a><a class="site-card" href="https://www.cnki.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">中国知网</span><span class="desc">中国知网知识发现网络平台</span></div></a><a class="site-card" href="https://www.youdao.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">网易有道</span><span class="desc">口碑型大众学习工具</span></div></a></div>]]></content>
       
     </entry>
     
@@ -345,11 +345,11 @@
     
     
     <entry>
-      <title>网址导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[<div class="site-card-group"><a class="site-card" href="https://www.baidu.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">百度</span><span class="desc">中文搜索引擎</span></div></a><a class="site-card" href="https://www.dotcpp.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">C语言网</span><span class="desc">C语言程序设计专业网站</span></div></a><a class="site-card" href="https://www.csdn.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">CSDN</span><span class="desc">专业开发者社区</span></div></a><a class="site-card" href="https://www.cnki.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">中国知网</span><span class="desc">中国知网知识发现网络平台</span></div></a><a class="site-card" href="https://www.youdao.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">网易有道</span><span class="desc">口碑型大众学习工具</span></div></a></div>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
