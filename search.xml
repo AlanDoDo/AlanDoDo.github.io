@@ -33,7 +33,7 @@
       <link href="/2022/12/27/2022-12-28-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%95%99%E7%A8%8B/"/>
       <url>/2022/12/27/2022-12-28-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>1.本章内容教大家下载安装激活VMware虚拟机，目前只安装了Windows11，所以只推出Windows11的安装教程，其他系统安装大类相同。<br>2.同样该教程需要的安装包放到了…，接下来我们一起来安装自己的虚拟机吧！</p><h1 id="环境与工具准备"><a href="#环境与工具准备" class="headerlink" title="环境与工具准备"></a>环境与工具准备</h1><ul><li>有40G以上的多余内存空间，后续如果安装东西多且需求大的话可能需要更大空间</li><li>与本地账户不同的微软账号（微软默认为邮箱注册，当然你也可以选择使用手机号注册，点击下方的“改为使用电话号码”，就可以使用电话号码注册，国家要选择中国+86），也就是说需要一个没有绑定自己电脑的邮箱或者电话号码<h1 id="VMware软件的安装"><a href="#VMware软件的安装" class="headerlink" title="VMware软件的安装"></a>VMware软件的安装</h1><h1 id="Windows11系统的配置"><a href="#Windows11系统的配置" class="headerlink" title="Windows11系统的配置"></a>Windows11系统的配置</h1><h1 id="安装完成后的优化"><a href="#安装完成后的优化" class="headerlink" title="安装完成后的优化"></a>安装完成后的优化</h1></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>1.本章内容教大家下载安装激活VMware虚拟机，目前只安装了Windows11，所以只推出Windows11的安装教程，其他系统安装大类相同。<br>2.同样该教程需要的安装包放了链接：<a href="https://pan.baidu.com/s/1MkZgaHnTpd3H6Yi3WgW4kw">https://pan.baidu.com/s/1MkZgaHnTpd3H6Yi3WgW4kw</a><br>提取码：<strong>2155</strong> 接下来我们一起来安装自己的虚拟机吧！</p><h1 id="环境与工具准备"><a href="#环境与工具准备" class="headerlink" title="环境与工具准备"></a>环境与工具准备</h1><ul><li>有40G以上的多余内存空间，后续如果安装东西多且需求大的话可能需要更大空间</li><li>与本地账户不同的微软账号（微软默认为邮箱注册，当然你也可以选择使用手机号注册，点击下方的“改为使用电话号码”，就可以使用电话号码注册，国家要选择中国+86），也就是说需要一个没有绑定自己电脑的邮箱或者电话号码<h1 id="VMware软件的安装"><a href="#VMware软件的安装" class="headerlink" title="VMware软件的安装"></a>VMware软件的安装</h1><h1 id="Windows11系统的配置"><a href="#Windows11系统的配置" class="headerlink" title="Windows11系统的配置"></a>Windows11系统的配置</h1><h1 id="安装完成后的优化"><a href="#安装完成后的优化" class="headerlink" title="安装完成后的优化"></a>安装完成后的优化</h1></li></ul>]]></content>
       
       
       <categories>
@@ -96,6 +96,31 @@
         <tags>
             
             <tag> 浪漫文案 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>百度网盘不限速下载</title>
+      <link href="/2022/12/21/2022-12-15-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/"/>
+      <url>/2022/12/21/2022-12-15-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8D%E9%99%90%E9%80%9F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这个脚本目前来说适合百度网盘下载的文件，关键是非常稳定，这个脚本在2020年的12月份就做了，距今已经快两个年头了，但依然有效，说它稳定是有依据的。<br>多的不说，下面开始说说操作。</p><h1 id="脚本安装"><a href="#脚本安装" class="headerlink" title="脚本安装"></a>脚本安装</h1><p>这部分可以看<a href="https://www.alandodo.cn/2022/12/20/2022-12-20-%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/" title="脚本安装">脚本安装</a><br>搜索如下图，自行安装（<strong>记得启用</strong>）<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m14.jpg" alt=""></p><h1 id="脚本使用"><a href="#脚本使用" class="headerlink" title="脚本使用"></a>脚本使用</h1><p>打开<a href="https://pan.baidu.com/" title="百度网盘">百度网盘</a>，<strong>刷新页面</strong>，会发现多出了<p class='p red'>简易下载助手</p><br><strong>这里提供博主的两种下载方式</strong><a href="https://www.cnblogs.com/softxmm/p/13972678.html#aria2" title="软件小妹">软件小妹</a>，<strong>如需第二种下载方式可看该博主教程</strong><br><a href="https://wwx.lanzoux.com/b01nqc7yj" title="IDM下载地址">IDM下载地址</a><strong>选择下载的位置下载即可，我一般放置到桌面</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m15.png" alt=""><br><strong>解压文件，这里提供的IDM是绿色版本，解压后，执行“!)绿化.bat”，就可以正常使用了,下面是配置教程</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m16.jpg" alt=""><br><strong>IDM配置：设置4线程及修改UA为 netdisk;PC</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m17.jpeg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m18.png" alt=""><br><strong>配置完成后就可以找到要下载的文件下载，这里需要输入验证码，关注公众号</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m19.jpg" alt=""><br><strong>复制直链地址，如下图所示，选择安装位置安装即可</strong><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m20.jpg" alt=""></p><p><strong>因为百度网盘受众比较广，所以安装脚本下载文件对本人来说还是比较便利的，这里就推荐给大家了</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 油猴脚本 </tag>
             
         </tags>
       
@@ -257,9 +282,9 @@
     
     
     <entry>
-      <title>关于作者</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -268,9 +293,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于作者</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -312,17 +337,6 @@
     
     
     <entry>
-      <title>游戏</title>
-      <link href="/moyu/index.html"/>
-      <url>/moyu/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>音乐</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
@@ -334,9 +348,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>游戏</title>
+      <link href="/moyu/index.html"/>
+      <url>/moyu/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -350,6 +364,17 @@
       <url>/navigate/index.html</url>
       
         <content type="html"><![CDATA[<div class="site-card-group"><a class="site-card" href="https://www.baidu.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">百度</span><span class="desc">中文搜索引擎</span></div></a><a class="site-card" href="https://www.dotcpp.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">C语言网</span><span class="desc">C语言程序设计专业网站</span></div></a><a class="site-card" href="https://www.csdn.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">CSDN</span><span class="desc">专业开发者社区</span></div></a><a class="site-card" href="https://www.cnki.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">中国知网</span><span class="desc">中国知网知识发现网络平台</span></div></a><a class="site-card" href="https://www.youdao.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">网易有道</span><span class="desc">口碑型大众学习工具</span></div></a></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
