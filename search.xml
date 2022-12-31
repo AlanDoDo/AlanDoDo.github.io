@@ -332,6 +332,17 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于作者</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -354,33 +365,22 @@
     
     
     <entry>
-      <title>个人视频</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><div class="tag link"><a class="link-card" title="My bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0/"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/a7.jpg"/></div><div class="right"><p class="text">My bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0/</p></div></a></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>友情链接</title>
       <link href="/link/index.html"/>
       <url>/link/index.html</url>
       
         <content type="html"><![CDATA[<div class="tag link"><a class="link-card" title="Akilarの糖果屋" href="https://akilar.top/"><div class="left"><img src="https://cdn.cbd.int/akilar-candyassets@1.0.36/image/siteicon/favicon.ico"/></div><div class="right"><p class="text">Akilarの糖果屋</p><p class="url">https://akilar.top/</p></div></a></div><div class="tag link"><a class="link-card" title="安知鱼`Blog" href="https://anzhiy.cn/"><div class="left"><img src="https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg"/></div><div class="right"><p class="text">安知鱼`Blog</p><p class="url">https://anzhiy.cn/</p></div></a></div><div class="tag link"><a class="link-card" title="Ethan.Tzy" href="https://tzy1997.com/"><div class="left"><img src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg"/></div><div class="right"><p class="text">Ethan.Tzy</p><p class="url">https://tzy1997.com/</p></div></a></div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人视频</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><div class="tag link"><a class="link-card" title="My bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0/"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/a7.jpg"/></div><div class="right"><p class="text">My bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0/</p></div></a></div>]]></content>
       
     </entry>
     
