@@ -354,17 +354,6 @@
     
     
     <entry>
-      <title>友情链接</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<div class="tag link"><a class="link-card" title="Akilarの糖果屋" href="https://akilar.top/"><div class="left"><img src="https://cdn.cbd.int/akilar-candyassets@1.0.36/image/siteicon/favicon.ico"/></div><div class="right"><p class="text">Akilarの糖果屋</p><p class="url">https://akilar.top/</p></div></a></div><div class="tag link"><a class="link-card" title="安知鱼`Blog" href="https://anzhiy.cn/"><div class="left"><img src="https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg"/></div><div class="right"><p class="text">安知鱼`Blog</p><p class="url">https://anzhiy.cn/</p></div></a></div><div class="tag link"><a class="link-card" title="Ethan.Tzy" href="https://tzy1997.com/"><div class="left"><img src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg"/></div><div class="right"><p class="text">Ethan.Tzy</p><p class="url">https://tzy1997.com/</p></div></a></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>个人视频</title>
       <link href="/movies/index.html"/>
       <url>/movies/index.html</url>
@@ -376,9 +365,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -387,11 +376,11 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>友情链接</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="tag link"><a class="link-card" title="Akilarの糖果屋" href="https://akilar.top/"><div class="left"><img src="https://cdn.cbd.int/akilar-candyassets@1.0.36/image/siteicon/favicon.ico"/></div><div class="right"><p class="text">Akilarの糖果屋</p><p class="url">https://akilar.top/</p></div></a></div><div class="tag link"><a class="link-card" title="安知鱼`Blog" href="https://anzhiy.cn/"><div class="left"><img src="https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg"/></div><div class="right"><p class="text">安知鱼`Blog</p><p class="url">https://anzhiy.cn/</p></div></a></div><div class="tag link"><a class="link-card" title="Ethan.Tzy" href="https://tzy1997.com/"><div class="left"><img src="https://bu.dusays.com/2022/05/02/626f92e193879.jpg"/></div><div class="right"><p class="text">Ethan.Tzy</p><p class="url">https://tzy1997.com/</p></div></a></div>]]></content>
       
     </entry>
     
@@ -401,6 +390,17 @@
       <title>游戏</title>
       <link href="/moyu/index.html"/>
       <url>/moyu/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -420,9 +420,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
