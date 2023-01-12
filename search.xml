@@ -518,9 +518,9 @@
     
     
     <entry>
-      <title>DIY</title>
-      <link href="/list/index.html"/>
-      <url>/list/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -540,11 +540,11 @@
     
     
     <entry>
-      <title>个人视频</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>DIY</title>
+      <link href="/list/index.html"/>
+      <url>/list/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><a class="site-card" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a2.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">My bilibili</span><span class="desc">B站视频</span></div></a>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -562,11 +562,11 @@
     
     
     <entry>
-      <title>网址导航</title>
-      <link href="/navigate/index.html"/>
-      <url>/navigate/index.html</url>
+      <title>个人视频</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
-        <content type="html"><![CDATA[<div class="site-card-group"><a class="site-card" href="https://www.baidu.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">百度</span><span class="desc">中文搜索引擎</span></div></a><a class="site-card" href="https://www.dotcpp.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">C语言网</span><span class="desc">C语言程序设计专业网站</span></div></a><a class="site-card" href="https://www.csdn.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">CSDN</span><span class="desc">专业开发者社区</span></div></a><a class="site-card" href="https://www.cnki.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">中国知网</span><span class="desc">中国知网知识发现网络平台</span></div></a><a class="site-card" href="https://www.youdao.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">网易有道</span><span class="desc">口碑型大众学习工具</span></div></a></div>]]></content>
+        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><a class="site-card" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a2.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">My bilibili</span><span class="desc">B站视频</span></div></a>]]></content>
       
     </entry>
     
@@ -595,11 +595,11 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>网址导航</title>
+      <link href="/navigate/index.html"/>
+      <url>/navigate/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div class="site-card-group"><a class="site-card" href="https://www.baidu.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">百度</span><span class="desc">中文搜索引擎</span></div></a><a class="site-card" href="https://www.dotcpp.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">C语言网</span><span class="desc">C语言程序设计专业网站</span></div></a><a class="site-card" href="https://www.csdn.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">CSDN</span><span class="desc">专业开发者社区</span></div></a><a class="site-card" href="https://www.cnki.net/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">中国知网</span><span class="desc">中国知网知识发现网络平台</span></div></a><a class="site-card" href="https://www.youdao.com/"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a4.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">网易有道</span><span class="desc">口碑型大众学习工具</span></div></a></div>]]></content>
       
     </entry>
     

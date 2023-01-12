@@ -437,6 +437,19 @@ h6::before {
 background-color: rgb(13, 12, 12);
 }
 
+/* 个人信息卡片背景图 */
+[data-theme="light"] #aside-content > .card-widget.card-info {
+  background-image: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a25.jpg);
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: 100%;
+}
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+  background-image: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a26.jpg);
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: 100%;
+}
 
 
 
