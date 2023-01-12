@@ -35,7 +35,7 @@
 
 /*页面样式调节*/  
   :root {
-    --trans-light: rgba(226, 218, 218, 0.4);
+    --trans-light: rgba(255, 255, 255, 0.669);
     --trans-dark: rgba(44, 44, 44, 0.4);
     --border-style: 1px solid rgb(169, 169, 169);
     --backdrop-filter: blur(5px) saturate(130%);
@@ -369,6 +369,75 @@ h6::before {
     text-shadow: #5636ed 0 0 5px;
   }
 }
+
+/*GitHub开源圆角*/
+#card-info-btn {
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+
+/*顶栏美化*/
+#nav .site-page {
+  font-size: 0.79em; /*字体大小*/
+  letter-spacing: 3px; /*字体间距*/
+  font-weight: 600; /*字体粗细*/
+}
+
+#nav {
+  height: 70px; /*顶栏高度调整*/
+}
+#page-header.nav-fixed #nav {
+  top: -70px; /*顶栏调整空缺补齐*/
+}
+
+/*版权卡片美化*/
+#post .post-copyright {
+  position: relative;
+  margin: 2rem 0 0.5rem;
+  padding: 1.5rem 0.8rem;
+  border: 2px solid #454040; /*卡片边框*/
+  border-radius: 20px; /*边框圆角*/
+  }
+  #post .post-copyright:before {
+  position: absolute;
+  top: -1.9rem; /*C位置*/
+  color: #2a7cb340; /*C颜色*/
+  font-size: 6rem; /*C大小*/
+  }
+
+  #aside-content #card-toc .toc-content .toc-link.active {
+    background: #669cbe;
+    border-radius: 5px;
+  }
+
+  /*文章相关推荐卡片美化*/
+.relatedPosts > .relatedPosts-list > div {
+  border-radius: 20px;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0f0d11;
+  background-image: -webkit-linear-gradient( 45deg, rgba(38, 33, 33, 0.4) 25%, transparent 25%, transparent 50%, rgba(43, 36, 36, 0.4) 50%, rgba(48, 41, 41, 0.4) 75%, transparent 75%, transparent);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+/*background-image: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a24.jpg);*/
+background-color: rgb(13, 12, 12);
+}
+
+
 
 
 
