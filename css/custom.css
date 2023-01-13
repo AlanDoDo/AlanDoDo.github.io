@@ -25,6 +25,7 @@
   /*音乐播放器缩进去*/
   .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
     left: -66px !important;
+    border-radius: 30px;
     /* 默认情况下缩进左侧66px，只留一点箭头部分 */
   }
   
