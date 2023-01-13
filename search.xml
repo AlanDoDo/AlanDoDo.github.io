@@ -576,33 +576,22 @@
     
     
     <entry>
-      <title>个人视频</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><a class="site-card" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a2.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">My bilibili</span><span class="desc">B站视频</span></div></a>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>游戏</title>
-      <link href="/moyu/index.html"/>
-      <url>/moyu/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>DIY</title>
       <link href="/list/index.html"/>
       <url>/list/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人视频</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><a class="site-card" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a2.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg"/><span class="title">My bilibili</span><span class="desc">B站视频</span></div></a>]]></content>
       
     </entry>
     
@@ -625,6 +614,17 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏</title>
+      <link href="/moyu/index.html"/>
+      <url>/moyu/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
       
     </entry>
     
