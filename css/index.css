@@ -6712,7 +6712,7 @@ blockquote.pullquote.right {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(120deg, #ff27e8 0, #ff8000 100%);
+    background: linear-gradient(120deg, #f25de3 0, #10e28a 100%);
     color: var(--anzhiyu-white);
     background-size: 200%;
     animation: gradient 15s ease infinite;
@@ -6739,7 +6739,7 @@ blockquote.pullquote.right {
     transition: 2s ease-in-out;
   }
   .author-content-item.game-yuanshen {
-    background: url(https://img02.anzhiy.cn/adminuploads/1/2022/12/19/63a079ca63c8a.webp) no-repeat top;
+    background: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a34.jpg) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
@@ -6778,14 +6778,14 @@ blockquote.pullquote.right {
   
   .author-content-item.comic-content {
     width: 39%;
-    background: url(https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/violet.jpg) no-repeat top;
+    background: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a33.jpg) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
-    color: violet;
+    color: rgb(207, 229, 212);
   }
   .author-content-item.comic-content::after {
-    box-shadow: 0 -48px 203px 11px #fbe9b8 inset;
+    box-shadow: 0 -48px 203px 11px #353125 inset;
     position: absolute;
     content: "";
     width: 100%;
@@ -6795,7 +6795,7 @@ blockquote.pullquote.right {
   }
   
   .author-content-item.like-technology {
-    background: url(https://img02.anzhiy.cn/adminuploads/1/2022/09/24/632f0dd8f33c6.webp) no-repeat;
+    background: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a32.jpg) no-repeat;
     background-size: cover;
     min-height: 230px;
     color: var(--anzhiyu-white);
