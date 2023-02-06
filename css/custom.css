@@ -456,9 +456,11 @@ background-color: rgb(13, 12, 12);
   left: 0 !important;
   /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
 }
-.aplayer .aplayer-icon {
-  background-color: rgb(255, 255, 255) !important;
+/*图标变黑*/
+.aplayer .aplayer-miniswitcher {
+  background: #201e1e !important;
 }
+
 
 /*宽屏*/
 .layout {
