@@ -441,6 +441,33 @@ background-color: rgb(13, 12, 12);
   background-size: 100%;
 }
 
+/*加载页面*/
+.loading-img {
+  background: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a39.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/*aplayer*/
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+  /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0 !important;
+  /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+}
+.aplayer .aplayer-icon {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+/*宽屏*/
+.layout {
+  max-width: 1300px;
+}
+
+
+
+
 
 
 
