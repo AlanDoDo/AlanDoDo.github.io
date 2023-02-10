@@ -25,10 +25,10 @@
 
 /*页面样式调节*/  
   :root {
-    --trans-light: rgba(255, 255, 255, 0.669);
-    --trans-dark: rgba(44, 44, 44, 0.4);
+    --trans-light: rgba(255, 255, 255, 0.71);
+    --trans-dark: rgba(24, 24, 24, 0.119);
     --border-style: 1px solid rgb(169, 169, 169);
-    --backdrop-filter: blur(5px) saturate(130%);
+    --backdrop-filter: blur(3px) saturate(150%);
   }
   
   /* 首页文章卡片 */
@@ -59,7 +59,7 @@
   
   /* 导航栏 */
   #page-header.nav-fixed #nav {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.838);
     backdrop-filter: var(--backdrop-filter);
   }
   
@@ -87,10 +87,10 @@
   
   /* 阅读模式 */
   .read-mode #aside-content .card-widget {
-    background: rgba(158, 204, 171, 0.5) !important;
+    background: rgba(158, 204, 171, 0.283) !important;
   }
   .read-mode div#post {
-    background: rgba(158, 204, 171, 0.5) !important;
+    background: rgba(158, 204, 171, 0.249) !important;
   }
   
   /* 夜间模式下的阅读模式 */
@@ -369,7 +369,7 @@ h6::before {
 
 /*顶栏美化*/
 #nav .site-page {
-  font-size: 0.79em; /*字体大小*/
+  font-size: 0.85em; /*字体大小*/
   letter-spacing: 3px; /*字体间距*/
   font-weight: 600; /*字体粗细*/
 }
@@ -458,17 +458,66 @@ background-color: rgb(13, 12, 12);
 }
 /*图标变黑*/
 .aplayer .aplayer-miniswitcher {
-  background: #201e1e !important;
+  background: #171717 !important;
 }
-
+.aplayer.aplayer-fixed .aplayer-body {
+  border-radius: 0 10px 10px 0 !important;
+}
 
 /*宽屏*/
 .layout {
   max-width: 1300px;
 }
 
+/*投币按钮*/
+.reward-button {
+  border-radius: 8px 8px 8px 8px;
+}
+.post-reward .reward-main .reward-all {
+    border-radius: 14px;
+    background: rgba(28, 28, 29, 0.893);
+}
 
+/*头像呼吸灯*/
+/* 头像呼吸灯 */
+[data-theme="light"] .avatar-img {
+  animation: huxi_light 4s ease-in-out infinite;
+}
+[data-theme="dark"] .avatar-img {
+  animation: huxi_dark 4s ease-in-out infinite;
+}
+@keyframes huxi_light {
+  0% {
+    box-shadow: 0px 0px 1px 1px #e9f5fa;
+  }
+  50% {
+    box-shadow: 0px 0px 5px 5px #e9f5fa;
+  }
+  100% {
+    box-shadow: 0px 0px 1px 1px #e9f5fa;
+  }
+}
+@keyframes huxi_dark {
+  0% {
+    box-shadow: 0px 0px 1px 1px #7b7a7a;
+  }
+  50% {
+    box-shadow: 0px 0px 5px 5px #585959;
+  }
+  100% {
+    box-shadow: 0px 0px 1px 1px #555757;
+  }
+}
 
+/*页脚方框颜色*/
+#pagination .page-number.current {
+  background: #6486eb;
+}
+
+/*文章与卡片间距离*/
+#aside-content {
+  padding-left: 25px;
+}
 
 
 
