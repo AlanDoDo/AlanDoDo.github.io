@@ -519,6 +519,16 @@ background-color: rgb(13, 12, 12);
   padding-left: 25px;
 }
 
+/*正文字体颜色*/
+:root {
+  --font-color: #000000e0;
+}
+
+/*黑夜主题字体颜色*/
+[data-theme='dark'] {
+  --font-color: rgba(255, 255, 255, 0.9);
+
+}
 
 
 
