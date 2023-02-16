@@ -108,7 +108,7 @@
       <link href="/2023/02/04/2023-2-3-SpringBoot%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/"/>
       <url>/2023/02/04/2023-2-3-SpringBoot%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/</url>
       
-        <content type="html"><![CDATA[<hr><h1 id="全栈开发"><a href="#全栈开发" class="headerlink" title="全栈开发"></a>全栈开发</h1><h2 id="涵盖主流前后端开发技术的全栈课程"><a href="#涵盖主流前后端开发技术的全栈课程" class="headerlink" title="涵盖主流前后端开发技术的全栈课程"></a>涵盖主流前后端开发技术的全栈课程</h2><ul><li>Java EE企业级框架：SpringBoot+MyBatisPlus</li><li>Web前端核心框架：Vue+ElementUI</li><li>公共云部署：前后端项目集成打包与部署<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ul><li>掌握JavaEE企业级开发框架的使用，能够利用SpringBoot开发Web应用</li><li>掌握Web前端开发框架Vue的使用，能够完成前后端分离开发</li><li>掌握云端环境的配置与使用，能够完成前后端程序的打包部署<h2 id="Web技术基础"><a href="#Web技术基础" class="headerlink" title="Web技术基础"></a>Web技术基础</h2>目前市面上的软件主要可分为两种<br>BS:(Browser/Server浏览器/服务器架构模式)<br>CS:(Client/Server客户端/服务器架构模式)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m34.jpg" alt=""><h2 id="架构对比"><a href="#架构对比" class="headerlink" title="架构对比"></a>架构对比</h2>架构对比</li></ul></li><li>C/S架构主要特点是交互性强，具有安全访问模式，网络流量低，响应速度快因为客户端负责大多数业务逻辑和UI演示，所以也被称为胖客户端，C/S结构的软件需要针对不同的操作系统开发不同版本的软件。</li><li>随着互联网的兴起，CS架构不适合Web，最大的原因是Web应用程序的修改和升级非常迅速，而CS架构需要每个客户端逐个升级桌面App，因此<br>Browser/Server模式开始流行，简称BS架构。</li><li>B/S架构的主要特点是分散性高、维护方便、开发简单、共享性高、总拥有成本底<h2 id="BS架构原理"><a href="#BS架构原理" class="headerlink" title="BS架构原理"></a>BS架构原理</h2>在BS架构下，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web页面，并把Web页面展示给用户即可。<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m35.jpg" alt=""></li></ul>]]></content>
+        <content type="html"><![CDATA[<hr><h1 id="全栈开发"><a href="#全栈开发" class="headerlink" title="全栈开发"></a>全栈开发</h1><h2 id="涵盖主流前后端开发技术的全栈课程"><a href="#涵盖主流前后端开发技术的全栈课程" class="headerlink" title="涵盖主流前后端开发技术的全栈课程"></a>涵盖主流前后端开发技术的全栈课程</h2><ul><li>Java EE企业级框架：SpringBoot+MyBatisPlus</li><li>Web前端核心框架：Vue+ElementUI</li><li>公共云部署：前后端项目集成打包与部署<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ul><li>掌握JavaEE企业级开发框架的使用，能够利用SpringBoot开发Web应用</li><li>掌握Web前端开发框架Vue的使用，能够完成前后端分离开发</li><li>掌握云端环境的配置与使用，能够完成前后端程序的打包部署<h2 id="Web技术基础"><a href="#Web技术基础" class="headerlink" title="Web技术基础"></a>Web技术基础</h2>目前市面上的软件主要可分为两种<br>BS:(Browser/Server浏览器/服务器架构模式)<br>CS:(Client/Server客户端/服务器架构模式)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m34.jpg" alt=""><h2 id="架构对比"><a href="#架构对比" class="headerlink" title="架构对比"></a>架构对比</h2>架构对比</li></ul></li><li>C/S架构主要特点是交互性强，具有安全访问模式，网络流量低，响应速度快因为客户端负责大多数业务逻辑和UI演示，所以也被称为胖客户端，C/S结构的软件需要针对不同的操作系统开发不同版本的软件。</li><li>随着互联网的兴起，CS架构不适合Web，最大的原因是Web应用程序的修改和升级非常迅速，而CS架构需要每个客户端逐个升级桌面App，因此<br>Browser/Server模式开始流行，简称BS架构。</li><li>B/S架构的主要特点是分散性高、维护方便、开发简单、共享性高、总拥有成本底<h2 id="BS架构原理"><a href="#BS架构原理" class="headerlink" title="BS架构原理"></a>BS架构原理</h2>在BS架构下，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web页面，并把Web页面展示给用户即可。<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m35.jpg" alt=""><h2 id="努力中…"><a href="#努力中…" class="headerlink" title="努力中…"></a>努力中…</h2></li></ul>]]></content>
       
       
       <categories>
@@ -618,17 +618,6 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>DIY</title>
       <link href="/diy/index.html"/>
       <url>/diy/index.html</url>
@@ -640,11 +629,33 @@
     
     
     <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>旅行集</title>
       <link href="/gallery/index.html"/>
       <url>/gallery/index.html</url>
       
         <content type="html"><![CDATA[<h2 id="这里加载可能稍慢（0-0）"><a href="#这里加载可能稍慢（0-0）" class="headerlink" title="这里加载可能稍慢（0.0）"></a>这里加载可能稍慢（0.0）</h2><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu33.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu32.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu31.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu30.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu29.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu28.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu27.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu26.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu25.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu24.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu23.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu22.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu21.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu16.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu20.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu19.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu18.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu17.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu14.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu15.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu13.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu11.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu10.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu12.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu8.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu6.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu5.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu4.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu2.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu1.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%964.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%963.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%962.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%961.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A33.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A32.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB2.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%913.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%912.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%91.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E4%BA%A4%E5%A4%A72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E4%BA%A4%E5%A4%A7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A73.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%89%E7%94%B5%E7%A7%91%E5%A4%A7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%892.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%891.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E9%99%95%E8%A5%BF.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B14.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B13.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B11.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B12.jpg" alt=""></p>          </div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏</title>
+      <link href="/moyu/index.html"/>
+      <url>/moyu/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m81.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m75.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm61.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm60.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m59.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
       
     </entry>
     
@@ -667,17 +678,6 @@
       <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><a class="site-card" href="https://www.bilibili.com/video/BV1XP4y1X7Kr/?spm_id_from=333.999.0.0&vd_source=5b692f8be609178b27207d56f3ad73b0"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a16.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/><span class="title">My bilibili</span><span class="desc">B站视频</span></div></a><h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><div class="tag link"><a class="link-card" title="bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/></div><div class="right"><p class="text">bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F</p></div></a></div>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>游戏</title>
-      <link href="/moyu/index.html"/>
-      <url>/moyu/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m81.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m75.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm61.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm60.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m59.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
       
     </entry>
     
