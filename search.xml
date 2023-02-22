@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JavaScript基础语法</title>
+      <link href="/2023/03/01/2023-3-1-JS%E5%9F%BA%E7%A1%80/"/>
+      <url>/2023/03/01/2023-3-1-JS%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<h2 id="编程基础"><a href="#编程基础" class="headerlink" title="编程基础"></a>编程基础</h2><p><strong>编程</strong>: 就是让计算机为解决某个问题而使用某种程序设计语言编写程序代码，并最终得到结果的过程。<br><strong>计算机程序</strong>: 就是计算机所执行的一系列的<strong>指令集合</strong>，而程序全部都是用我们所掌握的语言来编写的，所以人们要控制计算机一定要通过计算机语言向计算机发出命令。<br><strong>计算机语言</strong>指用于<strong>人与计算机之间通讯的语言</strong>，它是人与计算机之间传递信息的<strong>媒介</strong>。<br>计算机语言的种类非常的多，总的来说可以分成<strong>机器语言</strong>，<strong>汇编语言</strong>和<strong>高级语言</strong>三大类。<br>实际上计算机最终所执行的都是<strong>机器语言</strong>，它是由”0”和”1”组成的二进制数，<strong>二进制是计算机语言的基础</strong>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Web前端CSS3进阶+项目</title>
       <link href="/2023/02/18/2023-2-18-CSS%E8%BF%9B%E9%98%B6-%E9%A1%B9%E7%9B%AE/"/>
       <url>/2023/02/18/2023-2-18-CSS%E8%BF%9B%E9%98%B6-%E9%A1%B9%E7%9B%AE/</url>
@@ -632,33 +657,11 @@
     
     
     <entry>
-      <title>DIY</title>
-      <link href="/diy/index.html"/>
-      <url>/diy/index.html</url>
-      
-        <content type="html"><![CDATA[<hr><h1 id="数字电子时钟"><a href="#数字电子时钟" class="headerlink" title="数字电子时钟"></a>数字电子时钟</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li>寒假就在家里闲着，恰好又是机器人专业，就打算搞一块板子练练手，于是在某宝上找到了这个淘了回来</li><li>买它的过程中顺便又去某东上买了一套电烙铁(提示大家想购买的话，最好买那种锡和烙铁在一起，那种自动的，我买的那种一开始不熟悉，巨难用)</li><li>于是就开始了焊接过程，制作了自己的第一个电子DIY<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2></li></ol><ul><li>我买的是这种(STC15F204EA系列)单片机器件，下面是需要焊接的元件<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m62.jpg" alt=""></li><li>这里把热敏，光敏电阻，晶振，瓷片电容，电池壳子…安装完就是这样<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m63.jpg" alt=""></li><li>然后把核心元器件焊接上去，拼装，装上电池，就完成了(由于买回来的是烤完后的，所以不需要自己烧机，商家还贴心的发了份源码)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m64.jpg" alt=""></li><li>亮咯<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m65.jpg" alt=""></li><li>于是就把它的壳子装上，它有光控，闹钟，温度等一些功能，总体还是不错的<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m66.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m67.jpg" alt=""><h2 id="说说"><a href="#说说" class="headerlink" title="说说"></a>说说</h2></li><li>还有一份该单片机资料，物超所值<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m68.jpg" alt=""></li></ul><h1 id="拼积木-Lamborghini"><a href="#拼积木-Lamborghini" class="headerlink" title="拼积木-Lamborghini"></a>拼积木-Lamborghini</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><ul><li>大年初四晚上闲着跟我弟，还有我爸一块拼积木，没想到从晚饭一直拼到了12.00<h2 id="制作-1"><a href="#制作-1" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m69.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m70.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m71.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m73.jpg" alt=""></li></ul><h1 id="感光萤光虫机器人"><a href="#感光萤光虫机器人" class="headerlink" title="感光萤光虫机器人"></a>感光萤光虫机器人</h1><h2 id="前言-2"><a href="#前言-2" class="headerlink" title="前言"></a>前言</h2><ul><li>这个东西焊接挺容易的，但是组装麻烦一点，质量不行，塑料腿还让我搞坏了0.0<h2 id="制作-2"><a href="#制作-2" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m76.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m77.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m78.jpg" alt=""></li></ul><h1 id="电动遥控车"><a href="#电动遥控车" class="headerlink" title="电动遥控车"></a>电动遥控车</h1><h2 id="制作-3"><a href="#制作-3" class="headerlink" title="制作"></a>制作</h2><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m79.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m80.jpg" alt=""></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>关于作者</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>旅行集</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="这里加载可能稍慢（0-0）"><a href="#这里加载可能稍慢（0-0）" class="headerlink" title="这里加载可能稍慢（0.0）"></a>这里加载可能稍慢（0.0）</h2><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu33.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu32.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu31.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu30.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu29.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu28.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu27.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu26.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu25.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu24.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu23.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu22.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu21.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu16.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu20.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu19.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu18.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu17.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu14.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu15.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu13.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu11.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu10.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu12.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu8.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu6.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu5.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu4.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu2.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu1.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%964.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%963.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%962.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%961.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A33.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A32.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB2.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%913.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%912.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%91.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E4%BA%A4%E5%A4%A72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E4%BA%A4%E5%A4%A7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A73.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%89%E7%94%B5%E7%A7%91%E5%A4%A7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%892.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%891.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E9%99%95%E8%A5%BF.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B14.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B13.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B11.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B12.jpg" alt=""></p>          </div>]]></content>
       
     </entry>
     
@@ -687,22 +690,44 @@
     
     
     <entry>
-      <title>游戏</title>
-      <link href="/moyu/index.html"/>
-      <url>/moyu/index.html</url>
+      <title>DIY</title>
+      <link href="/diy/index.html"/>
+      <url>/diy/index.html</url>
       
-        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m81.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m75.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm61.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm60.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m59.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
+        <content type="html"><![CDATA[<hr><h1 id="数字电子时钟"><a href="#数字电子时钟" class="headerlink" title="数字电子时钟"></a>数字电子时钟</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li>寒假就在家里闲着，恰好又是机器人专业，就打算搞一块板子练练手，于是在某宝上找到了这个淘了回来</li><li>买它的过程中顺便又去某东上买了一套电烙铁(提示大家想购买的话，最好买那种锡和烙铁在一起，那种自动的，我买的那种一开始不熟悉，巨难用)</li><li>于是就开始了焊接过程，制作了自己的第一个电子DIY<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2></li></ol><ul><li>我买的是这种(STC15F204EA系列)单片机器件，下面是需要焊接的元件<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m62.jpg" alt=""></li><li>这里把热敏，光敏电阻，晶振，瓷片电容，电池壳子…安装完就是这样<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m63.jpg" alt=""></li><li>然后把核心元器件焊接上去，拼装，装上电池，就完成了(由于买回来的是烤完后的，所以不需要自己烧机，商家还贴心的发了份源码)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m64.jpg" alt=""></li><li>亮咯<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m65.jpg" alt=""></li><li>于是就把它的壳子装上，它有光控，闹钟，温度等一些功能，总体还是不错的<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m66.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m67.jpg" alt=""><h2 id="说说"><a href="#说说" class="headerlink" title="说说"></a>说说</h2></li><li>还有一份该单片机资料，物超所值<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m68.jpg" alt=""></li></ul><h1 id="拼积木-Lamborghini"><a href="#拼积木-Lamborghini" class="headerlink" title="拼积木-Lamborghini"></a>拼积木-Lamborghini</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><ul><li>大年初四晚上闲着跟我弟，还有我爸一块拼积木，没想到从晚饭一直拼到了12.00<h2 id="制作-1"><a href="#制作-1" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m69.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m70.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m71.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m73.jpg" alt=""></li></ul><h1 id="感光萤光虫机器人"><a href="#感光萤光虫机器人" class="headerlink" title="感光萤光虫机器人"></a>感光萤光虫机器人</h1><h2 id="前言-2"><a href="#前言-2" class="headerlink" title="前言"></a>前言</h2><ul><li>这个东西焊接挺容易的，但是组装麻烦一点，质量不行，塑料腿还让我搞坏了0.0<h2 id="制作-2"><a href="#制作-2" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m76.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m77.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m78.jpg" alt=""></li></ul><h1 id="电动遥控车"><a href="#电动遥控车" class="headerlink" title="电动遥控车"></a>电动遥控车</h1><h2 id="制作-3"><a href="#制作-3" class="headerlink" title="制作"></a>制作</h2><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m79.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m80.jpg" alt=""></p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>个人视频</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>旅行集</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="自己学了学剪辑，感兴趣的小伙伴可以看看"><a href="#自己学了学剪辑，感兴趣的小伙伴可以看看" class="headerlink" title="自己学了学剪辑，感兴趣的小伙伴可以看看"></a>自己学了学剪辑，感兴趣的小伙伴可以看看</h2><a class="site-card" href="https://www.bilibili.com/video/BV1XP4y1X7Kr/?spm_id_from=333.999.0.0&vd_source=5b692f8be609178b27207d56f3ad73b0"><div class="img"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a16.jpg"/></div><div class="info"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/><span class="title">My bilibili</span><span class="desc">B站视频</span></div></a><h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><div class="tag link"><a class="link-card" title="bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/></div><div class="right"><p class="text">bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F</p></div></a></div>]]></content>
+        <content type="html"><![CDATA[<h2 id="这里加载可能稍慢（0-0）"><a href="#这里加载可能稍慢（0-0）" class="headerlink" title="这里加载可能稍慢（0.0）"></a>这里加载可能稍慢（0.0）</h2><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu33.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu32.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu31.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu30.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu29.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu28.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu27.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu26.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu25.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu24.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu23.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu22.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu21.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu16.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu20.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu19.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu18.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu17.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu14.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu15.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu13.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu11.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu10.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu12.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu8.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu6.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu5.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu4.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu2.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/menggu1.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%964.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%963.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%962.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%A4%A7%E6%98%8E%E6%B9%961.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A33.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A32.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%BC%A0%E5%AE%B6%E5%8F%A3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB3.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB2.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E6%B8%85%E5%AE%AB.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%913.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%912.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%85%B5%E9%A9%AC%E4%BF%91.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E4%BA%A4%E5%A4%A72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E4%BA%A4%E5%A4%A7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A73.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E7%94%B5%E7%A7%91%E5%A4%A72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%89%E7%94%B5%E7%A7%91%E5%A4%A7.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%892.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E8%A5%BF%E5%AE%891.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E9%99%95%E8%A5%BF.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B14.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B13.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B11.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/%E5%8D%8E%E5%B1%B12.jpg" alt=""></p>          </div>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>游戏</title>
+      <link href="/moyu/index.html"/>
+      <url>/moyu/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m81.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m75.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm61.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm60.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m59.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
       
     </entry>
     
@@ -720,11 +745,11 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>个人视频</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><div class="tag link"><a class="link-card" title="bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/></div><div class="right"><p class="text">bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F</p></div></a></div><h1 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h1><p><a href="https://www.bilibili.com/video/BV11G4y127LW/?spm_id_from=333.1007.tianma.1-1-1.click&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="潜龙二十年，今朝震海天！万字解读比亚迪发展史">潜龙二十年，今朝震海天！万字解读比亚迪发展史</a></p><p><a href="https://www.bilibili.com/video/BV1i14y157YV/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="电子监听、全国断网，棱镜门背后，中国如何从末路狂奔到世界之巅">电子监听、全国断网，棱镜门背后，中国如何从末路狂奔到世界之巅</a></p>]]></content>
       
     </entry>
     
