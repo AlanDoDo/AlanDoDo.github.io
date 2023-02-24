@@ -657,9 +657,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>关于作者</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -668,9 +668,20 @@
     
     
     <entry>
-      <title>关于作者</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>DIY</title>
+      <link href="/diy/index.html"/>
+      <url>/diy/index.html</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="数字电子时钟"><a href="#数字电子时钟" class="headerlink" title="数字电子时钟"></a>数字电子时钟</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li>寒假就在家里闲着，恰好又是机器人专业，就打算搞一块板子练练手，于是在某宝上找到了这个淘了回来</li><li>买它的过程中顺便又去某东上买了一套电烙铁(提示大家想购买的话，最好买那种锡和烙铁在一起，那种自动的，我买的那种一开始不熟悉，巨难用)</li><li>于是就开始了焊接过程，制作了自己的第一个电子DIY<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2></li></ol><ul><li>我买的是这种(STC15F204EA系列)单片机器件，下面是需要焊接的元件<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m62.jpg" alt=""></li><li>这里把热敏，光敏电阻，晶振，瓷片电容，电池壳子…安装完就是这样<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m63.jpg" alt=""></li><li>然后把核心元器件焊接上去，拼装，装上电池，就完成了(由于买回来的是烤完后的，所以不需要自己烧机，商家还贴心的发了份源码)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m64.jpg" alt=""></li><li>亮咯<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m65.jpg" alt=""></li><li>于是就把它的壳子装上，它有光控，闹钟，温度等一些功能，总体还是不错的<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m66.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m67.jpg" alt=""><h2 id="说说"><a href="#说说" class="headerlink" title="说说"></a>说说</h2></li><li>还有一份该单片机资料，物超所值<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m68.jpg" alt=""></li></ul><h1 id="拼积木-Lamborghini"><a href="#拼积木-Lamborghini" class="headerlink" title="拼积木-Lamborghini"></a>拼积木-Lamborghini</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><ul><li>大年初四晚上闲着跟我弟，还有我爸一块拼积木，没想到从晚饭一直拼到了12.00<h2 id="制作-1"><a href="#制作-1" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m69.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m70.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m71.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m73.jpg" alt=""></li></ul><h1 id="感光萤光虫机器人"><a href="#感光萤光虫机器人" class="headerlink" title="感光萤光虫机器人"></a>感光萤光虫机器人</h1><h2 id="前言-2"><a href="#前言-2" class="headerlink" title="前言"></a>前言</h2><ul><li>这个东西焊接挺容易的，但是组装麻烦一点，质量不行，塑料腿还让我搞坏了0.0<h2 id="制作-2"><a href="#制作-2" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m76.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m77.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m78.jpg" alt=""></li></ul><h1 id="电动遥控车"><a href="#电动遥控车" class="headerlink" title="电动遥控车"></a>电动遥控车</h1><h2 id="制作-3"><a href="#制作-3" class="headerlink" title="制作"></a>制作</h2><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m79.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m80.jpg" alt=""></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -690,22 +701,11 @@
     
     
     <entry>
-      <title>DIY</title>
-      <link href="/diy/index.html"/>
-      <url>/diy/index.html</url>
+      <title>游戏</title>
+      <link href="/moyu/index.html"/>
+      <url>/moyu/index.html</url>
       
-        <content type="html"><![CDATA[<hr><h1 id="数字电子时钟"><a href="#数字电子时钟" class="headerlink" title="数字电子时钟"></a>数字电子时钟</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li>寒假就在家里闲着，恰好又是机器人专业，就打算搞一块板子练练手，于是在某宝上找到了这个淘了回来</li><li>买它的过程中顺便又去某东上买了一套电烙铁(提示大家想购买的话，最好买那种锡和烙铁在一起，那种自动的，我买的那种一开始不熟悉，巨难用)</li><li>于是就开始了焊接过程，制作了自己的第一个电子DIY<h2 id="制作"><a href="#制作" class="headerlink" title="制作"></a>制作</h2></li></ol><ul><li>我买的是这种(STC15F204EA系列)单片机器件，下面是需要焊接的元件<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m62.jpg" alt=""></li><li>这里把热敏，光敏电阻，晶振，瓷片电容，电池壳子…安装完就是这样<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m63.jpg" alt=""></li><li>然后把核心元器件焊接上去，拼装，装上电池，就完成了(由于买回来的是烤完后的，所以不需要自己烧机，商家还贴心的发了份源码)<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m64.jpg" alt=""></li><li>亮咯<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m65.jpg" alt=""></li><li>于是就把它的壳子装上，它有光控，闹钟，温度等一些功能，总体还是不错的<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m66.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m67.jpg" alt=""><h2 id="说说"><a href="#说说" class="headerlink" title="说说"></a>说说</h2></li><li>还有一份该单片机资料，物超所值<br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m68.jpg" alt=""></li></ul><h1 id="拼积木-Lamborghini"><a href="#拼积木-Lamborghini" class="headerlink" title="拼积木-Lamborghini"></a>拼积木-Lamborghini</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言"></a>前言</h2><ul><li>大年初四晚上闲着跟我弟，还有我爸一块拼积木，没想到从晚饭一直拼到了12.00<h2 id="制作-1"><a href="#制作-1" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m69.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m70.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m71.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m72.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m73.jpg" alt=""></li></ul><h1 id="感光萤光虫机器人"><a href="#感光萤光虫机器人" class="headerlink" title="感光萤光虫机器人"></a>感光萤光虫机器人</h1><h2 id="前言-2"><a href="#前言-2" class="headerlink" title="前言"></a>前言</h2><ul><li>这个东西焊接挺容易的，但是组装麻烦一点，质量不行，塑料腿还让我搞坏了0.0<h2 id="制作-2"><a href="#制作-2" class="headerlink" title="制作"></a>制作</h2><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m76.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m77.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m78.jpg" alt=""></li></ul><h1 id="电动遥控车"><a href="#电动遥控车" class="headerlink" title="电动遥控车"></a>电动遥控车</h1><h2 id="制作-3"><a href="#制作-3" class="headerlink" title="制作"></a>制作</h2><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m79.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m80.jpg" alt=""></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>个人视频</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><div class="tag link"><a class="link-card" title="bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/></div><div class="right"><p class="text">bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F</p></div></a></div><h1 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h1><p><a href="https://www.bilibili.com/video/BV11G4y127LW/?spm_id_from=333.1007.tianma.1-1-1.click&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="潜龙二十年，今朝震海天！万字解读比亚迪发展史">潜龙二十年，今朝震海天！万字解读比亚迪发展史</a></p><p><a href="https://www.bilibili.com/video/BV1i14y157YV/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="电子监听、全国断网，棱镜门背后，中国如何从末路狂奔到世界之巅">电子监听、全国断网，棱镜门背后，中国如何从末路狂奔到世界之巅</a></p><p><a href="https://www.bilibili.com/video/BV183411M7o1/?spm_id_from=333.999.0.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="围剿华尔街，对弈华盛顿，中国光伏是如何成为世界第一的？">围剿华尔街，对弈华盛顿，中国光伏是如何成为世界第一的？</a></p><p><a href="https://www.bilibili.com/video/BV1fq4y1g7hq/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="5G，华为，土耳其——我花了两个月，搞懂了5G背后的秘密">5G，华为，土耳其——我花了两个月，搞懂了5G背后的秘密</a></p>]]></content>
+        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m81.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m75.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm61.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm60.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m59.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
       
     </entry>
     
@@ -723,11 +723,11 @@
     
     
     <entry>
-      <title>游戏</title>
-      <link href="/moyu/index.html"/>
-      <url>/moyu/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<hr><div class="fj-gallery"><p><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m81.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m74.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m75.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm61.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img%2Fm60.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m59.jpg" alt=""><br><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m58.jpg" alt=""></p>          </div>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -745,11 +745,11 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>个人视频</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="bilibili"><a href="#bilibili" class="headerlink" title="bilibili"></a>bilibili</h1><div class="tag link"><a class="link-card" title="bilibili" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F"><div class="left"><img src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a35.png"/></div><div class="right"><p class="text">bilibili</p><p class="url">https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0%2F</p></div></a></div><h1 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h1><p><a href="https://www.bilibili.com/video/BV11G4y127LW/?spm_id_from=333.1007.tianma.1-1-1.click&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="潜龙二十年，今朝震海天！万字解读比亚迪发展史">潜龙二十年，今朝震海天！万字解读比亚迪发展史</a></p><p><a href="https://www.bilibili.com/video/BV1i14y157YV/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="电子监听、全国断网，棱镜门背后，中国如何从末路狂奔到世界之巅">电子监听、全国断网，棱镜门背后，中国如何从末路狂奔到世界之巅</a></p><p><a href="https://www.bilibili.com/video/BV183411M7o1/?spm_id_from=333.999.0.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="围剿华尔街，对弈华盛顿，中国光伏是如何成为世界第一的？">围剿华尔街，对弈华盛顿，中国光伏是如何成为世界第一的？</a></p><p><a href="https://www.bilibili.com/video/BV1fq4y1g7hq/?spm_id_from=333.788.recommend_more_video.0&amp;vd_source=5b692f8be609178b27207d56f3ad73b0" title="5G，华为，土耳其——我花了两个月，搞懂了5G背后的秘密">5G，华为，土耳其——我花了两个月，搞懂了5G背后的秘密</a></p>]]></content>
       
     </entry>
     
