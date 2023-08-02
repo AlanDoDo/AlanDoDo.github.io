@@ -1,0 +1,1083 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Python基础学习笔记5 | AlanDoDO🐼</title><meta name="keywords" content="Python"><meta name="author" content="Alan"><meta name="copyright" content="Alan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Python基础学习笔记5"><meta name="application-name" content="Python基础学习笔记5"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Python基础学习笔记5"><meta property="og:url" content="https://www.alandodo.cn/2023/03/07/2023-3-7-Python%E5%AD%A6%E4%B9%A05/index.html"><meta property="og:site_name" content="AlanDoDO🐼"><meta property="og:description" content="PySpark实战-前言介绍spark是Apache基金会旗下的顶级开源项目用于对海量数据进行大规模分布式计算。PySpark是Spark的Python实现,是Spark为Python开发者提供的编程入口，用于以Python代码完成Spark任务的开发PySpark不仅可以作为Python第三方库使"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m103.jpg"><meta property="article:author" content="Alan"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m103.jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.alandodo.cn/2023/03/07/2023-3-7-Python%E5%AD%A6%E4%B9%A05/"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//npm.onmicrosoft.cn"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.14/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#3b70fc","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python基础学习笔记5',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-11 20:23:43',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>if (GLOBAL_CONFIG.preloader.source == "2" || GLOBAL_CONFIG.preloader.source == "3") {
+  const loadingPercentage = document.getElementById("loading-percentage");
+  let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+      loadingPercentage.textContent = currentValue;
+      if (currentValue === "100%") {
+        clearInterval(loadingPercentageTimer);
+      }
+    }
+  }, 100);
+}
+
+const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div id="web_box"><div id="web_container"><div id="menu-mask"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://alandodo.cn/" title="博客" target="_blank"><img class="back-menu-item-icon" src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://image.anheyu.com/" title="Sale" target="_blank"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="Sale"/><span class="back-menu-item-text">Sale</span></a><a class="back-menu-item" href="https://image.anheyu.com/" title="智慧泊车" target="_blank"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="智慧泊车"/><span class="back-menu-item-text">智慧泊车</span></a><a class="back-menu-item" href="https://image.anheyu.com/" title="资源共享" target="_blank"><img class="back-menu-item-icon" src="https://image.anheyu.com/favicon.ico" alt="资源共享"/><span class="back-menu-item-text">资源共享</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">AlanDoDO🐼</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-127px;"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="wechat" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="alipay" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> <span>最新评论</span></span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AJAX/" style="font-size: 1.05rem;">AJAX<sup>1</sup></a><a href="/tags/Architecture/" style="font-size: 1.05rem;">Architecture<sup>1</sup></a><a href="/tags/BOM/" style="font-size: 1.05rem;">BOM<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C++<sup>1</sup></a><a href="/tags/CSS/" style="font-size: 1.05rem;">CSS<sup>2</sup></a><a href="/tags/Chat-GPT/" style="font-size: 1.05rem;">Chat GPT<sup>1</sup></a><a href="/tags/DOM/" style="font-size: 1.05rem;">DOM<sup>1</sup></a><a href="/tags/Flushbonading/" style="font-size: 1.05rem;">Flushbonading<sup>2</sup></a><a href="/tags/Git/" style="font-size: 1.05rem;">Git<sup>1</sup></a><a href="/tags/HTML/" style="font-size: 1.05rem;">HTML<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>2</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>1</sup></a><a href="/tags/MySQL/" style="font-size: 1.05rem;">MySQL<sup>1</sup></a><a href="/tags/Node-js/" style="font-size: 1.05rem;">Node.js<sup>1</sup></a><a href="/tags/PS/" style="font-size: 1.05rem;">PS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>8</sup></a><a href="/tags/Robot/" style="font-size: 1.05rem;">Robot<sup>1</sup></a><a href="/tags/Ros2/" style="font-size: 1.05rem;">Ros2<sup>1</sup></a><a href="/tags/Siemens/" style="font-size: 1.05rem;">Siemens<sup>1</sup></a><a href="/tags/Tampermonkey/" style="font-size: 1.05rem;">Tampermonkey<sup>2</sup></a><a href="/tags/U%E6%A0%A1%E5%9B%AD/" style="font-size: 1.05rem;">U校园<sup>1</sup></a><a href="/tags/VMware/" style="font-size: 1.05rem;">VMware<sup>1</sup></a><a href="/tags/Vue/" style="font-size: 1.05rem;">Vue<sup>3</sup></a><a href="/tags/Vue3/" style="font-size: 1.05rem;">Vue3<sup>1</sup></a><a href="/tags/WeChat/" style="font-size: 1.05rem;">WeChat<sup>1</sup></a><a href="/tags/Webpack/" style="font-size: 1.05rem;">Webpack<sup>1</sup></a><a href="/tags/books/" style="font-size: 1.05rem;">books<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 1.05rem;">butterfly<sup>2</sup></a><a href="/tags/crawler/" style="font-size: 1.05rem;">crawler<sup>1</sup></a><a href="/tags/jQuery/" style="font-size: 1.05rem;">jQuery<sup>1</sup></a><a href="/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/" style="font-size: 1.05rem;">全栈开发<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 1.05rem;">技术分享<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%97%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">数字电子技术<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">数据可视化<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">数据结构与算法<sup>1</sup></a><a href="/tags/%E6%B5%AA%E6%BC%AB%E6%96%87%E6%A1%88/" style="font-size: 1.05rem;">浪漫文案<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">15</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="anzhiyu.switchDarkMode()" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Python/" tabindex="-1"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Python</span></a></span></div></div><h1 class="post-title">Python基础学习笔记5</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="post-meta-icon anzhiyufont anzhiyu-icon-calendar-days"></i><span class="post-meta-label">发表于</span><time datetime="2023-03-07T13:15:00.000Z" title="发表于 2023-03-07 21:15:00">2023-03-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为石家庄"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>石家庄</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m103.jpg"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="PySpark实战-前言介绍"><a href="#PySpark实战-前言介绍" class="headerlink" title="PySpark实战-前言介绍"></a>PySpark实战-前言介绍</h2><p>spark是Apache基金会旗下的顶级开源项目用于对海量数据进行大规模分布式计算。<br>PySpark是Spark的Python实现,是Spark为Python开发者提供的编程入口，用于以Python代码完成Spark任务的开发<br>PySpark不仅可以作为Python第三方库使用也可以将程序提交的Spark集群环境中，调度大规模集群进行执行。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m104.jpg"></p>
+<p>Python应用场景和就业方向是十分丰富的，其中，最为亮点的方向为大数据开发和人工智能</p>
+<h2 id="基础准备"><a href="#基础准备" class="headerlink" title="基础准备"></a>基础准备</h2><p>PySpark库的安装：同其它的Python第三方库一样PySpark同样可以使用pip程序进行安装<br>在”CMD”命令提示符程序内,输入: pip install pyspark<br>或使用国内代理镜像网站(清华大学源)</p>
+<pre><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyspark
+</code></pre>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示获取PySpark的执行环境入库对象: SparkContext</span></span><br><span class="line"><span class="comment"># 并通过SparkContext对象获取当前PySpark的版本</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 导包</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf, SparkContext</span><br><span class="line"><span class="comment"># 创建SparkConf类对象</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark_app&quot;</span>)</span><br><span class="line"><span class="comment"># 基于SparkConf类对象创建SparkContext对象</span></span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"><span class="comment"># 打印PySpark的运行版本</span></span><br><span class="line"><span class="built_in">print</span>(sc.version)</span><br><span class="line"><span class="comment"># 停止SparkContext对象的运行(停止PySpark程序)</span></span><br><span class="line">sc.stop()</span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m105.jpg"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m160.jpg"></p>
+<h2 id="数据输入"><a href="#数据输入" class="headerlink" title="数据输入"></a>数据输入</h2><p><strong>RDD对象</strong>,PySpark支持多种数据的输入,在输入完成后,都会得到一个:RDD类的对象<br>RDD全称为:<strong>弹性分布式数据集</strong>(Resilient Distributed Datasets)PySpark针对数据的处理都是以RDD对象作为载体,即:<br>1.数据存储在RDD内<br>2.各类数据的计算方法,也都是RDD的成员方法<br>3.RDD的数据计算方法，返回值依旧是RDD对象<br><strong>Python数据容器转RDD对象</strong>:PySpark支持通过SparkContext对象的parallelize成员方法将:<br>list、tuple、set、dicr、str 转换为PySpark的RDD对象</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).\</span><br><span class="line">    setAppName(<span class="string">&quot;test_spark_app&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line">rdd = sc.parallelize(数据容器对象)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出RDD的内容</span></span><br><span class="line"><span class="built_in">print</span>(rdd.collect())</span><br></pre></td></tr></table></figure>
+
+<p>注意:字符串会被拆分出1个个的字符，存入RDD对象<br>字典仅有key会被存入RDD对象</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过parallelize方法将Python对象加载到Spark内，成为RDD对象</span></span><br><span class="line">rdd1 = sc.parallelize([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">rdd2 = sc.parallelize((<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>))</span><br><span class="line">rdd3 = sc.parallelize(<span class="string">&quot;abcdefg&quot;</span>)</span><br><span class="line">rdd4 = sc.parallelize(&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;)</span><br><span class="line">rdd5 = sc.parallelize(&#123;<span class="string">&quot;key1&quot;</span>: <span class="string">&quot;value1&quot;</span>,<span class="string">&quot;key2&quot;</span>: <span class="string">&quot;value2&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果要查看RDD里面有什么内容，需要用collect()方法</span></span><br><span class="line"><span class="built_in">print</span>(rdd1.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd2.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd3.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd4.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd1.collect())</span><br><span class="line"></span><br><span class="line"><span class="comment">#用过textFile方法，读取文件数据加载到Spark内，成为RDD对象</span></span><br><span class="line">sc.stop()</span><br></pre></td></tr></table></figure>
+<p><strong>读取文件转RDD对象</strong>:PySpark也支持通过SparkContext入口对象，来读取文件来构建出RDD对象</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过parallelize方法将Python对象加载到Spark内，成为RDD对象</span></span><br><span class="line">rdd1 = sc.parallelize([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">rdd2 = sc.parallelize((<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>))</span><br><span class="line">rdd3 = sc.parallelize(<span class="string">&quot;abcdefg&quot;</span>)</span><br><span class="line">rdd4 = sc.parallelize(&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;)</span><br><span class="line">rdd5 = sc.parallelize(&#123;<span class="string">&quot;key1&quot;</span>: <span class="string">&quot;value1&quot;</span>,<span class="string">&quot;key2&quot;</span>: <span class="string">&quot;value2&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果要查看RDD里面有什么内容，需要用collect()方法</span></span><br><span class="line"><span class="built_in">print</span>(rdd1.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd2.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd3.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd4.collect())</span><br><span class="line"><span class="built_in">print</span>(rdd1.collect())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用过textFile方法，读取文件数据加载到Spark内，成为RDD对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># rdd = sc.textFile(&quot;D:/hello.txt&quot;)</span></span><br><span class="line"><span class="comment"># print(rdd.collect())</span></span><br><span class="line"></span><br><span class="line">sc.stop()</span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-map方法"><a href="#数据计算-map方法" class="headerlink" title="数据计算-map方法"></a>数据计算-map方法</h2><p>map方法:PySpark的数据计算,都是基于RDD对象来进行的，那么如何进行呢?<br>自然是依赖，RDD对象内置丰富的: 成员方法(算子)<br>map算子是将RDD的数据一条条处理(处理的逻基于map算子中接收的处理函数 返回新的RDD</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&quot;python解释器位置“</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">conf = SparkConf().setMaster(&quot;</span>local[*]<span class="string">&quot;).setAppName(&quot;</span>test_spark<span class="string">&quot;)</span></span><br><span class="line"><span class="string">sc = SparkContext(conf=conf)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 准备一个RDD</span></span><br><span class="line"><span class="string">rdd = sc.parallelize([1,2,3,4,5])</span></span><br><span class="line"><span class="string"># 通过map方法将全部数据都乘以10</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def func(data):</span></span><br><span class="line"><span class="string">    return data * 10</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">rdd2 = rdd.map(func)</span></span><br><span class="line"><span class="string"># 链式调用</span></span><br><span class="line"><span class="string"># rdd2 = rdd.map(lambda x: x * 10).map(lambda x: x + 5)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">print(rdd2.collect())</span></span><br><span class="line"><span class="string"># (T) -&gt; U</span></span><br><span class="line"><span class="string"># (T) -&gt; T</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-flatMap方法"><a href="#数据计算-flatMap方法" class="headerlink" title="数据计算-flatMap方法"></a>数据计算-flatMap方法</h2><p>功能:对rdd执行map操作,然后进行<strong>解除嵌套</strong>操作.</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;解释器位置&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备一个RDD</span></span><br><span class="line">rdd = sc.parallelize([<span class="string">&quot;itheima itcast 666&quot;</span>,<span class="string">&quot;itheima itheima itcast&quot;</span>,<span class="string">&quot;python itheima&quot;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 需求，将RDD数据里面的一个个单词提取出来</span></span><br><span class="line">rdd2 = rdd.<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x.split(<span class="string">&quot;&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(rdd2.collect())</span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-reduceByKey方法"><a href="#数据计算-reduceByKey方法" class="headerlink" title="数据计算-reduceByKey方法"></a>数据计算-reduceByKey方法</h2><p>功能: <strong>针对KV型</strong> RDD,自动按照key分组,然后根据你提供的聚合逻辑,完成 <strong>组内数据(value)</strong> 的聚合操作.</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;解释器位置&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备一个RDD</span></span><br><span class="line">rdd = sc.parallelize([(<span class="string">&#x27;男&#x27;</span>,<span class="number">99</span>),(<span class="string">&#x27;男&#x27;</span>,<span class="number">88</span>),(<span class="string">&#x27;女&#x27;</span>,<span class="number">99</span>),(<span class="string">&#x27;女&#x27;</span>,<span class="number">66</span>)])</span><br><span class="line"><span class="comment"># 求男生和女生两个组的成绩之和</span></span><br><span class="line">rdd2 = rdd.reduceByKey(<span class="keyword">lambda</span> a,b: a + b)</span><br><span class="line"><span class="built_in">print</span>(rdd2.collect())</span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-单词统计案例"><a href="#数据计算-单词统计案例" class="headerlink" title="数据计算-单词统计案例"></a>数据计算-单词统计案例</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建执行环境入口对象</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;F:\Python\python.exe&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 读取数据文件</span></span><br><span class="line">rdd = sc.textFile(<span class="string">&quot;F:/hello.txt&quot;</span>)</span><br><span class="line"><span class="comment"># 3.取出全部单词</span></span><br><span class="line">word_rdd = rdd.flatMap(<span class="keyword">lambda</span> x: x.split(<span class="string">&quot;&quot;</span>))</span><br><span class="line"><span class="comment"># 4.将所有单词都转换成二元元组，单词为Key，value设置为1</span></span><br><span class="line">word_with_one_rdd = word_rdd.<span class="built_in">map</span>(<span class="keyword">lambda</span> word: (word,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 5.分组并求和</span></span><br><span class="line">result_rdd = word_with_one_rdd.reduceByKey(<span class="keyword">lambda</span> a,b: a + b)</span><br><span class="line"><span class="comment"># 6.打印输出结果</span></span><br><span class="line"><span class="built_in">print</span>(result_rdd.collect())</span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-filter方法"><a href="#数据计算-filter方法" class="headerlink" title="数据计算-filter方法"></a>数据计算-filter方法</h2><p>功能:过滤想要的数据进行保留<br>返回是True的数据被保留,False的数据被丢弃</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建执行环境入口对象</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;F:\Python\python.exe&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备一个RDD</span></span><br><span class="line">rdd = sc.parallelize([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="comment"># 对RDD的数据进行过滤</span></span><br><span class="line">rdd2 = rdd.<span class="built_in">filter</span>(<span class="keyword">lambda</span> num: num % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(rdd2.collect())</span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-distinct方法"><a href="#数据计算-distinct方法" class="headerlink" title="数据计算-distinct方法"></a>数据计算-distinct方法</h2><p>完成对RDD内数据的去重操作</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建执行环境入口对象</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;F:\Python\python.exe&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备一个RDD</span></span><br><span class="line">rdd = sc.parallelize([<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>])</span><br><span class="line"><span class="comment"># RDD的数据进行去重</span></span><br><span class="line">rdd2 = rdd.distinct()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(rdd2.collect())</span><br></pre></td></tr></table></figure>
+<h2 id="数据计算-sortBy方法"><a href="#数据计算-sortBy方法" class="headerlink" title="数据计算-sortBy方法"></a>数据计算-sortBy方法</h2><p>功能:对RDD数据进行排序基于你指定的排序依据<br>接收一个处理函数可用lambda快速编写,函数表示用来决定排序的依据,可以控制升序或降序,全局排序需要设置分区数为1</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建执行环境入口对象</span></span><br><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;F:\Python\python.exe&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 读取数据文件</span></span><br><span class="line">rdd = sc.textFile(<span class="string">&quot;F:/hello.txt&quot;</span>)</span><br><span class="line"><span class="comment"># 2.取出全部单词</span></span><br><span class="line">word_rdd = rdd.flatMap(<span class="keyword">lambda</span> x: x.split(<span class="string">&quot; &quot;</span>))</span><br><span class="line"><span class="comment"># 3.将所有单词都转换成二元元组，单词为Key，value设置为1</span></span><br><span class="line">word_with_one_rdd = word_rdd.<span class="built_in">map</span>(<span class="keyword">lambda</span> word: (word,<span class="number">1</span>))</span><br><span class="line"><span class="comment"># 4.分组并求和</span></span><br><span class="line">result_rdd = word_with_one_rdd.reduceByKey(<span class="keyword">lambda</span> a, b: a + b)</span><br><span class="line"><span class="built_in">print</span>(result_rdd.collect())</span><br><span class="line"><span class="comment"># 5.对结果进行排序</span></span><br><span class="line">final_rdd = result_rdd.sortBy(<span class="keyword">lambda</span> x: x[<span class="number">1</span>],ascending=<span class="literal">False</span>, numPartitions=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(final_rdd.collect())</span><br></pre></td></tr></table></figure>
+<h2 id="数据输出-输出为Python对象"><a href="#数据输出-输出为Python对象" class="headerlink" title="数据输出-输出为Python对象"></a>数据输出-输出为Python对象</h2><p>Spark的编程流程就是:将数据加载为RDD(数据输入)-对RDD进行计算(数据计算)-将RDD转换为Python对象(数据输出)<br>数据输出的方法:</p>
+<ol>
+<li>collect:将RDD内容转换为list</li>
+<li>reduce:对RDD内容进行自定义聚合</li>
+<li>take:取出RDD的前N个元素组成list</li>
+<li>count:统计RDD元素个数</li>
+</ol>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyspark <span class="keyword">import</span> SparkConf,SparkContext</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">os.environ[<span class="string">&#x27;PYSPARK_PYTHON&#x27;</span>] = <span class="string">&#x27;D:/dev/python/python310/python.exe&#x27;</span></span><br><span class="line">conf = SparkConf().setMaster(<span class="string">&quot;local[*]&quot;</span>).setAppName(<span class="string">&quot;test_spark&quot;</span>)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 准备RDD</span></span><br><span class="line">rdd = sc.parallelize([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># collect算子，输出RDD为List对象</span></span><br><span class="line">rdd_list: <span class="built_in">list</span> = rdd.collect()</span><br><span class="line"><span class="built_in">print</span>(rdd_list)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(rdd_list))</span><br><span class="line"></span><br><span class="line"><span class="comment"># reduce算子，对RDD进行两两聚合</span></span><br><span class="line">num = rdd.reduce(<span class="keyword">lambda</span> a, b: a + b)</span><br><span class="line"><span class="built_in">print</span>(num)</span><br><span class="line"></span><br><span class="line"><span class="comment"># take算子，取出RDD前N个元素，组成List返回</span></span><br><span class="line">take_list = rdd.take(<span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(take_list)</span><br><span class="line"></span><br><span class="line"><span class="comment"># count，统计irdd内有多少条数据，返回值为数字</span></span><br><span class="line">num_count = rdd.count()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;rdd内有<span class="subst">&#123;num_count&#125;</span>个元素&quot;</span>)</span><br><span class="line"></span><br><span class="line">sc.stop()</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据输出-输出到文件中"><a href="#数据输出-输出到文件中" class="headerlink" title="数据输出-输出到文件中"></a>数据输出-输出到文件中</h2><p>saveAsTextFile算子功能:将RDD的数据写入文本文件中,支持本地写出hdfs等文件系统</p>
+<p>RDD输出到文件的方法:</p>
+<ol>
+<li>rdd.saveAsTextFile</li>
+<li>输出的结果是一个文件夹</li>
+<li>有几个分区就输出多少个结果文件</li>
+</ol>
+<p>如何修改RDD分区:</p>
+<ol>
+<li>SparkConf对象设置conf.set(“spark.default.parallelism”，”1”)</li>
+<li>创建RDD的时候,sc.parallelize方法传入numSlices参数为1</li>
+</ol>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>在函数嵌套的前提下，内部函数使用了外部函数的变量,并且外部函数返回了内部函数，我们把这个使用外部函数变量的内部函数称为闭包。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 简单闭包</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">def outer(logo):</span></span><br><span class="line"><span class="string">    def inner(msg):</span></span><br><span class="line"><span class="string">    print(f&quot;&lt;&#123;logo&#125;&gt;&#123;msg&#125;&lt;&#123;logo&#125;&gt;&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    return inner</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fn1 = outer(&quot;黑马程序员&quot;)</span></span><br><span class="line"><span class="string">fn1(&quot;大家好&quot;)</span></span><br><span class="line"><span class="string">fn1(&quot;大家好&quot;)</span></span><br><span class="line"><span class="string">fn2 = outer(&quot;传智教育&quot;)</span></span><br><span class="line"><span class="string">fn2(&quot;大家好&quot;)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 使用nonlocal关键字修改外部函数的值</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    def outer(num1):</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        def inner(num2):</span></span><br><span class="line"><span class="string">            nonlocal num1</span></span><br><span class="line"><span class="string">            num1 += num2</span></span><br><span class="line"><span class="string">            print(num1)</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">        return inner</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">fn = outer(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 使用闭包实现ATM小案例</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">account_create</span>(<span class="params">initial_amount=<span class="number">0</span></span>):</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">atm</span>(<span class="params">num,deposit=<span class="literal">True</span></span>):</span><br><span class="line">        <span class="keyword">nonlocal</span> initial_amount</span><br><span class="line">        <span class="keyword">if</span> deposit:</span><br><span class="line">            initial_amount += num</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;存款: +<span class="subst">&#123;num&#125;</span>, 账户余额: <span class="subst">&#123;initial_amount&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            initial_amount -= num</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;取款:-<span class="subst">&#123;num&#125;</span>, 账户余额: <span class="subst">&#123;initial_amount&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> atm</span><br><span class="line">        </span><br><span class="line">atm = account_create()</span><br><span class="line"></span><br><span class="line">atm(<span class="number">100</span>)</span><br><span class="line">atm(<span class="number">200</span>)</span><br></pre></td></tr></table></figure>
+
+<p>闭包的好处和缺点:<br>优点: 不定义全局变量,也可以让函数持续访问和修改一个外部变量<br>优点:闭包函数引用的外部变量,是外层函数的内部变量。作用域封闭难以被误操作修改<br>缺点:额外的内存占用<br>nonlocal关键字的作用:<br>在闭包函数(内部函数中)想要修改外部函数的变量值<br>需要用nonlocal声明这个外部变量</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 简单闭包</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">def outer(logo):</span></span><br><span class="line"><span class="string">    def inner(msg):</span></span><br><span class="line"><span class="string">    print(f&quot;&lt;&#123;logo&#125;&gt;&#123;msg&#125;&lt;&#123;logo&#125;&gt;&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    return inner</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fn1 = outer(&quot;黑马程序员&quot;)</span></span><br><span class="line"><span class="string">fn1(&quot;大家好&quot;)</span></span><br><span class="line"><span class="string">fn1(&quot;大家好&quot;)</span></span><br><span class="line"><span class="string">fn2 = outer(&quot;传智教育&quot;)</span></span><br><span class="line"><span class="string">fn2(&quot;大家好&quot;)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 使用nonlocal关键字修改外部函数的值</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    def outer(num1):</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        def inner(num2):</span></span><br><span class="line"><span class="string">            nonlocal num1</span></span><br><span class="line"><span class="string">            num1 += num2</span></span><br><span class="line"><span class="string">            print(num1)</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">        return inner</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">fn = outer(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">fn(10)</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 使用闭包实现ATM小案例</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">account_create</span>(<span class="params">initial_amount=<span class="number">0</span></span>):</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">atm</span>(<span class="params">num,deposit=<span class="literal">True</span></span>):</span><br><span class="line">        <span class="keyword">nonlocal</span> initial_amount</span><br><span class="line">        <span class="keyword">if</span> deposit:</span><br><span class="line">            initial_amount += num</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;存款: +<span class="subst">&#123;num&#125;</span>, 账户余额: <span class="subst">&#123;initial_amount&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            initial_amount -= num</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;取款:-<span class="subst">&#123;num&#125;</span>, 账户余额: <span class="subst">&#123;initial_amount&#125;</span>&quot;</span>)</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> atm</span><br><span class="line">        </span><br><span class="line">atm = account_create()</span><br><span class="line"></span><br><span class="line">atm(<span class="number">100</span>)</span><br><span class="line">atm(<span class="number">200</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>装饰器其实也是一种闭包，其功能就是在不破坏目标函数原有的代码和功能的前提下,为目标函数增加新功能。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"># 装饰器的一般写法(闭包)</span></span><br><span class="line"><span class="string">def outer(func):</span></span><br><span class="line"><span class="string">    def inner():</span></span><br><span class="line"><span class="string">        print(&quot;我睡觉了&quot;)</span></span><br><span class="line"><span class="string">        func()</span></span><br><span class="line"><span class="string">        print(&quot;我起床了&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    return inner</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def sleep():</span></span><br><span class="line"><span class="string">    import random</span></span><br><span class="line"><span class="string">    import time</span></span><br><span class="line"><span class="string">    print(&quot;睡眠中......&quot;)</span></span><br><span class="line"><span class="string">    time.sleep(random.randint(1, 5))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fn = outer(sleep)</span></span><br><span class="line"><span class="string">fn()</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 饰器的快捷写法(语法糖)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我睡觉了&quot;</span>)</span><br><span class="line">        func()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我起床了&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@outer</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sleep</span>():</span><br><span class="line">    <span class="keyword">import</span> random</span><br><span class="line">    <span class="keyword">import</span> time</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;睡眠中......&quot;</span>)</span><br><span class="line">    time.sleep(random.randint(<span class="number">1</span>,<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line">sleep()</span><br></pre></td></tr></table></figure>
+<h2 id="设计模式-单例模式"><a href="#设计模式-单例模式" class="headerlink" title="设计模式-单例模式"></a>设计模式-单例模式</h2><p>单例模式(Singleton Pattern)是一种常用的软件设计模式,该模式的主要目的是确保某一个类只有一个实例存在。<br>在整个系统中，某个类只能出现一个实例时，单例对象就能派上用场。<br>定义:保证一个类只有一个实例,并提供一个访问它的全局访问点<br>适用场景:当一个类只能有一个实例，而客户可以从一个众所周知的访问点访问它时。</p>
+<ol>
+<li>什么是设计模式:设计模式就是一种编程套路,使用特定的套路得到特定的效果</li>
+<li>什么是单例设计模式单例模式就是对一个类，只获取其唯一的类实例对象,持续复用它,节省内存,节省创建对象的开销<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 演示非单例模式的效果</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">StrTools</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">s1 = StrTools()</span><br><span class="line">s2 = StrTools()</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(s1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(s2))</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="设计模式-工厂模式"><a href="#设计模式-工厂模式" class="headerlink" title="设计模式-工厂模式"></a>设计模式-工厂模式</h2><p>当需要大量创建一个类的实例的时候，可以使用工厂模式即，从原生的使用类的构造去创建对象的形式迁移到，基于工厂提供的方法去创建对象的形式<br>使用工厂类的get_person()方法去创建具体的类对象</p>
+<ol>
+<li>大批量创建对象的时候有统一的入口，易于代码维护</li>
+<li>当发生修改，仅修改工厂类的创建方法即可</li>
+<li>符合现实世界的模式即由工厂来制作产品(对象)</li>
+</ol>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Worker</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span>(<span class="title class_ inherited__">Person</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PersonFactory</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_person</span>(<span class="params">self, p_type</span>):</span><br><span class="line">        <span class="keyword">if</span> p_type == <span class="string">&#x27;w&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span> Worker()</span><br><span class="line">        <span class="keyword">elif</span> p_type == <span class="string">&#x27;s&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span> Student()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> Teacher()</span><br><span class="line"></span><br><span class="line">pf = PersonFactory()</span><br><span class="line">worker = pf.get_person(<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">stu = pf.get_person(<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line">teacher = pf.get_person(<span class="string">&#x27;t&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="多线程并行执行概念"><a href="#多线程并行执行概念" class="headerlink" title="多线程并行执行概念"></a>多线程并行执行概念</h2><p>现代操作系统比如MacOS X,UNIX,Linux,Windows等,都是支持”多任务”的操作系统.<br><strong>进程</strong>:就是一个程序，运行在系统之上,那么便称之这个程序为一个运行进程,并分配进程ID方便系统管理。<br><strong>线程</strong>:线程是归属于进程的一个进程可以开启多个线程,执行不同的工作，是进程的实际工作最小单位。</p>
+<p><strong>进程</strong>就好比一家公司，是操作系统对程序进行运行管理的单位<br><strong>线程</strong>就好比公司的员工，进程可以有多个线程(员工),是进程实际的工作者</p>
+<p><strong>注意点:</strong><br>进程之间是内存隔离的，即不同的进程拥有各自的内存空间。这就类似于不同的公司拥有不同的办公场所.<br>线程之间是内存共享的,线程是属于进程的，一个进程内的多个线程之间是共享这个进程所拥有的内存空间的这就好比，公司员工之间是共享公司的办公场所。</p>
+<p>多个进程同时在运行，即不同的程序同时运行,称之为:<strong>多任务并行执行</strong><br>一个进程内的多个线程同时在运行,称之为:<strong>多线程并行执行</strong></p>
+<h2 id="多线程编程"><a href="#多线程编程" class="headerlink" title="多线程编程"></a>多线程编程</h2><p>threading模块的使用:<br>thread_obj &#x3D; threading.Thread(target&#x3D;func)创建线程对象<br>thread_obj.start()启动线程执行</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sing</span>(<span class="params">msg</span>):</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">dance</span>(<span class="params">msg</span>):</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="built_in">print</span>(msg)</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 创建一个唱歌的线程</span></span><br><span class="line">    sing_thread = threading.Thread(target=sing,args=(<span class="string">&quot;我要唱歌 哈哈哈&quot;</span>, ))</span><br><span class="line">    <span class="comment"># 创建一个跳舞的线程</span></span><br><span class="line">    dance_thread = threading.Thread(target=dance, kwargs=&#123;<span class="string">&quot;msg&quot;</span>:<span class="string">&quot;我在跳舞哦 啦啦啦&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 让线程去干活吧</span></span><br><span class="line">sing_thread.start()</span><br><span class="line">dance_thread.start()</span><br></pre></td></tr></table></figure>
+<h2 id="Socket服务端开发"><a href="#Socket服务端开发" class="headerlink" title="Socket服务端开发"></a>Socket服务端开发</h2><p>socket(简称 套接字)是进程之间通信一个工具,好比现实生活中的插座，所有的家用电器要想工作都是基于插座进行进程之间想要进行网络通信需要socket。<br>Socket负责进程之间的网络数据传输，好比数据的搬运工。</p>
+<p>客户端和服务端<br>2个进程之间通过Socket进行相互通讯，就必须有服务端和客户端<br>Socket服务端:等待其它进程的连接、可接受发来的消息、可以回复消息Socket客户端:主动连接服务端、可以发送消息、可以接收回复</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="comment"># 创建Socket对象</span></span><br><span class="line">socket_server = socket.socket()</span><br><span class="line"><span class="comment"># 绑定ip地址和端口</span></span><br><span class="line">socket_server.bind((<span class="string">&quot;localhost&quot;</span>, <span class="number">8888</span>))</span><br><span class="line"><span class="comment"># 监听端口</span></span><br><span class="line">socket_server.listen(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># Listen方法内接受一个整数传参数，表示接受的链接数量</span></span><br><span class="line"><span class="comment"># 等待客户端链接</span></span><br><span class="line"><span class="comment"># result: tuple = socket_server.accept()</span></span><br><span class="line"><span class="comment"># conn = result[0]    # 客户端和服务端的链接对象</span></span><br><span class="line"><span class="comment"># address = result[1] # 客户端的地址信息</span></span><br><span class="line">conn, address = socket_server.accept()</span><br><span class="line"><span class="comment"># accept方法返回的是二元元组(链接对象，客户端地址信息)</span></span><br><span class="line"><span class="comment">#可以通过 变量1，变量2 = socket_server.accept()的形式，直接接受二元元组内的两个元素</span></span><br><span class="line"><span class="comment"># accept()方法，是阻塞的方法，等待客户端的链接，如果没有接，就卡在这一行不向下执行了</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;接收到了客户端的链接，客户端的信息是: <span class="subst">&#123;address&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 接受客户端信息，要使用客户端和服务端的本次链接对象，而非socket_server对象</span></span><br><span class="line">    data: <span class="built_in">str</span> = conn.recv(<span class="number">124</span>).decode(<span class="string">&quot;UTF-8&quot;</span>)</span><br><span class="line">    <span class="comment"># recv接受的参数是缓冲区大小，一般给1024即可</span></span><br><span class="line">    <span class="comment"># reCv方法的返回值是一个字节数组也就是butes对象，不是字符，可以通过decode方法通过UTF-8编码，将字节数组转换为字符串对象</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;客户端发来的消息是，<span class="subst">&#123;data&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="comment"># 发送回复消息</span></span><br><span class="line">    msg = <span class="built_in">input</span>(<span class="string">&quot;请输入你要和客户端回复的消息:&quot;</span>).encode(<span class="string">&quot;UTF-8&quot;</span>) <span class="comment"># encode可以将字符用编码为字节数组对象</span></span><br><span class="line">    <span class="keyword">if</span> msg == <span class="string">&#x27;exit&#x27;</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    conn.send(msg)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 关闭链接</span></span><br><span class="line">conn.close()</span><br><span class="line">socket_server.close()</span><br></pre></td></tr></table></figure>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1aof_H-PLZWSfoSN1xPnCww?pwd=2155">https://pan.baidu.com/s/1aof_H-PLZWSfoSN1xPnCww?pwd=2155</a><br>提取码：2155</p>
+<h2 id="Socket客户端开发"><a href="#Socket客户端开发" class="headerlink" title="Socket客户端开发"></a>Socket客户端开发</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="comment"># 创建socket对象</span></span><br><span class="line">socket_client = socket.socket()</span><br><span class="line"><span class="comment"># 连接到服务端</span></span><br><span class="line">socket_client.connect((<span class="string">&quot;localhost&quot;</span>, <span class="number">8888</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="comment"># 发送消息</span></span><br><span class="line">    msg = <span class="built_in">input</span>(<span class="string">&quot;请输入要给服务端发送的消息：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> msg == <span class="string">&#x27;exit&#x27;</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    socket_client.send(<span class="string">&quot;你好呀&quot;</span>.encode(<span class="string">&quot;UTF-8&quot;</span>))</span><br><span class="line">    <span class="comment"># 接收返回消息</span></span><br><span class="line">    recv_data = socket_client.recv(<span class="number">1024</span>) <span class="comment"># 1024是缓冲区的大小，一般1024即可。同样recv方法是阻塞的</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;服务端回复的消息是: <span class="subst">&#123;recv_data.decode(<span class="string">&#x27;UTF-8&#x27;</span>)&#125;</span>&quot;</span>) </span><br><span class="line"><span class="comment"># 关闭链接</span></span><br><span class="line">socket_client.close()</span><br></pre></td></tr></table></figure>
+<h2 id="正则表达式-基础方法"><a href="#正则表达式-基础方法" class="headerlink" title="正则表达式-基础方法"></a>正则表达式-基础方法</h2><p>正则表达式,又称<strong>规则表达式</strong>(Regular Expression),是使用单个字符串来描述、匹配某个句法规则的字符串,常被用来检索、替换那些符合某个模式(规则)的文本。<br>简单来说,正则表达式就是使用:字符串定义规则，并通过规则去验证字符串是否匹配。</p>
+<pre><code>比如，验证一个字符串是否是符合条件的电子邮箱地址，只需要配置好正则规则，即可匹配任意邮箱。
+比如通过正则规则:(^[\w-]+(\.[\w-]*@[w-]+[\.w-]+)+$)
+即可匹配一个字符串是否是标准邮箱格式
+</code></pre>
+<p>Python正则表达式使用re模块,并基于re模块中三个基础方法来做正则匹配。<br>分别是:<strong>match、search、findall</strong> 三个基础方法<br><strong>re.match</strong>(匹配规则，被匹配字符串)<br>从被匹配字符串开头进行匹配，匹配成功返回匹配对象(包含匹配的信息)，匹配不成功返回<strong>None</strong></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">s = <span class="string">&quot;python itheima&quot;</span></span><br><span class="line"><span class="comment"># match 从头匹配</span></span><br><span class="line">result = re.<span class="keyword">match</span>(<span class="string">&quot;python&quot;</span>, s)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="built_in">print</span>(result.span())</span><br><span class="line"><span class="built_in">print</span>(result.group())</span><br></pre></td></tr></table></figure>
+<p><strong>search</strong>(匹配规则，被匹配字符串)<br>搜索整个字符串,找出匹配的。从前向后,找到第一个后,就停止,不会继续向后<br>整个字符串都找不到，返回<strong>None</strong></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">s = <span class="string">&quot;1python itheima python python&quot;</span></span><br><span class="line"></span><br><span class="line">result = re.<span class="keyword">match</span>(<span class="string">&quot;python&quot;</span>, s)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="comment"># print(result.span())</span></span><br><span class="line"><span class="comment"># print(result.group())</span></span><br><span class="line"><span class="comment"># search 搜索匹配</span></span><br><span class="line">result = re.search(<span class="string">&quot;python2&quot;</span>, s)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+<p><strong>findall</strong>(匹配规则，被匹配字符串)匹配整个字符串,找出全部匹配项<br>找不到返回<strong>空list:[ ]</strong></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">s = <span class="string">&quot;1python itheima python python&quot;</span></span><br><span class="line"></span><br><span class="line">result = re.<span class="keyword">match</span>(<span class="string">&quot;python&quot;</span>, s)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="comment"># print(result.span())</span></span><br><span class="line"><span class="comment"># print(result.group())</span></span><br><span class="line"><span class="comment"># search 搜索匹配</span></span><br><span class="line">result = re.search(<span class="string">&quot;python2&quot;</span>, s)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"><span class="comment"># findall 搜索全部匹配</span></span><br><span class="line">result = re.findall(<span class="string">&quot;python&quot;</span>, s)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+<h2 id="正则表达式-元字符匹配"><a href="#正则表达式-元字符匹配" class="headerlink" title="正则表达式-元字符匹配"></a>正则表达式-元字符匹配</h2><p><strong>单字符匹配:</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.</td>
+<td>匹配任意1个字符(除了\n)，.匹配点本身</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>匹配[]中列举的字符</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字，即0-9</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配非数字</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配空白，即空格、tab键</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配非空白</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配单词字符，即a-z、A-Z、0-9、_</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配非单词字符</td>
+</tr>
+</tbody></table>
+<p>示例:<br>字符串s &#x3D; “itheima1 @@python2 !!666 ##itcast3”<br>找出全部数字:re.findall(r’\d’,s)<br>字符串的r标记,表示当前字符串是原始字符串,即内部的转义字符无效而是普通字符<br>找出特殊字符:找出全部英文字母</p>
+<pre><code>re.findall(r&#39;[a-zA-Z]&#39;, s)
+[]内可以写:[a-zA-Z0-9]这三种范围组合或指定单个字符如[aceDFG135]
+</code></pre>
+<p><strong>数量匹配：</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>匹配前一个规则的字符出现0至无数次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前一个规则的字符出现1至无数次</td>
+</tr>
+<tr>
+<td>？</td>
+<td>匹配前一个规则的字符出现0次或1次</td>
+</tr>
+<tr>
+<td>{m}</td>
+<td>匹配前一个规则的字符出现m次</td>
+</tr>
+<tr>
+<td>{m，}</td>
+<td>匹配前一个规则的字符出现最少m次</td>
+</tr>
+<tr>
+<td>{m，n}</td>
+<td>匹配前一个规则的字符出现m到n次</td>
+</tr>
+</tbody></table>
+<p><strong>边界匹配:</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>^</td>
+<td>匹配字符串开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串结尾</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配一个单词的边界</td>
+</tr>
+<tr>
+<td>\B</td>
+<td>匹配非单词边界</td>
+</tr>
+</tbody></table>
+<p><strong>分组匹配:</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>( )</td>
+<td>将括号中字符作为一个分组</td>
+</tr>
+</tbody></table>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="comment"># s = &quot;itheima1 @@python2 !!666 ##itccast3&quot;</span></span><br><span class="line"><span class="comment"># result = re.findall(r&#x27;[b-eF-Z3-9]&#x27;，s) # 字符前面带上的标记，表示字符串中转义字符无效</span></span><br><span class="line"><span class="comment"># print(result)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配账号，只能由字母和数字组成，长度限制6到10位</span></span><br><span class="line"><span class="comment"># r= &#x27;^[0-9a-zA-Z]&#123;6,10&#125;$&#x27;</span></span><br><span class="line"><span class="comment"># s= &#x27;123456_&#x27;</span></span><br><span class="line"><span class="comment"># print(re.findall(r，s))</span></span><br><span class="line"><span class="comment"># 匹配QQ号，要求纯数字，长度5-11，第一位不为0</span></span><br><span class="line"><span class="comment"># r= &#x27;^[1-9][0-9]&#123;4,10&#125;&#125;$&#x27;</span></span><br><span class="line"><span class="comment"># s = &#x27;123453678&#x27;</span></span><br><span class="line"><span class="comment"># print(re.findall(r，s))</span></span><br><span class="line"><span class="comment"># 匹配邮箱地址，只允许qq、163、gmail这三种邮箱地址</span></span><br><span class="line"><span class="comment"># abc.efg.daw@qq.com.cn.eu.qq.aa.cc</span></span><br><span class="line"><span class="comment"># abc@qq.com</span></span><br><span class="line"><span class="comment"># &#123;内容&#125;.&#123;内容).&#123;内容).&#123;内容&#125;.&#123;内容&#125;@&#123;内容&#125;.&#123;内容&#125;.&#123;内容&#125;</span></span><br><span class="line">r = <span class="string">r&#x27;^[\w-]+(\.[\w-]+)*@(qq|163|gmail)(\.[\w-]+)+$&#x27;</span></span><br><span class="line">s = <span class="string">&#x27;a.b.c.d.e.f.g@qq.com.a.z.c.d.e&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(re.<span class="keyword">match</span>(r,s))</span><br></pre></td></tr></table></figure>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><ol>
+<li>递归在编程中是一种非常重要的算法<br>递归:即方法(函数)自己调用自己的一种特殊编程写法,函数调用自己，即称之为递归调用</li>
+<li>递归需要注意什么?<br>注意退出的条件，否则容易变成无限递归<br>注意返回值的传递，确保从最内层，层层传递到最外层</li>
+<li>OS模块的3个方法<br>os.listdir,列出指定目录下的内容<br>os.path.isdir,判断给定路径是否是文件夹，是返回True,否返回False<br>os.path.exists,判断给定路径是否存在，存在返回True,否则返回False</li>
+</ol>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Alan</div><div class="post-copyright__author_desc">No one can deny you</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.alandodo.cn/2023/03/07/2023-3-7-Python%E5%AD%A6%E4%B9%A05/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.alandodo.cn/2023/03/07/2023-3-7-Python%E5%AD%A6%E4%B9%A05/')">Python基础学习笔记5</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.alandodo.cn/2023/03/07/2023-3-7-Python%E5%AD%A6%E4%B9%A05/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Python基础学习笔记5&amp;url=https://www.alandodo.cn/2023/03/07/2023-3-7-Python%E5%AD%A6%E4%B9%A05/&amp;pic=https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m103.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.alandodo.cn" target="_blank">AlanDoDO🐼</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Python/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Python<span class="tagsPageCount">8</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/05/2023-3-5-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m97.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">微信小程序开发</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/08/2023-5-22-%E5%B5%8C%E5%85%A5%E5%BC%8F%E6%A1%8C%E9%9D%A2%E5%B1%8F%E5%B9%95/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/41.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">嵌入式单片机教程-桌面小屏幕实战教学</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/12/16/2022-12-16-python%E5%AD%A6%E4%B9%A01/" title="Python基础学习笔记1"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a11.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-12-16</div><div class="title">Python基础学习笔记1</div></div></a></div><div><a href="/2023/01/18/2023-1-18-python%E5%AD%A6%E4%B9%A03/" title="Python基础学习笔记3"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a22.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-01-18</div><div class="title">Python基础学习笔记3</div></div></a></div><div><a href="/2023/01/05/2023-1-5-python%E5%AD%A6%E4%B9%A02/" title="Python基础学习笔记2"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a13.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-01-05</div><div class="title">Python基础学习笔记2</div></div></a></div><div><a href="/2023/02/15/2023-2-15-Python%E5%AD%A6%E4%B9%A04/" title="Python基础学习笔记4 + SQL基础"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a36.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-02-15</div><div class="title">Python基础学习笔记4 + SQL基础</div></div></a></div><div><a href="/2023/03/14/2023-3-14-Python%E5%AE%9E%E6%88%98/" title="Python经典实战练习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/m164.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-03-14</div><div class="title">Python经典实战练习</div></div></a></div><div><a href="/2023/06/14/2023-6-14-python%E5%A4%8D%E4%B9%A0/" title="Python复习"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x5jpg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-06-14</div><div class="title">Python复习</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-top" title="点击展开"><div class="card-info-avatar"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div></div></div><div class="author-info__description">描述</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Alan</h1><div class="author-info__desc">No one can deny you</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/AlanDoDo/AlanDoDo.github.io" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PySpark%E5%AE%9E%E6%88%98-%E5%89%8D%E8%A8%80%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">PySpark实战-前言介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">基础准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%85%A5"><span class="toc-number">3.</span> <span class="toc-text">数据输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-map%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">数据计算-map方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-flatMap%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">数据计算-flatMap方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-reduceByKey%E6%96%B9%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">数据计算-reduceByKey方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-%E5%8D%95%E8%AF%8D%E7%BB%9F%E8%AE%A1%E6%A1%88%E4%BE%8B"><span class="toc-number">7.</span> <span class="toc-text">数据计算-单词统计案例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-filter%E6%96%B9%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text">数据计算-filter方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-distinct%E6%96%B9%E6%B3%95"><span class="toc-number">9.</span> <span class="toc-text">数据计算-distinct方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97-sortBy%E6%96%B9%E6%B3%95"><span class="toc-number">10.</span> <span class="toc-text">数据计算-sortBy方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA-%E8%BE%93%E5%87%BA%E4%B8%BAPython%E5%AF%B9%E8%B1%A1"><span class="toc-number">11.</span> <span class="toc-text">数据输出-输出为Python对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%BE%93%E5%87%BA-%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6%E4%B8%AD"><span class="toc-number">12.</span> <span class="toc-text">数据输出-输出到文件中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">13.</span> <span class="toc-text">闭包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-number">14.</span> <span class="toc-text">装饰器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">15.</span> <span class="toc-text">设计模式-单例模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-number">16.</span> <span class="toc-text">设计模式-工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%B9%B6%E8%A1%8C%E6%89%A7%E8%A1%8C%E6%A6%82%E5%BF%B5"><span class="toc-number">17.</span> <span class="toc-text">多线程并行执行概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B"><span class="toc-number">18.</span> <span class="toc-text">多线程编程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Socket%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91"><span class="toc-number">19.</span> <span class="toc-text">Socket服务端开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Socket%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BC%80%E5%8F%91"><span class="toc-number">20.</span> <span class="toc-text">Socket客户端开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%9F%BA%E7%A1%80%E6%96%B9%E6%B3%95"><span class="toc-number">21.</span> <span class="toc-text">正则表达式-基础方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E5%85%83%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D"><span class="toc-number">22.</span> <span class="toc-text">正则表达式-元字符匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-number">23.</span> <span class="toc-text">递归</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/28/2023-7-28-vue3/" title="Vue3"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue3"/></a><div class="content"><a class="title" href="/2023/07/28/2023-7-28-vue3/" title="Vue3">Vue3</a><time datetime="2023-07-28T11:21:00.000Z" title="发表于 2023-07-28 19:21:00">2023-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/25/2023-7-25-Vue2/" title="Vue2"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x34.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue2"/></a><div class="content"><a class="title" href="/2023/07/25/2023-7-25-Vue2/" title="Vue2">Vue2</a><time datetime="2023-07-25T11:21:00.000Z" title="发表于 2023-07-25 19:21:00">2023-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/20/2023-7-20-%20Architecture/" title="Architecture"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x44.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Architecture"/></a><div class="content"><a class="title" href="/2023/07/20/2023-7-20-%20Architecture/" title="Architecture">Architecture</a><time datetime="2023-07-20T03:05:00.000Z" title="发表于 2023-07-20 11:05:00">2023-07-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/19/2023-7-19-Webpack/" title="Webpack"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x48.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Webpack"/></a><div class="content"><a class="title" href="/2023/07/19/2023-7-19-Webpack/" title="Webpack">Webpack</a><time datetime="2023-07-19T00:50:00.000Z" title="发表于 2023-07-19 08:50:00">2023-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/18/2023-7-18-Vue2/" title="Vue2"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x34.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue2"/></a><div class="content"><a class="title" href="/2023/07/18/2023-7-18-Vue2/" title="Vue2">Vue2</a><time datetime="2023-07-18T11:28:00.000Z" title="发表于 2023-07-18 19:28:00">2023-07-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2021 - 2023 By <a class="footer-bar-link" href="/" title="Alan" target="_blank">Alan</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/AlanDoDo/AlanDoDo.github.io" title="Hexo">Hexo</a></div></div></div></footer></div></div></div><div id="sidebar"><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">37</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">18</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-127px;"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.14/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2021 By 安知鱼 V1.5.3",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Alan 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "visitor@anheyu.com";</script><script>//动态标题
+let leaveTitle = 'w(ﾟДﾟ)w 不要走！再看看嘛！';
+let backTitle = '♪(^∇^*)欢迎肥来！';
+let OriginTitile = document.title
+let titleTime
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = leaveTitle
+    clearTimeout(titleTime)
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = backTitle + OriginTitile
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile
+    }, 2000)
+  }
+})</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script>// 初始化函数
+let rm = {};
+
+//禁止图片与超链接拖拽
+let aElements = document.getElementsByTagName("a");
+for (let i = 0; i < aElements.length; i++) {
+  aElements[i].setAttribute("draggable", "false");
+  let imgElements = aElements[i].getElementsByTagName("img");
+  for (let j = 0; j < imgElements.length; j++) {
+    imgElements[j].setAttribute("draggable", "false");
+  }
+}
+
+// 显示菜单
+rm.showRightMenu = function (isTrue, x = 0, y = 0) {
+  console.info(x, y)
+  let rightMenu = document.getElementById("rightMenu");
+  rightMenu.style.top = x + "px";
+  rightMenu.style.left = y + "px";
+  if (isTrue) {
+    rightMenu.style.display = "block";
+    stopMaskScroll();
+  } else {
+    rightMenu.style.display = "none";
+  }
+};
+
+// 隐藏菜单
+rm.hideRightMenu = function () {
+  rm.showRightMenu(false);
+  let rightMenuMask = document.querySelector("#rightmenu-mask");
+  rightMenuMask.style.display = "none";
+};
+
+// 尺寸
+let rmWidth = document.getElementById("rightMenu").offsetWidth;
+let rmHeight = document.getElementById("rightMenu").offsetHeight;
+
+// 重新定义尺寸
+rm.reloadrmSize = function () {
+  rightMenu.style.visibility = "hidden";
+  rightMenu.style.display = "block";
+  // 获取宽度和高度
+  rmWidth = document.getElementById("rightMenu").offsetWidth;
+  rmHeight = document.getElementById("rightMenu").offsetHeight;
+  rightMenu.style.visibility = "visible";
+};
+
+// 获取点击的href
+let domhref = "";
+let domImgSrc = "";
+let globalEvent = null;
+
+var oncontextmenuFunction = function (event) {
+  if (document.body.clientWidth > 768) {
+    let pageX = event.clientX + 10; //加10是为了防止显示时鼠标遮在菜单上
+    let pageY = event.clientY;
+
+    //其他额外菜单
+    const $rightMenuOther = document.querySelector(".rightMenuOther");
+    const $rightMenuPlugin = document.querySelector(".rightMenuPlugin");
+    const $rightMenuCopyText = document.querySelector("#menu-copytext");
+    const $rightMenuPasteText = document.querySelector("#menu-pastetext");
+    const $rightMenuCommentText = document.querySelector("#menu-commenttext");
+    const $rightMenuNewWindow = document.querySelector("#menu-newwindow");
+    const $rightMenuNewWindowImg = document.querySelector("#menu-newwindowimg");
+    const $rightMenuCopyLink = document.querySelector("#menu-copylink");
+    const $rightMenuCopyImg = document.querySelector("#menu-copyimg");
+    const $rightMenuDownloadImg = document.querySelector("#menu-downloadimg");
+    const $rightMenuSearch = document.querySelector("#menu-search");
+    const $rightMenuSearchBaidu = document.querySelector("#menu-searchBaidu");
+    const $rightMenuMusicToggle = document.querySelector("#menu-music-toggle");
+    const $rightMenuMusicBack = document.querySelector("#menu-music-back");
+    const $rightMenuMusicForward = document.querySelector("#menu-music-forward");
+    const $rightMenuMusicPlaylist = document.querySelector("#menu-music-playlist");
+    const $rightMenuMusicCopyMusicName = document.querySelector("#menu-music-copyMusicName");
+
+    let href = event.target.href;
+    let imgsrc = event.target.currentSrc;
+
+    // 判断模式 扩展模式为有事件
+    let pluginMode = false;
+    $rightMenuOther.style.display = "block";
+    globalEvent = event;
+
+    // 检查是否需要复制 是否有选中文本
+    if (selectTextNow && window.getSelection()) {
+      pluginMode = true;
+      $rightMenuCopyText.style.display = "block";
+      $rightMenuCommentText.style.display = "block";
+      $rightMenuSearch.style.display = "block";
+      $rightMenuSearchBaidu.style.display = "block";
+    } else {
+      $rightMenuCopyText.style.display = "none";
+      $rightMenuCommentText.style.display = "none";
+      $rightMenuSearchBaidu.style.display = "none";
+      $rightMenuSearch.style.display = "none";
+    }
+
+    //检查是否右键点击了链接a标签
+    if (href) {
+      pluginMode = true;
+      $rightMenuNewWindow.style.display = "block";
+      $rightMenuCopyLink.style.display = "block";
+      domhref = href;
+    } else {
+      $rightMenuNewWindow.style.display = "none";
+      $rightMenuCopyLink.style.display = "none";
+    }
+
+    //检查是否需要复制图片
+    if (imgsrc) {
+      pluginMode = true;
+      $rightMenuCopyImg.style.display = "block";
+      $rightMenuDownloadImg.style.display = "block";
+      $rightMenuNewWindowImg.style.display = "block";
+      document.getElementById("rightMenu").style.width="12rem"
+      domImgSrc = imgsrc;
+    } else {
+      $rightMenuCopyImg.style.display = "none";
+      $rightMenuDownloadImg.style.display = "none";
+      $rightMenuNewWindowImg.style.display = "none";
+    }
+
+    // 判断是否为输入框
+    if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {
+      pluginMode = true;
+      $rightMenuPasteText.style.display = "block";
+    } else {
+      $rightMenuPasteText.style.display = "none";
+    }
+    const navMusicEl = document.querySelector("#nav-music");
+    //判断是否是音乐
+    if (navMusicEl && navMusicEl.contains(event.target)) {
+      pluginMode = true;
+      $rightMenuMusicToggle.style.display = "block";
+      $rightMenuMusicBack.style.display = "block";
+      $rightMenuMusicForward.style.display = "block";
+      $rightMenuMusicPlaylist.style.display = "block";
+      $rightMenuMusicCopyMusicName.style.display = "block";
+    } else {
+      $rightMenuMusicToggle.style.display = "none";
+      $rightMenuMusicBack.style.display = "none";
+      $rightMenuMusicForward.style.display = "none";
+      $rightMenuMusicPlaylist.style.display = "none";
+      $rightMenuMusicCopyMusicName.style.display = "none";
+    }
+
+    // 如果不是扩展模式则隐藏扩展模块
+    if (pluginMode) {
+      $rightMenuOther.style.display = "none";
+      $rightMenuPlugin.style.display = "block";
+    } else {
+      $rightMenuPlugin.style.display = "none";
+    }
+
+    rm.reloadrmSize();
+
+    // 鼠标默认显示在鼠标右下方，当鼠标靠右或靠下时，将菜单显示在鼠标左方\上方
+    if (pageX + rmWidth > window.innerWidth) {
+      pageX -= rmWidth + 10;
+    }
+    if (pageY + rmHeight > window.innerHeight) {
+      pageY -= pageY + rmHeight - window.innerHeight;
+    }
+
+    rm.showRightMenu(true, pageY, pageX);
+    document.getElementById("rightmenu-mask").style.display = "flex";
+    return false;
+  }
+};
+
+// 监听右键初始化
+window.oncontextmenu = oncontextmenuFunction
+
+// 下载图片状态
+rm.downloadimging = false;
+
+// 复制图片到剪贴板
+rm.writeClipImg = function (imgsrc) {
+  console.log("按下复制");
+  rm.hideRightMenu();
+  anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+  if (rm.downloadimging == false) {
+    rm.downloadimging = true;
+    setTimeout(function () {
+      copyImage(imgsrc);
+      anzhiyu.snackbarShow("复制成功！图片已添加盲水印，请遵守版权协议");
+      rm.downloadimging = false;
+    }, "10000");
+  }
+};
+
+function imageToBlob(imageURL) {
+  const img = new Image();
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  img.crossOrigin = "";
+  img.src = imageURL;
+  return new Promise(resolve => {
+    img.onload = function () {
+      c.width = this.naturalWidth;
+      c.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      c.toBlob(
+        blob => {
+          // here the image is a blob
+          resolve(blob);
+        },
+        "image/png",
+        0.75
+      );
+    };
+  });
+}
+
+async function copyImage(imageURL) {
+  const blob = await imageToBlob(imageURL);
+  const item = new ClipboardItem({ "image/png": blob });
+  navigator.clipboard.write([item]);
+}
+
+rm.copyUrl = function (id) {
+  const input = document.createElement("input"); // Create a new <input> element
+  input.id = "copyVal"; // Set the id of the new element to "copyVal"
+  document.body.appendChild(input); // Append the new element to the end of the <body> element
+  
+  const text = id;
+  input.value = text;
+  input.select();
+  input.setSelectionRange(0, input.value.length);
+  document.execCommand("copy");
+  
+  input.remove(); // Remove the <input> element from the DOM
+};
+
+function stopMaskScroll() {
+  if (document.getElementById("rightmenu-mask")) {
+    let xscroll = document.getElementById("rightmenu-mask");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      { passive: true }
+    );
+  }
+  if (document.getElementById("rightMenu")) {
+    let xscroll = document.getElementById("rightMenu");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      { passive: true }
+    );
+  }
+}
+
+rm.rightmenuCopyText = function (txt) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt);
+  }
+  rm.hideRightMenu();
+};
+
+rm.copyPageUrl = function (url) {
+  if (!url) {
+    url = window.location.href;
+  }
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+rm.sharePage = function () {
+  var content = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+// 复制当前选中文本
+var selectTextNow = "";
+document.onmouseup = document.ondblclick = selceText;
+
+function selceText() {
+  var txt;
+  if (document.selection) {
+    txt = document.selection.createRange().text;
+  } else {
+    txt = window.getSelection().toString();
+  }
+  selectTextNow = txt !== "" ? txt : "";
+}
+
+// 读取剪切板
+rm.readClipboard = function () {
+  if (navigator.clipboard) {
+    navigator.clipboard.readText().then(clipText => rm.insertAtCaret(globalEvent.target, clipText));
+  }
+};
+
+// 粘贴文本到焦点
+rm.insertAtCaret = function (elemt, value) {
+  const startPos = elemt.selectionStart,
+    endPos = elemt.selectionEnd;
+  if (document.selection) {
+    elemt.focus();
+    var sel = document.selection.createRange();
+    sel.text = value;
+    elemt.focus();
+  } else {
+    if (startPos || startPos == "0") {
+      var scrollTop = elemt.scrollTop;
+      elemt.value = elemt.value.substring(0, startPos) + value + elemt.value.substring(endPos, elemt.value.length);
+      elemt.focus();
+      elemt.selectionStart = startPos + value.length;
+      elemt.selectionEnd = startPos + value.length;
+      elemt.scrollTop = scrollTop;
+    } else {
+      elemt.value += value;
+      elemt.focus();
+    }
+  }
+};
+
+//粘贴文本
+rm.pasteText = function () {
+  const result = rm.readClipboard() || "";
+  rm.hideRightMenu();
+};
+
+//引用到评论
+rm.rightMenuCommentText = function (txt) {
+  rm.hideRightMenu();
+  const postCommentDom = document.getElementById("post-comment");
+  var domTop = postCommentDom.offsetTop;
+  window.scrollTo(0, domTop - 80);
+  if (txt == "undefined" || txt == "null") txt = "好棒！";
+  function setText() {
+    setTimeout(() => {
+      var input = document.getElementsByClassName("el-textarea__inner")[0];
+      if (!input) setText();
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("input", true, true);
+      let inputValue = replaceAll(txt, "\n", "\n> ");
+      input.value = "> " + inputValue + "\n\n";
+      input.dispatchEvent(evt);
+      input.focus();
+      input.setSelectionRange(-1, -1);
+      if (document.getElementById("comment-tips")) {
+        document.getElementById("comment-tips").classList.add("show");
+      }
+    }, 100);
+  }
+  setText();
+};
+
+//替换所有内容
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}
+
+// 百度搜索
+rm.searchBaidu = function () {
+  anzhiyu.snackbarShow("即将跳转到百度搜索", false, 2000);
+  setTimeout(function () {
+    window.open("https://www.baidu.com/s?wd=" + selectTextNow);
+  }, "2000");
+  rm.hideRightMenu();
+};
+
+//分享链接
+rm.copyLink = function () {
+  rm.rightmenuCopyText(domhref);
+  anzhiyu.snackbarShow("已复制链接地址");
+};
+
+function addRightMenuClickEvent() {
+  // 添加点击事件
+  document.getElementById("menu-backward").addEventListener("click", function () {
+  window.history.back();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-forward").addEventListener("click", function () {
+    window.history.forward();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-refresh").addEventListener("click", function () {
+    window.location.reload();
+  });
+
+  document.getElementById("menu-top").addEventListener("click", function () {
+    anzhiyu.scrollToDest(0, 500);
+    rm.hideRightMenu();
+  });
+
+  const menuLinks = document.querySelectorAll(".menu-link");
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", rm.hideRightMenu);
+  });
+
+  document.getElementById("menu-darkmode").addEventListener("click", anzhiyu.switchDarkMode);
+
+  document.getElementById("menu-home") && document.getElementById("menu-home").addEventListener("click", function () {
+    window.location.href = window.location.origin;
+  });
+
+  document.getElementById("menu-randomPost").addEventListener("click", function () {
+    toRandomPost();
+  });
+
+  document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
+
+  document.getElementById("rightmenu-mask").addEventListener("click", rm.hideRightMenu);
+
+  document.getElementById("rightmenu-mask").addEventListener("contextmenu", function (event) {
+    rm.hideRightMenu();
+    event.preventDefault(); // Prevent the default context menu from appearing
+  });
+
+  document.getElementById("menu-copy").addEventListener("click", rm.copyPageUrl);
+
+  document.getElementById("menu-pastetext").addEventListener("click", rm.pasteText);
+
+  document.getElementById("menu-copytext").addEventListener("click", function () {
+    rm.rightmenuCopyText(selectTextNow);
+    anzhiyu.snackbarShow("复制成功，复制和转载请标注本文地址");
+  });
+
+  document.getElementById("menu-commenttext").addEventListener("click", function () {
+    rm.rightMenuCommentText(selectTextNow);
+  });
+
+  document.getElementById("menu-newwindow").addEventListener("click", function () {
+    window.open(domhref, "_blank");
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copylink").addEventListener("click", rm.copyLink);
+
+  document.getElementById("menu-downloadimg").addEventListener("click", function () {
+    anzhiyu.downloadImage(domImgSrc, "anzhiyu");
+  });
+
+  document.getElementById("menu-newwindowimg").addEventListener("click", function () {
+    window.open(domImgSrc, "_blank");
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copyimg").addEventListener("click", function () {
+    rm.writeClipImg(domImgSrc);
+  });
+
+  document.getElementById("menu-searchBaidu").addEventListener("click", rm.searchBaidu);
+
+  //音乐
+  document.getElementById("menu-music-toggle").addEventListener("click", anzhiyu.musicToggle);
+
+  document.getElementById("menu-music-back").addEventListener("click", anzhiyu.musicSkipBack);
+
+  document.getElementById("menu-music-forward").addEventListener("click", anzhiyu.musicSkipForward);
+
+  document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
+    rm.rightmenuCopyText(anzhiyu.musicGetName());
+    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
+  });
+
+}
+
+addRightMenuClickEvent();</script><script data-pjax>var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+var pageHeaderEl = document.getElementById("page-header");
+var navMusicEl = document.getElementById("nav-music");
+var consoleEl = document.getElementById("console");
+// 已随机的歌曲
+var selectRandomSong = [];
+// 音乐默认声音大小
+var musicVolume = 0.8;
+// 是否切换了周杰伦音乐列表
+var changeMusicListFlag = false;
+// 当前默认播放列表
+var defaultPlayMusicList = [];
+
+document.getElementById("page-name").innerText = document.title.split(" | AlanDoDO🐼")[0];
+anzhiyu.initIndexEssay();
+anzhiyu.changeTimeInEssay();
+anzhiyu.removeBodyPaceClass();
+anzhiyu.qrcodeCreate();
+anzhiyu.changeTimeInAlbumDetail();
+anzhiyu.reflashEssayWaterFall();
+anzhiyu.sayhi();
+anzhiyu.stopImgRightDrag();
+anzhiyu.addNavBackgroundInit();
+anzhiyu.setValueToBodyType();
+anzhiyu.catalogActive();
+anzhiyu.tagsPageActive();
+anzhiyu.categoriesBarActive();
+anzhiyu.topCategoriesBarScroll();
+anzhiyu.switchRightClickMenuHotReview();
+anzhiyu.getCustomPlayList();
+anzhiyu.addEventListenerConsoleMusicList(false);
+setTimeout(() => {if (typeof addFriendLinksInFooter === "function") {addFriendLinksInFooter();}}, 200)</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div></body></html>
