@@ -18349,6 +18349,12 @@ html.hide-aside .layout > div:first-child {
   }
 }
 
+#recent-posts > .recent-post-item >.recent-post-info {
+height: 134px;
+}
+#recent-posts>.recent-post-item .post_cover {
+  height: 280px;
+}
 #aside-content .card-widget#card-wechat {
   background: #57bd6a;
   display: flex;
