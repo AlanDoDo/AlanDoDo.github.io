@@ -1,0 +1,1081 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Web3.0 DeFi项目实战教程 | Alan</title><meta name="keywords" content="Web3.0"><meta name="author" content="Alan"><meta name="copyright" content="Alan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Web3.0 DeFi项目实战教程"><meta name="application-name" content="Web3.0 DeFi项目实战教程"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Web3.0 DeFi项目实战教程"><meta property="og:url" content="https://www.alandodo.cn/2023/08/15/2023-8-15-Web3.0/index.html"><meta property="og:site_name" content="Alan"><meta property="og:description" content="Web3.0-dapp开发初识web3.0     认识区块链什么是区块链 网络 数据库 计算机   区块链的应用 众筹行为 公证书 供应链 股权证  以太坊介绍 以太坊（英文Ethereum）是一个开源的有智能合约功能的公共区块链平台，通过其专用加密货币以太币（Ether，简称“ETH”）提供去中"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x136.jpg"><meta property="article:author" content="Alan"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x136.jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.alandodo.cn/2023/08/15/2023-8-15-Web3.0/"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//npm.onmicrosoft.cn"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.14/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":240},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#3b70fc","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Web3.0 DeFi项目实战教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-11 18:05:06',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>if (GLOBAL_CONFIG.preloader.source == "2" || GLOBAL_CONFIG.preloader.source == "3") {
+  const loadingPercentage = document.getElementById("loading-percentage");
+  let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+      loadingPercentage.textContent = currentValue;
+      if (currentValue === "100%") {
+        clearInterval(loadingPercentageTimer);
+      }
+    }
+  }, 100);
+}
+
+const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div id="web_box"><div id="web_container"><div id="menu-mask"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://alandodo.cn/" title="博客" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.png" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="https://image.anheyu.com/" title="Sale" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg" alt="Sale"/><span class="back-menu-item-text">Sale</span></a><a class="back-menu-item" href="https://image.anheyu.com/" title="智慧泊车" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/web/%E9%92%A2%E7%AC%94.png" alt="智慧泊车"/><span class="back-menu-item-text">智慧泊车</span></a><a class="back-menu-item" href="https://image.anheyu.com/" title="资源共享" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x126.png" alt="资源共享"/><span class="back-menu-item-text">资源共享</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Alan</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png" target="_blank"><img class="post-qr-code-img" alt="wechat" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png" target="_blank"><img class="post-qr-code-img" alt="alipay" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> <span>最新评论</span></span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AJAX/" style="font-size: 1.05rem;">AJAX<sup>1</sup></a><a href="/tags/Architecture/" style="font-size: 1.05rem;">Architecture<sup>1</sup></a><a href="/tags/BOM/" style="font-size: 1.05rem;">BOM<sup>1</sup></a><a href="/tags/Books/" style="font-size: 1.05rem;">Books<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C++<sup>1</sup></a><a href="/tags/CSS/" style="font-size: 1.05rem;">CSS<sup>2</sup></a><a href="/tags/Chat-GPT/" style="font-size: 1.05rem;">Chat GPT<sup>1</sup></a><a href="/tags/DOM/" style="font-size: 1.05rem;">DOM<sup>1</sup></a><a href="/tags/Flushbonading/" style="font-size: 1.05rem;">Flushbonading<sup>2</sup></a><a href="/tags/Git/" style="font-size: 1.05rem;">Git<sup>1</sup></a><a href="/tags/HTML/" style="font-size: 1.05rem;">HTML<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/JAVA/" style="font-size: 1.05rem;">JAVA<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>1</sup></a><a href="/tags/MySQL/" style="font-size: 1.05rem;">MySQL<sup>1</sup></a><a href="/tags/Node-js/" style="font-size: 1.05rem;">Node.js<sup>1</sup></a><a href="/tags/PS/" style="font-size: 1.05rem;">PS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>6</sup></a><a href="/tags/Robot/" style="font-size: 1.05rem;">Robot<sup>2</sup></a><a href="/tags/Ros2/" style="font-size: 1.05rem;">Ros2<sup>1</sup></a><a href="/tags/Siemens/" style="font-size: 1.05rem;">Siemens<sup>1</sup></a><a href="/tags/Tampermonkey/" style="font-size: 1.05rem;">Tampermonkey<sup>2</sup></a><a href="/tags/VMware/" style="font-size: 1.05rem;">VMware<sup>1</sup></a><a href="/tags/Vue/" style="font-size: 1.05rem;">Vue<sup>3</sup></a><a href="/tags/Vue3/" style="font-size: 1.05rem;">Vue3<sup>1</sup></a><a href="/tags/WeChat/" style="font-size: 1.05rem;">WeChat<sup>1</sup></a><a href="/tags/Web3-0/" style="font-size: 1.05rem;">Web3.0<sup>1</sup></a><a href="/tags/Webpack/" style="font-size: 1.05rem;">Webpack<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 1.05rem;">butterfly<sup>2</sup></a><a href="/tags/crawler/" style="font-size: 1.05rem;">crawler<sup>1</sup></a><a href="/tags/jQuery/" style="font-size: 1.05rem;">jQuery<sup>1</sup></a><a href="/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/" style="font-size: 1.05rem;">全栈开发<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 1.05rem;">技术分享<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">数据可视化<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">数据结构与算法<sup>1</sup></a><a href="/tags/%E6%B5%AA%E6%BC%AB%E6%96%87%E6%A1%88/" style="font-size: 1.05rem;">浪漫文案<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="anzhiyu.switchDarkMode()" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Web3-0/">Web3.0</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Web3-0/" tabindex="-1"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Web3.0</span></a></span></div></div><h1 class="post-title">Web3.0 DeFi项目实战教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="post-meta-icon anzhiyufont anzhiyu-icon-calendar-days"></i><span class="post-meta-label">发表于</span><time datetime="2023-08-15T12:06:00.000Z" title="发表于 2023-08-15 20:06:00">2023-08-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">3.7k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>13分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="Web3.0 DeFi项目实战教程"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为石家庄"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>石家庄</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x136.jpg"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Web3-0-dapp开发"><a href="#Web3-0-dapp开发" class="headerlink" title="Web3.0-dapp开发"></a>Web3.0-dapp开发</h1><h4 id="初识web3-0"><a href="#初识web3-0" class="headerlink" title="初识web3.0"></a>初识web3.0</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111093309289.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111093358402.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111093415621.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111093438046.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111093459028.png"></p>
+<h4 id="认识区块链"><a href="#认识区块链" class="headerlink" title="认识区块链"></a>认识区块链</h4><h5 id="什么是区块链"><a href="#什么是区块链" class="headerlink" title="什么是区块链"></a>什么是区块链</h5><ul>
+<li>网络</li>
+<li>数据库</li>
+<li>计算机</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111093921274.png"></p>
+<h5 id="区块链的应用"><a href="#区块链的应用" class="headerlink" title="区块链的应用"></a>区块链的应用</h5><ul>
+<li>众筹行为</li>
+<li>公证书</li>
+<li>供应链</li>
+<li>股权证</li>
+</ul>
+<h4 id="以太坊介绍"><a href="#以太坊介绍" class="headerlink" title="以太坊介绍"></a>以太坊介绍</h4><blockquote>
+<p>以太坊（英文Ethereum）是一个开源的有智能合约功能的公共区块链平台，通过其专用加密货币以太币（Ether，简称“ETH”）提供去中心化的以太虚拟机（Ethereum Virtual Machine）来处理点对点合约。</p>
+</blockquote>
+<blockquote>
+<p>以太坊的概念首次在2013至2014年间由程序员Vitalik Buterin受比特币启发后提出，大意为“下一代加密货币与去中心化应用平台”，在2014年通过ICO众筹开始得以发展。</p>
+</blockquote>
+<blockquote>
+<p>截至2018年2月，以太币是市值第二高的加密货币，仅次于比特币。</p>
+</blockquote>
+<h5 id="哈希算法-Hash-Function"><a href="#哈希算法-Hash-Function" class="headerlink" title="哈希算法(Hash Function)"></a>哈希算法(Hash Function)</h5><p>将任意长度的二进制值串映射为固定长度的二进制值串，这个映射的规则就是哈希算法，而通过原始数据映射之后得到的二进制值串就是哈希值。</p>
+<p>构成哈希算法的条件：</p>
+<ul>
+<li>从哈希值不能反向推导出原始数据（所以哈希算法也叫单向哈希算法）</li>
+<li>对输入数据非常敏感，哪怕原始数据只修改了一个 Bit，最后得到的哈希值也大不相同；</li>
+<li>散列冲突的概率要很小，对于不同的原始数据，哈希值相同的概率非常小；</li>
+<li>哈希算法的执行效率要尽量高效，针对较长的文本，也能快速地计算出哈希值。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221111091800116.png"></p>
+<h5 id="Solidity语言简述"><a href="#Solidity语言简述" class="headerlink" title="Solidity语言简述"></a>Solidity语言简述</h5><blockquote>
+<p>Solidity是一种智能合约高级语言，运行在Ethereum虚拟机（EVM）之上。</p>
+</blockquote>
+<p>它的语法接近于Javascript，是一种面向对象的语言。但作为一种真正意义上运行在网络上的去中心合约，它又有很多的不同，下面列举一些：</p>
+<ul>
+<li>以太坊底层是基于帐户，而非UTXO的，所以有一个特殊的<code>Address</code>的类型。用于定位用户，定位合约，定位合约的代码（合约本身也是一个帐户）。</li>
+<li>由于语言内嵌框架是支持支付的，所以提供了一些关键字，如<code>payable</code>，可以在语言层面直接支持支付，而且超级简单。</li>
+<li>存储是使用网络上的区块链，数据的每一个状态都可以永久存储，所以需要确定变量使用内存，还是区块链。</li>
+<li>运行环境是在去中心化的网络上，会比较强调合约或函数执行的调用的方式。因为原来一个简单的函数调用变为了一个网络上的节点中的代码执行，分布式的感觉。</li>
+<li>最后一个非常大的不同则是它的异常机制，一旦出现异常，所有的执行都将会被回撤，这主要是为了保证合约执行的原子性，以避免中间状态出现的数据不一致。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^<span class="number">0.4</span><span class="number">.0</span>;</span><br><span class="line"></span><br><span class="line">contract <span class="title class_">HelloWorld</span>&#123;</span><br><span class="line">    uint balance;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">update</span>(<span class="params">uint amount</span>) returns (address, uint)&#123;</span><br><span class="line">        balance += amount;</span><br><span class="line">        <span class="keyword">return</span> (msg.<span class="property">sender</span>, balance);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Web3-js简述"><a href="#Web3-js简述" class="headerlink" title="Web3.js简述"></a>Web3.js简述</h5><blockquote>
+<p>Web3.js是一个库，它有很多函数，使用它可以在以太坊生态系统中通过HTTP或IPC与本地或者以太坊远程节点交互，如查看链上信息等</p>
+<p>各种高级语言编写的程序可以使用web3 interface来与EVM交互，在此过程中使用是的JSON-RPC（一个无状态且轻量级的远程过程调用（RPC）传送协议，其传递内容透过 JSON 为主）</p>
+</blockquote>
+<p><strong>您可以使用web3.js</strong>来读取和写入以太坊区块链，而不是使用 ajax 从 Web 服务器读取和写入数据。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> web3 = <span class="keyword">new</span> <span class="title class_">Web3</span>(</span><br><span class="line">        <span class="title class_">Web3</span>.<span class="property">givenProvider</span> || <span class="string">&quot;http://localhost:8545&quot;</span></span><br><span class="line">);</span><br><span class="line"><span class="comment">// 获取当前节点下的账号信息</span></span><br><span class="line"><span class="keyword">const</span> accounts = <span class="keyword">await</span> web3.<span class="property">eth</span>.<span class="title function_">requestAccounts</span>(); <span class="comment">// 会返回当前的账号</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;accounts&#x27;</span>, accounts)</span><br></pre></td></tr></table></figure>
+
+<h4 id="DApp"><a href="#DApp" class="headerlink" title="DApp"></a>DApp</h4><blockquote>
+<p>DApp的部分或全部逻辑是被存储在去中心化网络中的，而这个去中心化网络在区块链的世界里是叫做公有链。</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221107122318158.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221107122340881.png"></p>
+<h4 id="MetaMask"><a href="#MetaMask" class="headerlink" title="MetaMask"></a>MetaMask</h4><blockquote>
+<p>MetaMask是一个浏览器插件，可作为MetaMask Chrome扩展或Firefox附加组件使用。它的核心是它作为以太坊钱包：通过安装它，您将可以访问一个独特的以太坊钱包地址，您可以使用它开始发送和接收以太币或ERC20通证。</p>
+</blockquote>
+<p>但MetaMask不仅仅是以太坊钱包。作为浏览器扩展，它可以与您正在浏览的当前网页进行交互。它通过在您访问的每个网页中注入一个名为web3.js的JavaScript库来实现。注入后，web3将通过window.web3的JavaScript代码为你访问的每个网页提供一个对象。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221114085716392.png"></p>
+<p><strong>MetaMask 有什么优势？</strong></p>
+<ul>
+<li><p>用户只需一个插件即可访问各种 Dapp</p>
+</li>
+<li><p>用户无需管理私钥，只需记住单词列表即可代表他们签名交易。</p>
+</li>
+<li><p>用户无需下载以太坊区块链，因为它将请求发送到用户计算机外部的节点。</p>
+</li>
+<li><p>Dapps 旨在与之配合使用，因此发送和发送以太坊变得更加容易。</p>
+</li>
+</ul>
+<p><strong>MetaMask 的缺点</strong></p>
+<ul>
+<li>第三方私钥存储-MetaMask 在用户的浏览器中保存私钥。这比硬件或纸钱包安全性低。</li>
+</ul>
+<h4 id="Ganache"><a href="#Ganache" class="headerlink" title="Ganache"></a>Ganache</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://trufflesuite.com/ganache/">https://trufflesuite.com/ganache/</a></p>
+</blockquote>
+<p>Ganache 是一个用与本地开发的区块链，用于在以太坊区块链上开发去中心化的应用程序。Ganache 模拟了以太坊网络，你可以在发布到生产环境之前看到你的 DApp 将如何执行。</p>
+<p>所以我们需要通过 ganache 来帮我们模拟一个以太坊的节点。测试通过后可以直接切换使用真实的以太坊的账号和区块节点就可以了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i ganache -g</span><br></pre></td></tr></table></figure>
+
+<h4 id="Web3-js"><a href="#Web3-js" class="headerlink" title="Web3.js"></a>Web3.js</h4><blockquote>
+<p>Web3.js是一个库，它有很多函数，使用它可以在以太坊生态系统中通过HTTP或IPC与本地或者以太坊远程节点交互，如查看链上信息等</p>
+<p>各种高级语言编写的程序可以使用web3 interface来与EVM交互，在此过程中使用是的JSON-RPC（一个无状态且轻量级的远程过程调用（RPC）传送协议，其传递内容透过 JSON 为主）</p>
+</blockquote>
+<p><strong>您可以使用web3.js</strong>来读取和写入以太坊区块链，而不是使用 ajax 从 Web 服务器读取和写入数据。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221115085526871.png"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/image-20221115090833652.png"></p>
+<h5 id="获取区块"><a href="#获取区块" class="headerlink" title="获取区块"></a>获取区块</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> web3 = <span class="keyword">new</span> <span class="title class_">Web3</span>(<span class="title class_">Web3</span>.<span class="property">givenProvider</span> || <span class="string">&quot;http://localhost:8545&quot;</span>);</span><br><span class="line"></span><br><span class="line">web3.<span class="property">eth</span>.<span class="title function_">getBlockNumber</span>()</span><br><span class="line">           .<span class="title function_">then</span>(<span class="variable language_">console</span>.<span class="property">log</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="获取余额"><a href="#获取余额" class="headerlink" title="获取余额"></a>获取余额</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> web3 = <span class="keyword">new</span> <span class="title class_">Web3</span>(<span class="title class_">Web3</span>.<span class="property">givenProvider</span> || <span class="string">&quot;http://localhost:8545&quot;</span>);</span><br><span class="line"></span><br><span class="line">web3.<span class="property">eth</span>.<span class="title function_">getBalance</span>(<span class="string">&quot;0x6b5aC29F2a2Ca361BE4fed60862C51D2F853842a&quot;</span>).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">               <span class="variable language_">console</span>.<span class="title function_">log</span>(web3.<span class="property">utils</span>.<span class="title function_">fromWei</span>(res, <span class="string">&quot;ether&quot;</span>))</span><br><span class="line">           &#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="交易"><a href="#交易" class="headerlink" title="交易"></a>交易</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">web3.<span class="property">eth</span>.<span class="title function_">sendTransaction</span>(&#123;</span><br><span class="line">        <span class="attr">from</span>:<span class="string">&quot;0x342361F2a62A5820A396e277481d104C0fc3CC60&quot;</span>,</span><br><span class="line">        <span class="attr">to</span>:<span class="string">&quot;0xeF2233172704bbD3A02D35E9d5620a3053F1E2E2&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>:web3.<span class="property">utils</span>.<span class="title function_">toWei</span>(<span class="string">&quot;1&quot;</span>,<span class="string">&quot;ether&quot;</span>)</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h4><h5 id="Remix-IDE"><a href="#Remix-IDE" class="headerlink" title="Remix IDE"></a>Remix IDE</h5><blockquote>
+<p> Remix IDE是开发以太坊智能合约的在线IDE工具，部署简单的智能合约非常方便</p>
+<p> Remix地址：<a target="_blank" rel="noopener" href="https://remix.ethereum.org/">https://remix.ethereum.org/</a></p>
+</blockquote>
+<h5 id="Truffle"><a href="#Truffle" class="headerlink" title="Truffle"></a>Truffle</h5><blockquote>
+<p>Truffle是一个世界级的智能合约开发框架，专门为智能合约而生。</p>
+</blockquote>
+<ul>
+<li>管理智能合约的生命周期</li>
+<li>自动化合约测试</li>
+<li>可编程，可部署，可发布合约</li>
+<li>不用过多的关注网络管理</li>
+<li>强大的交互式控制台</li>
+</ul>
+<p>目录结构：</p>
+<ul>
+<li><p>contracts&#x2F; : 存放solidity智能合约文件</p>
+</li>
+<li><p>migrations&#x2F; : truffle使用migration system 来控制合约的部署。 </p>
+</li>
+<li><p>test&#x2F; : 测试文件存放文字（javascript or solidity）</p>
+</li>
+<li><p>truffle-config.js : 配置文件</p>
+</li>
+</ul>
+<h5 id="Solidity语言"><a href="#Solidity语言" class="headerlink" title="Solidity语言"></a>Solidity语言</h5><h6 id="数据位置"><a href="#数据位置" class="headerlink" title="数据位置"></a>数据位置</h6><p>solidity数据存储位置有三类：storage，memory和calldata。不同存储位置的gas成本不同。storage类型的数据存在链上，类似计算机的硬盘，消耗gas多；memory和calldata类型的临时存在内存里，消耗gas少。大致用法：</p>
+<ol>
+<li><p>storage：合约里的状态变量默认都是storage，存储在链上。</p>
+</li>
+<li><p>memory：函数里的参数和临时变量一般用memory，存储在内存中，不上链。</p>
+</li>
+<li><p>calldata：和memory类似，存储在内存中，不上链。与memory的不同点在于calldata变量不能修改（immutable），一般用于函数的参数。</p>
+</li>
+</ol>
+<h6 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h6><p>变量的作用域：Solidity中变量按作用域划分有三种，分别是状态变量（state variable），局部变量（local variable）和全局变量(global variable)。</p>
+<ol>
+<li><p>状态变量：状态变量是数据存储在链上的变量，所有合约内函数都可以访问 ，gas消耗高。状态变量在合约内、函数外声明。可以在函数里更改状态变量的值：</p>
+</li>
+<li><p>局部变量：局部变量是仅在函数执行过程中有效的变量，函数退出后，变量无效。局部变量的数据存储在内存里，不上链，gas低。局部变量在函数内声明。</p>
+</li>
+<li><p>全局变量：全局变量是全局范围工作的变量，都是solidity预留关键字。他们可以在函数内不声明直接使用（类似于 msg.sender,block.number）</p>
+</li>
+</ol>
+<h6 id="作用域类型"><a href="#作用域类型" class="headerlink" title="作用域类型"></a>作用域类型</h6><p><strong>状态变量可以有三种作用域类型。</strong></p>
+<ul>
+<li>Public 公共状态变量可以在内部访问，也可以通过消息访问。对于公共状态变量，将生成一个自动getter函数。</li>
+<li>Internal – 内部状态变量只能从当前合约或其派生合约内访问。</li>
+<li>Private – 私有状态变量只能从当前合约内部访问，派生合约内不能访问。</li>
+</ul>
+<p><strong>函数可以指定为 external ，public ，internal 或者 private</strong></p>
+<p>external</p>
+<ul>
+<li>外部函数是合约接口的一部分，这意味着可以从其他合约或通过事务调用它们。但是内部无法调用。</li>
+</ul>
+<p>public </p>
+<ul>
+<li>外部调用和内部都可以调用</li>
+</ul>
+<p>internal  </p>
+<ul>
+<li>只能从当前合约或从当前合约派生的合约中访问，外部无法访问它们，由于它们没有通过合约的 ABI 向外部公开，所以它们可以接受内部类型的参数，比如映射或存储引用。</li>
+</ul>
+<p>private</p>
+<ul>
+<li>私有函数类似于内部函数，但它们在派生合约中不可见。</li>
+</ul>
+<h6 id="智能合约脚本"><a href="#智能合约脚本" class="headerlink" title="智能合约脚本"></a>智能合约脚本</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: GPL-3.0 </span></span><br><span class="line"><span class="comment">// 源码遵循协议， MIT...</span></span><br><span class="line">pragma solidity &gt;=<span class="number">0.4</span><span class="number">.16</span> &lt;<span class="number">0.9</span><span class="number">.0</span>; <span class="comment">//限定solidity编译器版本</span></span><br><span class="line"></span><br><span class="line">contract <span class="title class_">StudentStorage</span> &#123;</span><br><span class="line">    uint public age; <span class="comment">//状态变量是数据存储在链上的变量，所有合约内函数都可以访问 ，gas消耗高。状态变量在合约内、函数外声明。可以在函数里更改状态变量的值</span></span><br><span class="line">    string public name; <span class="comment">//公共状态变量与内部状态变量的不同之处在于，编译器会自动为它们生成 getter 函数，</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">setData</span>(<span class="params">string memory _name,uint _age</span>) public &#123;</span><br><span class="line">        name = _name;</span><br><span class="line">        age= _age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//一类是 view 函数（也称为视图函数），另一类是 pure 函数（也称为纯函数）。他们的区别是 view 函数不修改状态，pure 函数即不修改状态也不读取状态。</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">getData</span>(<span class="params"></span>) public view returns (string memory,uint) &#123;</span><br><span class="line">        <span class="keyword">return</span> (name,age);</span><br><span class="line">    &#125;<span class="comment">//在Solidity中一个函数方法是可以返回多个结果的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="部署脚本"><a href="#部署脚本" class="headerlink" title="部署脚本"></a>部署脚本</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @作者: kerwin</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//&quot;artifacts.require()&quot;方法告诉truffle我们将要与那个合约交互，导入某个合约</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">Contacts</span> = artifacts.<span class="built_in">require</span>(<span class="string">&quot;StudentStorage.sol&quot;</span>);  </span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">function</span> (<span class="params">deployer</span>) &#123;</span><br><span class="line">    deployer.<span class="title function_">deploy</span>(<span class="title class_">Contacts</span>);  <span class="comment">//部署这个合约  </span></span><br><span class="line">    <span class="comment">// 如果还有其他合约的话后面可以继续编写</span></span><br><span class="line">    <span class="comment">// deployer.deploy(合约文件)</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h6 id="脚本测试"><a href="#脚本测试" class="headerlink" title="脚本测试"></a>脚本测试</h6><ul>
+<li>mocha测试</li>
+<li>truffle 脚本</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @作者: kerwin</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">StudentStorage</span> = artifacts.<span class="built_in">require</span>(<span class="string">&#x27;StudentStorage&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="keyword">async</span> <span class="keyword">function</span>(<span class="params">callabck</span>)&#123;</span><br><span class="line">    <span class="keyword">const</span> studentStorage = <span class="keyword">await</span> <span class="title class_">StudentStorage</span>.<span class="title function_">deployed</span>()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> studentStorage.<span class="title function_">setData</span>(<span class="string">&quot;kerwin&quot;</span>,<span class="number">100</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">await</span> studentStorage.<span class="title function_">getData</span>())</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">await</span> studentStorage.<span class="title function_">name</span>())</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">await</span> studentStorage.<span class="title function_">age</span>())</span><br><span class="line">    <span class="title function_">callabck</span>() <span class="comment">//必须写，否则不结束</span></span><br><span class="line"> &#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h4 id="打通Web3-js到智能合约"><a href="#打通Web3-js到智能合约" class="headerlink" title="打通Web3.js到智能合约"></a>打通Web3.js到智能合约</h4><blockquote>
+<p>ABI 非常类似于 API（应用程序接口），一种人类可读的代码接口表示。ABI 定义了用于与二进制合约交互的方法和结构，就像 API 所做的那样，只是在较低的级别上。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment"> * @作者: kerwin</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;myname&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">id</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;add&quot;</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">var</span> web3 = <span class="keyword">new</span> <span class="title class_">Web3</span>(<span class="title class_">Web3</span>.<span class="property">givenProvider</span> || <span class="string">&quot;http://localhost:8545&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> account = <span class="keyword">await</span> web3.<span class="property">eth</span>.<span class="title function_">requestAccounts</span>()</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(account)</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">const</span> studentStorage = <span class="keyword">new</span> web3.<span class="property">eth</span>.<span class="title class_">Contract</span>(</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;合约的abi&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">            <span class="string">&quot;合约的address&quot;</span></span></span><br><span class="line"><span class="language-javascript">        );</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">        add.<span class="property">onclick</span> = <span class="keyword">async</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">await</span> studentStorage.<span class="property">methods</span>.<span class="title function_">addList</span>(myname.<span class="property">value</span>,age.<span class="property">value</span>).<span class="title function_">send</span>(&#123;<span class="attr">from</span>:account[<span class="number">0</span>]&#125;)</span></span><br><span class="line"><span class="language-javascript">            <span class="title function_">getList</span>()</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">getList</span>()</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getList</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">            <span class="keyword">var</span> mylist = <span class="keyword">await</span> studentStorage.<span class="property">methods</span>.<span class="title function_">getList</span>().<span class="title function_">call</span>(); </span></span><br><span class="line"><span class="language-javascript">            <span class="variable language_">console</span>.<span class="title function_">log</span>(mylist)</span></span><br><span class="line"><span class="language-javascript">            list.<span class="property">innerHTML</span>  = mylist.<span class="title function_">map</span>(<span class="function"><span class="params">item</span>=&gt;</span><span class="string">`</span></span></span><br><span class="line"><span class="string"><span class="language-javascript">                &lt;li&gt;<span class="subst">$&#123;item.id&#125;</span>-<span class="subst">$&#123;item.name&#125;</span>-<span class="subst">$&#123;item.age&#125;</span></span></span></span><br><span class="line"><span class="string"><span class="language-javascript">                  &lt;/li&gt;</span></span></span><br><span class="line"><span class="string"><span class="language-javascript">            `</span>).<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>)</span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SPDX-License-Identifier: GPL-3.0</span></span><br><span class="line"><span class="comment">// 源码遵循协议， MIT...</span></span><br><span class="line">pragma solidity &gt;=<span class="number">0.4</span><span class="number">.16</span> &lt;<span class="number">0.9</span><span class="number">.0</span>; <span class="comment">//限定solidity编译器版本</span></span><br><span class="line"></span><br><span class="line">contract <span class="title class_">StudentStorage</span> &#123;</span><br><span class="line">    struct <span class="title class_">Student</span> &#123;</span><br><span class="line">        uint id;</span><br><span class="line">        string name;</span><br><span class="line">        uint age;</span><br><span class="line">        address addr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Student</span>[] public <span class="title class_">StudentList</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">getList</span>(<span class="params"></span>) public view returns (<span class="title class_">Student</span>[] memory) &#123;</span><br><span class="line">        <span class="title class_">Student</span>[] memory list = <span class="title class_">StudentList</span>;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">addList</span>(<span class="params">string memory _name, uint _age</span>)</span><br><span class="line">        public</span><br><span class="line">        returns (uint)</span><br><span class="line">    &#123;</span><br><span class="line">        uint len = <span class="title class_">StudentList</span>.<span class="property">length</span>;</span><br><span class="line">        uint index = len + <span class="number">1</span>;</span><br><span class="line">        <span class="title class_">StudentList</span>.<span class="title function_">push</span>(<span class="title class_">Student</span>(index, _name, _age, msg.<span class="property">sender</span>)); </span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">StudentList</span>.<span class="property">length</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="加密货币"><a href="#加密货币" class="headerlink" title="加密货币"></a>加密货币</h4><p><strong>什么叫做代币？</strong></p>
+<p>代币可以在以太坊中表示任何东西：</p>
+<ul>
+<li>在线平台中的信誉积分</li>
+<li>金融资产类似于公司股份的资产</li>
+<li>像美元一样的法定货币</li>
+<li>一盎司黄金</li>
+<li>及更多…</li>
+</ul>
+<blockquote>
+<p><strong>ERC-20</strong>就是一套<strong>基于以太坊网络的标准代币发行协议</strong>。有了ERC-20，<strong>开发者们得以高效、可靠、低成本地创造专属自己项目的代币；</strong>我们甚至可以将ERC-20视为以太坊网络为早期区块链世界做出的最重要贡献.</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md">https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md</a></p>
+<p>ERC-20 的功能示例包括：</p>
+<ul>
+<li>将代币从一个帐户转到另一个帐户</li>
+<li>获取帐户的当前代币余额</li>
+<li>获取网络上可用代币的总供应量</li>
+<li>批准一个帐户中一定的代币金额由第三方帐户使用</li>
+</ul>
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">name</span>(<span class="params"></span>) public view returns (string)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">symbol</span>(<span class="params"></span>) public view returns (string)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">decimals</span>(<span class="params"></span>) public view returns (uint8)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">totalSupply</span>(<span class="params"></span>) public view returns (uint256)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">balanceOf</span>(<span class="params">address _owner</span>) public view returns (uint256 balance)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">transfer</span>(<span class="params">address _to, uint256 _value</span>) public returns (bool success)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">transferFrom</span>(<span class="params">address _from, address _to, uint256 _value</span>) public returns (bool success)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">approve</span>(<span class="params">address _spender, uint256 _value</span>) public returns (bool success)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">allowance</span>(<span class="params">address _owner, address _spender</span>) public view returns (uint256 remaining)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">event <span class="title class_">Transfer</span>(address indexed _from, address indexed _to, uint256 _value)</span><br><span class="line">event <span class="title class_">Approval</span>(address indexed _owner, address indexed _spender, uint256 _value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><p><strong>第三方库</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&quot;openzeppelin-solidity/contracts/utils/math/SafeMath.sol&quot;</span>;</span><br><span class="line">using <span class="title class_">SafeMath</span> <span class="keyword">for</span> uint256; <span class="comment">//为了uint256后面使用 sub ,add方法，，，</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Alan</div><div class="post-copyright__author_desc">No one can deny you</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.alandodo.cn/2023/08/15/2023-8-15-Web3.0/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.alandodo.cn/2023/08/15/2023-8-15-Web3.0/')">Web3.0 DeFi项目实战教程</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.alandodo.cn/2023/08/15/2023-8-15-Web3.0/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Web3.0 DeFi项目实战教程&amp;url=https://www.alandodo.cn/2023/08/15/2023-8-15-Web3.0/&amp;pic=https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x136.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.alandodo.cn" target="_blank">Alan</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Web3-0/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Web3.0<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x136.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2023/08/10/2023-8-10-Java%E5%9F%BA%E7%A1%801/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x132.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JAVA从入门到进阶(一)</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Web3-0-dapp%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">Web3.0-dapp开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E8%AF%86web3-0"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">初识web3.0</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E5%8C%BA%E5%9D%97%E9%93%BE"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">认识区块链</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%BA%E5%9D%97%E9%93%BE"><span class="toc-number">1.0.0.2.1.</span> <span class="toc-text">什么是区块链</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">1.0.0.2.2.</span> <span class="toc-text">区块链的应用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">以太坊介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E7%AE%97%E6%B3%95-Hash-Function"><span class="toc-number">1.0.0.3.1.</span> <span class="toc-text">哈希算法(Hash Function)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Solidity%E8%AF%AD%E8%A8%80%E7%AE%80%E8%BF%B0"><span class="toc-number">1.0.0.3.2.</span> <span class="toc-text">Solidity语言简述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Web3-js%E7%AE%80%E8%BF%B0"><span class="toc-number">1.0.0.3.3.</span> <span class="toc-text">Web3.js简述</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DApp"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">DApp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MetaMask"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">MetaMask</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ganache"><span class="toc-number">1.0.0.6.</span> <span class="toc-text">Ganache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web3-js"><span class="toc-number">1.0.0.7.</span> <span class="toc-text">Web3.js</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%8C%BA%E5%9D%97"><span class="toc-number">1.0.0.7.1.</span> <span class="toc-text">获取区块</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E4%BD%99%E9%A2%9D"><span class="toc-number">1.0.0.7.2.</span> <span class="toc-text">获取余额</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%A4%E6%98%93"><span class="toc-number">1.0.0.7.3.</span> <span class="toc-text">交易</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6"><span class="toc-number">1.0.0.8.</span> <span class="toc-text">智能合约</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Remix-IDE"><span class="toc-number">1.0.0.8.1.</span> <span class="toc-text">Remix IDE</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Truffle"><span class="toc-number">1.0.0.8.2.</span> <span class="toc-text">Truffle</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Solidity%E8%AF%AD%E8%A8%80"><span class="toc-number">1.0.0.8.3.</span> <span class="toc-text">Solidity语言</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.0.0.8.3.1.</span> <span class="toc-text">数据位置</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.0.0.8.3.2.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.0.8.3.3.</span> <span class="toc-text">作用域类型</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E8%84%9A%E6%9C%AC"><span class="toc-number">1.0.0.8.3.4.</span> <span class="toc-text">智能合约脚本</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC"><span class="toc-number">1.0.0.8.3.5.</span> <span class="toc-text">部署脚本</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%B5%8B%E8%AF%95"><span class="toc-number">1.0.0.8.3.6.</span> <span class="toc-text">脚本测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E9%80%9AWeb3-js%E5%88%B0%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6"><span class="toc-number">1.0.0.9.</span> <span class="toc-text">打通Web3.js到智能合约</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81"><span class="toc-number">1.0.0.10.</span> <span class="toc-text">加密货币</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.0.0.10.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.0.0.10.2.</span> <span class="toc-text">事件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link"><span class="toc-number">1.0.0.10.3.</span> <span class="toc-text"></span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2023 By <a class="footer-bar-link" href="/" title="Alan" target="_blank">Alan</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/AlanDoDo/AlanDoDo.github.io" title="Hexo">Hexo</a></div></div></div></footer></div></div></div><div id="sidebar"><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">37</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">18</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.14/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/01/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.5.3",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Alan 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "visitor@anheyu.com";</script><script>//动态标题
+let leaveTitle = 'w(ﾟДﾟ)w 不要走！再看看嘛！';
+let backTitle = '♪(^∇^*)欢迎回来！';
+let OriginTitile = document.title
+let titleTime
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = leaveTitle
+    clearTimeout(titleTime)
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = backTitle + OriginTitile
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile
+    }, 2000)
+  }
+})</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script>// 初始化函数
+let rm = {};
+
+//禁止图片与超链接拖拽
+let aElements = document.getElementsByTagName("a");
+for (let i = 0; i < aElements.length; i++) {
+  aElements[i].setAttribute("draggable", "false");
+  let imgElements = aElements[i].getElementsByTagName("img");
+  for (let j = 0; j < imgElements.length; j++) {
+    imgElements[j].setAttribute("draggable", "false");
+  }
+}
+
+// 显示菜单
+rm.showRightMenu = function (isTrue, x = 0, y = 0) {
+  console.info(x, y)
+  let rightMenu = document.getElementById("rightMenu");
+  rightMenu.style.top = x + "px";
+  rightMenu.style.left = y + "px";
+  if (isTrue) {
+    rightMenu.style.display = "block";
+    stopMaskScroll();
+  } else {
+    rightMenu.style.display = "none";
+  }
+};
+
+// 隐藏菜单
+rm.hideRightMenu = function () {
+  rm.showRightMenu(false);
+  let rightMenuMask = document.querySelector("#rightmenu-mask");
+  rightMenuMask.style.display = "none";
+};
+
+// 尺寸
+let rmWidth = document.getElementById("rightMenu").offsetWidth;
+let rmHeight = document.getElementById("rightMenu").offsetHeight;
+
+// 重新定义尺寸
+rm.reloadrmSize = function () {
+  rightMenu.style.visibility = "hidden";
+  rightMenu.style.display = "block";
+  // 获取宽度和高度
+  rmWidth = document.getElementById("rightMenu").offsetWidth;
+  rmHeight = document.getElementById("rightMenu").offsetHeight;
+  rightMenu.style.visibility = "visible";
+};
+
+// 获取点击的href
+let domhref = "";
+let domImgSrc = "";
+let globalEvent = null;
+
+var oncontextmenuFunction = function (event) {
+  if (document.body.clientWidth > 768) {
+    let pageX = event.clientX + 10; //加10是为了防止显示时鼠标遮在菜单上
+    let pageY = event.clientY;
+
+    //其他额外菜单
+    const $rightMenuOther = document.querySelector(".rightMenuOther");
+    const $rightMenuPlugin = document.querySelector(".rightMenuPlugin");
+    const $rightMenuCopyText = document.querySelector("#menu-copytext");
+    const $rightMenuPasteText = document.querySelector("#menu-pastetext");
+    const $rightMenuCommentText = document.querySelector("#menu-commenttext");
+    const $rightMenuNewWindow = document.querySelector("#menu-newwindow");
+    const $rightMenuNewWindowImg = document.querySelector("#menu-newwindowimg");
+    const $rightMenuCopyLink = document.querySelector("#menu-copylink");
+    const $rightMenuCopyImg = document.querySelector("#menu-copyimg");
+    const $rightMenuDownloadImg = document.querySelector("#menu-downloadimg");
+    const $rightMenuSearch = document.querySelector("#menu-search");
+    const $rightMenuSearchBaidu = document.querySelector("#menu-searchBaidu");
+    const $rightMenuMusicToggle = document.querySelector("#menu-music-toggle");
+    const $rightMenuMusicBack = document.querySelector("#menu-music-back");
+    const $rightMenuMusicForward = document.querySelector("#menu-music-forward");
+    const $rightMenuMusicPlaylist = document.querySelector("#menu-music-playlist");
+    const $rightMenuMusicCopyMusicName = document.querySelector("#menu-music-copyMusicName");
+
+    let href = event.target.href;
+    let imgsrc = event.target.currentSrc;
+
+    // 判断模式 扩展模式为有事件
+    let pluginMode = false;
+    $rightMenuOther.style.display = "block";
+    globalEvent = event;
+
+    // 检查是否需要复制 是否有选中文本
+    if (selectTextNow && window.getSelection()) {
+      pluginMode = true;
+      $rightMenuCopyText.style.display = "block";
+      $rightMenuCommentText.style.display = "block";
+      $rightMenuSearch.style.display = "block";
+      $rightMenuSearchBaidu.style.display = "block";
+    } else {
+      $rightMenuCopyText.style.display = "none";
+      $rightMenuCommentText.style.display = "none";
+      $rightMenuSearchBaidu.style.display = "none";
+      $rightMenuSearch.style.display = "none";
+    }
+
+    //检查是否右键点击了链接a标签
+    if (href) {
+      pluginMode = true;
+      $rightMenuNewWindow.style.display = "block";
+      $rightMenuCopyLink.style.display = "block";
+      domhref = href;
+    } else {
+      $rightMenuNewWindow.style.display = "none";
+      $rightMenuCopyLink.style.display = "none";
+    }
+
+    //检查是否需要复制图片
+    if (imgsrc) {
+      pluginMode = true;
+      $rightMenuCopyImg.style.display = "block";
+      $rightMenuDownloadImg.style.display = "block";
+      $rightMenuNewWindowImg.style.display = "block";
+      document.getElementById("rightMenu").style.width="12rem"
+      domImgSrc = imgsrc;
+    } else {
+      $rightMenuCopyImg.style.display = "none";
+      $rightMenuDownloadImg.style.display = "none";
+      $rightMenuNewWindowImg.style.display = "none";
+    }
+
+    // 判断是否为输入框
+    if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {
+      pluginMode = true;
+      $rightMenuPasteText.style.display = "block";
+    } else {
+      $rightMenuPasteText.style.display = "none";
+    }
+    const navMusicEl = document.querySelector("#nav-music");
+    //判断是否是音乐
+    if (navMusicEl && navMusicEl.contains(event.target)) {
+      pluginMode = true;
+      $rightMenuMusicToggle.style.display = "block";
+      $rightMenuMusicBack.style.display = "block";
+      $rightMenuMusicForward.style.display = "block";
+      $rightMenuMusicPlaylist.style.display = "block";
+      $rightMenuMusicCopyMusicName.style.display = "block";
+    } else {
+      $rightMenuMusicToggle.style.display = "none";
+      $rightMenuMusicBack.style.display = "none";
+      $rightMenuMusicForward.style.display = "none";
+      $rightMenuMusicPlaylist.style.display = "none";
+      $rightMenuMusicCopyMusicName.style.display = "none";
+    }
+
+    // 如果不是扩展模式则隐藏扩展模块
+    if (pluginMode) {
+      $rightMenuOther.style.display = "none";
+      $rightMenuPlugin.style.display = "block";
+    } else {
+      $rightMenuPlugin.style.display = "none";
+    }
+
+    rm.reloadrmSize();
+
+    // 鼠标默认显示在鼠标右下方，当鼠标靠右或靠下时，将菜单显示在鼠标左方\上方
+    if (pageX + rmWidth > window.innerWidth) {
+      pageX -= rmWidth + 10;
+    }
+    if (pageY + rmHeight > window.innerHeight) {
+      pageY -= pageY + rmHeight - window.innerHeight;
+    }
+
+    rm.showRightMenu(true, pageY, pageX);
+    document.getElementById("rightmenu-mask").style.display = "flex";
+    return false;
+  }
+};
+
+// 监听右键初始化
+window.oncontextmenu = oncontextmenuFunction
+
+// 下载图片状态
+rm.downloadimging = false;
+
+// 复制图片到剪贴板
+rm.writeClipImg = function (imgsrc) {
+  console.log("按下复制");
+  rm.hideRightMenu();
+  anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+  if (rm.downloadimging == false) {
+    rm.downloadimging = true;
+    setTimeout(function () {
+      copyImage(imgsrc);
+      anzhiyu.snackbarShow("复制成功！图片已添加盲水印，请遵守版权协议");
+      rm.downloadimging = false;
+    }, "10000");
+  }
+};
+
+function imageToBlob(imageURL) {
+  const img = new Image();
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  img.crossOrigin = "";
+  img.src = imageURL;
+  return new Promise(resolve => {
+    img.onload = function () {
+      c.width = this.naturalWidth;
+      c.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      c.toBlob(
+        blob => {
+          // here the image is a blob
+          resolve(blob);
+        },
+        "image/png",
+        0.75
+      );
+    };
+  });
+}
+
+async function copyImage(imageURL) {
+  const blob = await imageToBlob(imageURL);
+  const item = new ClipboardItem({ "image/png": blob });
+  navigator.clipboard.write([item]);
+}
+
+rm.copyUrl = function (id) {
+  const input = document.createElement("input"); // Create a new <input> element
+  input.id = "copyVal"; // Set the id of the new element to "copyVal"
+  document.body.appendChild(input); // Append the new element to the end of the <body> element
+  
+  const text = id;
+  input.value = text;
+  input.select();
+  input.setSelectionRange(0, input.value.length);
+  document.execCommand("copy");
+  
+  input.remove(); // Remove the <input> element from the DOM
+};
+
+function stopMaskScroll() {
+  if (document.getElementById("rightmenu-mask")) {
+    let xscroll = document.getElementById("rightmenu-mask");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      { passive: true }
+    );
+  }
+  if (document.getElementById("rightMenu")) {
+    let xscroll = document.getElementById("rightMenu");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      { passive: true }
+    );
+  }
+}
+
+rm.rightmenuCopyText = function (txt) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt);
+  }
+  rm.hideRightMenu();
+};
+
+rm.copyPageUrl = function (url) {
+  if (!url) {
+    url = window.location.href;
+  }
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+rm.sharePage = function () {
+  var content = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+// 复制当前选中文本
+var selectTextNow = "";
+document.onmouseup = document.ondblclick = selceText;
+
+function selceText() {
+  var txt;
+  if (document.selection) {
+    txt = document.selection.createRange().text;
+  } else {
+    txt = window.getSelection().toString();
+  }
+  selectTextNow = txt !== "" ? txt : "";
+}
+
+// 读取剪切板
+rm.readClipboard = function () {
+  if (navigator.clipboard) {
+    navigator.clipboard.readText().then(clipText => rm.insertAtCaret(globalEvent.target, clipText));
+  }
+};
+
+// 粘贴文本到焦点
+rm.insertAtCaret = function (elemt, value) {
+  const startPos = elemt.selectionStart,
+    endPos = elemt.selectionEnd;
+  if (document.selection) {
+    elemt.focus();
+    var sel = document.selection.createRange();
+    sel.text = value;
+    elemt.focus();
+  } else {
+    if (startPos || startPos == "0") {
+      var scrollTop = elemt.scrollTop;
+      elemt.value = elemt.value.substring(0, startPos) + value + elemt.value.substring(endPos, elemt.value.length);
+      elemt.focus();
+      elemt.selectionStart = startPos + value.length;
+      elemt.selectionEnd = startPos + value.length;
+      elemt.scrollTop = scrollTop;
+    } else {
+      elemt.value += value;
+      elemt.focus();
+    }
+  }
+};
+
+//粘贴文本
+rm.pasteText = function () {
+  const result = rm.readClipboard() || "";
+  rm.hideRightMenu();
+};
+
+//引用到评论
+rm.rightMenuCommentText = function (txt) {
+  rm.hideRightMenu();
+  const postCommentDom = document.getElementById("post-comment");
+  var domTop = postCommentDom.offsetTop;
+  window.scrollTo(0, domTop - 80);
+  if (txt == "undefined" || txt == "null") txt = "好棒！";
+  function setText() {
+    setTimeout(() => {
+      var input = document.getElementsByClassName("el-textarea__inner")[0];
+      if (!input) setText();
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("input", true, true);
+      let inputValue = replaceAll(txt, "\n", "\n> ");
+      input.value = "> " + inputValue + "\n\n";
+      input.dispatchEvent(evt);
+      input.focus();
+      input.setSelectionRange(-1, -1);
+      if (document.getElementById("comment-tips")) {
+        document.getElementById("comment-tips").classList.add("show");
+      }
+    }, 100);
+  }
+  setText();
+};
+
+//替换所有内容
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}
+
+// 百度搜索
+rm.searchBaidu = function () {
+  anzhiyu.snackbarShow("即将跳转到百度搜索", false, 2000);
+  setTimeout(function () {
+    window.open("https://www.baidu.com/s?wd=" + selectTextNow);
+  }, "2000");
+  rm.hideRightMenu();
+};
+
+//分享链接
+rm.copyLink = function () {
+  rm.rightmenuCopyText(domhref);
+  anzhiyu.snackbarShow("已复制链接地址");
+};
+
+function addRightMenuClickEvent() {
+  // 添加点击事件
+  document.getElementById("menu-backward").addEventListener("click", function () {
+  window.history.back();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-forward").addEventListener("click", function () {
+    window.history.forward();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-refresh").addEventListener("click", function () {
+    window.location.reload();
+  });
+
+  document.getElementById("menu-top").addEventListener("click", function () {
+    anzhiyu.scrollToDest(0, 500);
+    rm.hideRightMenu();
+  });
+
+  const menuLinks = document.querySelectorAll(".menu-link");
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", rm.hideRightMenu);
+  });
+
+  document.getElementById("menu-darkmode").addEventListener("click", anzhiyu.switchDarkMode);
+
+  document.getElementById("menu-home") && document.getElementById("menu-home").addEventListener("click", function () {
+    window.location.href = window.location.origin;
+  });
+
+  document.getElementById("menu-randomPost").addEventListener("click", function () {
+    toRandomPost();
+  });
+
+  document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
+
+  document.getElementById("rightmenu-mask").addEventListener("click", rm.hideRightMenu);
+
+  document.getElementById("rightmenu-mask").addEventListener("contextmenu", function (event) {
+    rm.hideRightMenu();
+    event.preventDefault(); // Prevent the default context menu from appearing
+  });
+
+  document.getElementById("menu-copy").addEventListener("click", rm.copyPageUrl);
+
+  document.getElementById("menu-pastetext").addEventListener("click", rm.pasteText);
+
+  document.getElementById("menu-copytext").addEventListener("click", function () {
+    rm.rightmenuCopyText(selectTextNow);
+    anzhiyu.snackbarShow("复制成功，复制和转载请标注本文地址");
+  });
+
+  document.getElementById("menu-commenttext").addEventListener("click", function () {
+    rm.rightMenuCommentText(selectTextNow);
+  });
+
+  document.getElementById("menu-newwindow").addEventListener("click", function () {
+    window.open(domhref, "_blank");
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copylink").addEventListener("click", rm.copyLink);
+
+  document.getElementById("menu-downloadimg").addEventListener("click", function () {
+    anzhiyu.downloadImage(domImgSrc, "anzhiyu");
+  });
+
+  document.getElementById("menu-newwindowimg").addEventListener("click", function () {
+    window.open(domImgSrc, "_blank");
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copyimg").addEventListener("click", function () {
+    rm.writeClipImg(domImgSrc);
+  });
+
+  document.getElementById("menu-searchBaidu").addEventListener("click", rm.searchBaidu);
+
+  //音乐
+  document.getElementById("menu-music-toggle").addEventListener("click", anzhiyu.musicToggle);
+
+  document.getElementById("menu-music-back").addEventListener("click", anzhiyu.musicSkipBack);
+
+  document.getElementById("menu-music-forward").addEventListener("click", anzhiyu.musicSkipForward);
+
+  document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
+    rm.rightmenuCopyText(anzhiyu.musicGetName());
+    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
+  });
+
+}
+
+addRightMenuClickEvent();</script><script data-pjax>var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+var pageHeaderEl = document.getElementById("page-header");
+var navMusicEl = document.getElementById("nav-music");
+var consoleEl = document.getElementById("console");
+// 已随机的歌曲
+var selectRandomSong = [];
+// 音乐默认声音大小
+var musicVolume = 0.8;
+// 是否切换了周杰伦音乐列表
+var changeMusicListFlag = false;
+// 当前默认播放列表
+var defaultPlayMusicList = [];
+
+document.getElementById("page-name").innerText = document.title.split(" | Alan")[0];
+anzhiyu.initIndexEssay();
+anzhiyu.changeTimeInEssay();
+anzhiyu.removeBodyPaceClass();
+anzhiyu.qrcodeCreate();
+anzhiyu.changeTimeInAlbumDetail();
+anzhiyu.reflashEssayWaterFall();
+anzhiyu.sayhi();
+anzhiyu.stopImgRightDrag();
+anzhiyu.addNavBackgroundInit();
+anzhiyu.setValueToBodyType();
+anzhiyu.catalogActive();
+anzhiyu.tagsPageActive();
+anzhiyu.categoriesBarActive();
+anzhiyu.topCategoriesBarScroll();
+anzhiyu.switchRightClickMenuHotReview();
+anzhiyu.getCustomPlayList();
+anzhiyu.addEventListenerConsoleMusicList(false);
+setTimeout(() => {if (typeof addFriendLinksInFooter === "function") {addFriendLinksInFooter();}}, 200)</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div></body></html>
