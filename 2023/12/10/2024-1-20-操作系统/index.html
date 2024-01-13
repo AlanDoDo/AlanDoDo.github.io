@@ -1,0 +1,1498 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>单片机简介 | Alan</title><meta name="keywords" content="Stm32"><meta name="author" content="Alan"><meta name="copyright" content="Alan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="单片机简介"><meta name="application-name" content="单片机简介"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="单片机简介"><meta property="og:url" content="https://www.alandodo.cn/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html"><meta property="og:site_name" content="Alan"><meta property="og:description" content="操作系统1.1_1 操作系统的概念、功能和目标作为用户和计算机硬件之间的接口 提供的功能命令接口（联机命令接口|脱机命令接口）程序接口GUI（图形用户界面win|ios|andrio）目标方便用户使用 1.1_2 操作系统的特征并发|并行 并发：多个事件交替发生（宏观同时发生、微观交替进行） 并行："><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg"><meta property="article:author" content="Alan"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.alandodo.cn/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><link rel="preconnect" href="//npm.elemecdn.com"/><link rel="preconnect" href="//npm.onmicrosoft.cn"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.14/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":240},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#3b70fc","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '单片机简介',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-01-13 23:33:02',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>if (GLOBAL_CONFIG.preloader.source == "2" || GLOBAL_CONFIG.preloader.source == "3") {
+  const loadingPercentage = document.getElementById("loading-percentage");
+  let loadingPercentageTimer = setInterval(function() {
+    var progressBar = document.querySelector(".pace-progress");
+    if (!progressBar) return
+    var currentValue = progressBar.getAttribute("data-progress-text");
+    if (currentValue !== loadingPercentage.textContent) {
+      loadingPercentage.textContent = currentValue;
+      if (currentValue === "100%") {
+        clearInterval(loadingPercentageTimer);
+      }
+    }
+  }, 100);
+}
+
+const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div id="web_box"><div id="web_container"><div id="menu-mask"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://alandodo.cn/" title="博客" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.png" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" href="http://robot.onliu.cn/" title="Robot" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/web/%E9%92%A2%E7%AC%94.png" alt="Robot"/><span class="back-menu-item-text">Robot</span></a><a class="back-menu-item" href="http://res.onliu.cn" title="Sale" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog-tuce/tubiao.jpg" alt="Sale"/><span class="back-menu-item-text">Sale</span></a><a class="back-menu-item" href="http://se.onliu.cn/" title="资源共享" target="_blank"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x126.png" alt="资源共享"/><span class="back-menu-item-text">资源共享</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Alan</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png" target="_blank"><img class="post-qr-code-img" alt="wechat" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png" target="_blank"><img class="post-qr-code-img" alt="alipay" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> <span>最新评论</span></span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AJAX/" style="font-size: 1.05rem;">AJAX<sup>1</sup></a><a href="/tags/Architecture/" style="font-size: 1.05rem;">Architecture<sup>1</sup></a><a href="/tags/BOM/" style="font-size: 1.05rem;">BOM<sup>1</sup></a><a href="/tags/Books/" style="font-size: 1.05rem;">Books<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C++<sup>2</sup></a><a href="/tags/CSS/" style="font-size: 1.05rem;">CSS<sup>2</sup></a><a href="/tags/Chat-GPT/" style="font-size: 1.05rem;">Chat GPT<sup>2</sup></a><a href="/tags/DOM/" style="font-size: 1.05rem;">DOM<sup>1</sup></a><a href="/tags/Flushbonading/" style="font-size: 1.05rem;">Flushbonading<sup>2</sup></a><a href="/tags/Git/" style="font-size: 1.05rem;">Git<sup>1</sup></a><a href="/tags/HTML/" style="font-size: 1.05rem;">HTML<sup>1</sup></a><a href="/tags/HTTP/" style="font-size: 1.05rem;">HTTP<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>2</sup></a><a href="/tags/MySQL/" style="font-size: 1.05rem;">MySQL<sup>1</sup></a><a href="/tags/Node-js/" style="font-size: 1.05rem;">Node.js<sup>2</sup></a><a href="/tags/PS/" style="font-size: 1.05rem;">PS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>6</sup></a><a href="/tags/Robot/" style="font-size: 1.05rem;">Robot<sup>2</sup></a><a href="/tags/Ros2/" style="font-size: 1.05rem;">Ros2<sup>1</sup></a><a href="/tags/Siemens/" style="font-size: 1.05rem;">Siemens<sup>1</sup></a><a href="/tags/Tampermonkey/" style="font-size: 1.05rem;">Tampermonkey<sup>2</sup></a><a href="/tags/VMware/" style="font-size: 1.05rem;">VMware<sup>1</sup></a><a href="/tags/Vue/" style="font-size: 1.05rem;">Vue<sup>3</sup></a><a href="/tags/Vue3/" style="font-size: 1.05rem;">Vue3<sup>1</sup></a><a href="/tags/WeChat/" style="font-size: 1.05rem;">WeChat<sup>1</sup></a><a href="/tags/Web3-0/" style="font-size: 1.05rem;">Web3.0<sup>1</sup></a><a href="/tags/Webpack/" style="font-size: 1.05rem;">Webpack<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 1.05rem;">butterfly<sup>2</sup></a><a href="/tags/crawler/" style="font-size: 1.05rem;">crawler<sup>1</sup></a><a href="/tags/jQuery/" style="font-size: 1.05rem;">jQuery<sup>1</sup></a><a href="/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/" style="font-size: 1.05rem;">全栈开发<sup>1</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/" style="font-size: 1.05rem;">技术分享<sup>1</sup></a><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">操作系统<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 1.05rem;">数据可视化<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" style="font-size: 1.05rem;">数据结构与算法<sup>2</sup></a><a href="/tags/%E6%B5%AA%E6%BC%AB%E6%96%87%E6%A1%88/" style="font-size: 1.05rem;">浪漫文案<sup>2</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">计算机网络<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="anzhiyu.switchDarkMode()" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Stm32/">Stm32</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Stm32/" tabindex="-1"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Stm32</span></a></span></div></div><h1 class="post-title">单片机简介</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="post-meta-icon anzhiyufont anzhiyu-icon-calendar-days"></i><span class="post-meta-label">发表于</span><time datetime="2023-12-10T02:52:00.000Z" title="发表于 2023-12-10 10:52:00">2023-12-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">13.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>42分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="单片机简介"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为石家庄"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>石家庄</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>操作系统<br>1.1_1 操作系统的概念、功能和目标<br>作为用户和计算机硬件之间的接口</p>
+<p>提供的功能<br>命令接口（联机命令接口|脱机命令接口）<br>程序接口<br>GUI（图形用户界面win|ios|andrio）<br>目标<br>方便用户使用</p>
+<p>1.1_2 操作系统的特征<br>并发|并行</p>
+<p>并发：多个事件交替发生（宏观同时发生、微观交替进行）</p>
+<p>并行：多个事件同时发生</p>
+<p>共享</p>
+<p>两种资源共享方式</p>
+<p>互斥共享方式：一个时间段内只允许一个进程访问该资源<br>同时共享方式：允许一个时间段内由多个进程“同时”对它们进行访问<br>虚拟</p>
+<p>概念：把一个物理上的实体变为若干个逻辑上的对应物</p>
+<p>空分复用计数<br>时分复用计数<br>异步</p>
+<p>概念：在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，而是走走停停的，以不可预知的速度向前推进。只有系统拥有并发性，才有可能导致异步性。</p>
+<p>1.1_3 操作系统的发展与分类<br>OS的发展与分类</p>
+<p>手工操作阶段<br>纸带机（用户独占全机、人机速度矛盾）<br>批处理阶段——dan’dao<br>单道批处理系统（外围机——磁带）<br>多道批处理系统（操作系统开始出现）<br>分时操作系统<br>轮流处理作业<br>不能处理紧急任务<br>实时操作系统<br>优先处理紧急任务<br>硬实时系统：必须在严格的时间内完成处理<br>软实时系统：可以偶尔犯错<br>网络操作系统<br>分布式操作系统<br>个人计算机操作系统<br>1.1_4 操作系统的运行机制与体系结构<br>OS的运行机制和体系结构</p>
+<p>运行机制<br>两种指令<br>特权指令<br>非特权指令<br>两种处理器状态<br>核心态（root）<br>用户态<br>两种程序<br>内核程序(运行在核心态 )<br>应用程序<br>操作系统内核<br>时钟管理（实现计时功能）<br>中断处理<br>原语（程序运行具有原子性，不可中断）<br>对系统资源进行管理的功能<br>进程管理<br>存储器管理<br>设备管理<br>操作系统的体系结构<br>大内核（将操作系统的主要功能模块都作为系统内核，运行在核心态）<br>微内核（只把最基本的功能保留在内核）<br>1.1_5 中断和异常<br>中断机制的诞生<br>操作系统介入，开展管理工作<br>“用户态—&gt;核心态”是通过中断实现的。并且中断是唯一途径<br>中断的概念和作用<br>中断的分类<br>内中断（异常）<br>陷阱（trap）<br>故障（fault）<br>中止（abort）<br>外中断  （CPU外部）<br>外中断的处理过程<br>1.1_6 系统调用<br>概念：应用程序通过系统调用请求操作系统的服务。保证系统的稳定性和安全性。</p>
+<p>系统调用和库函数的区别：</p>
+<p>系统调用是操作系统向上层提供的接口<br>有的库函数是对系统调用的进一步封装<br>当今编写的应用程序大多是通过高级语言提供的库函数间接地进行系统调用<br>2.1_1 进程的定义、组成、组织方式、特征<br>定义：</p>
+<p>组成：PCB（进程存在唯一的标志），程序段，数据段</p>
+<p>组织方式：链接方式，指针指向不同的队列；索引方式，索引表</p>
+<p>特征：动态性、并发性、独立性、异步性、结构性</p>
+<p>2.1_2 进程的状态与转换<br>状态：</p>
+<p>运行状态：占有CPU，并在CPU上运行，单核只能一个进程（双核两个）（CPU√，其它资源√）</p>
+<p>就绪状态：已经具备运行条件，但是没有空闲的CPU，暂时不能运行（CPUX，其它资源√）</p>
+<p>阻塞状态：等在某个事件的发生，暂时不能运行（CPUX，其它资源X）</p>
+<p>创建状态：创建PCB，程序段，数据段</p>
+<p>终止状态：回收内存，程序段，数据段，撤销PCB</p>
+<p>进程状态间的转换(图，且只能这样转化)</p>
+<p>创建态-&gt;就绪态</p>
+<p>就绪态-&gt;运行态</p>
+<p>运行态-&gt;就绪态</p>
+<p>运行态-&gt;中止态（比如数组越界）</p>
+<p>运行态-&gt;阻塞态（主动）</p>
+<p>阻塞态-&gt;就绪态（被动）</p>
+<p>2.1_3 进程控制<br>基本概念：</p>
+<p>什么是进程控制？</p>
+<p>答：实现各种进程状态转换。</p>
+<p>如何实现进程控制？</p>
+<p>答：用“原语”实现。</p>
+<p>原语做的事情：</p>
+<p>1、更新PCD中的信息</p>
+<p>2、将PCD插入合适的队列</p>
+<p>3、分配&#x2F;回收资源</p>
+<p>进程控制相关的原语：</p>
+<p>1、进程的创建：</p>
+<p>创建原语：申请空白PCB、为新进程分配所需资源、初始化PCB、将PCB插入就绪队列</p>
+<p>引起进程创建的事件：用户登录、作业调度、提供服务、应用请求</p>
+<p>2、进程的终止：</p>
+<p>撤销原语</p>
+<p>引起进程中止的事件：正常结束、异常结束、外界干预</p>
+<p>3、进程的阻塞：</p>
+<p>阻塞原语：运行态-&gt;阻塞态</p>
+<p>引起进程阻塞的事件：需要等待系统分配某种资源、需要等待相互合作的其他进程完成工作</p>
+<p>4、进程的唤醒：</p>
+<p>唤醒原语：阻塞态-&gt;就绪态</p>
+<p>引起进程唤醒的事件：等待的事件发生</p>
+<p>5、进程的切换</p>
+<p>切换原语</p>
+<p>引起进程切换的事件：当前进程事件片到、有更高优先级的进程到达、当前进程主动阻塞、当前进程终止</p>
+<p>2.1_4 进程通信<br>1、共享存储   （分配共享空间，且互斥（P、V操作）</p>
+<p>基于数据结构的共享：固定分配（低级）</p>
+<p>基于存储区的共享：划分存储区（高级）</p>
+<p>2、消息传递</p>
+<p>消息：消息头、消息体</p>
+<p>直接通信方式（直接挂载消息）</p>
+<p>间接通信方式（间接利用信箱发送消息）</p>
+<p>3、管道通信（pipe）</p>
+<p>只能半双工通信</p>
+<p>互斥（没写满，不能读，反之同理）</p>
+<p>2.1_5 线程概念和多线程模型<br>什么是线程，为什么要引入线程？</p>
+<p>答：线程是一个基本的CPU执行单元，也是程序执行流的最小单位，进一步提高了系统的并发度</p>
+<p>引入线程机制后，有什么变化？</p>
+<p>资源分配、调度：进程是资源分配的基本单位，线程是调度的基本单位</p>
+<p>并发性：各线程间也能并发，提升了并发度</p>
+<p>系统开销：可以只在进程中切换，减小了CPU切换环境的系统开销</p>
+<p>1、线程有哪些重要的属性</p>
+<p>线程是处理机调度的基本单位<br>多CPU计算机中，各个线程可占用不同的CPU<br>每个线程都有一个线程ID、线程控制块（TCB）<br>线程也有就绪、阻塞、运行三种基本状态<br>线程几乎不拥有系统资源<br>同一进程的不同线程间共享进程的资源<br>由于共享内存地址空间，统一进程中的线程间通信甚至无需系统干预<br>同一进程中的线程切换，不会引起进程切换<br>不同进程中的线程切换，会引起进程切换<br>切换同进程内的线程，系统开销很小<br>切换进程，系统开销较大<br>2、线程的实现方式</p>
+<p>用户级线程（ULT）：</p>
+<p>由应用管理，从用户的视角看能看到的线程</p>
+<p>内核级线程（KLT）：</p>
+<p>由操作系统管理，从操作系统内核视角看能看到的线程</p>
+<p>n个ULT可以映射到m个KLT上（n&gt;&#x3D;m）</p>
+<p>内核级线程才是处理机分配的单位</p>
+<p>3、多线程模型</p>
+<p>多对一模型</p>
+<p>n个ULT映射到1个KLT</p>
+<p>优点：开销小，效率高</p>
+<p>缺点：容易阻塞，并发度不高</p>
+<p>一对一模型</p>
+<p>n个ULT映射到n个KLT</p>
+<p>优点：并发能力很强</p>
+<p>缺点：占用成本高，开销大</p>
+<p>多对多模型</p>
+<p>n个ULT映射到m个KLT上（n&gt;&#x3D;m）</p>
+<p>中和以上两种优缺点</p>
+<p>2.2_1 处理机调度的概念、层次<br>基本概念</p>
+<p>通常进程数量大于处理机数量，所以要按照一定的算法选择一个进程，并将处理机分配给它运行，以实现进程的并发执行</p>
+<p>三个层次</p>
+<p>高级调度（作业调度）</p>
+<p>辅助外存与内存之间的调度，作业调入时会建立相应的PCB，作业调出时才撤销PCB，调入可由操作系统决定，调出由作业运行结束才调出</p>
+<p>中级调度（内存调度）</p>
+<p>将暂时不用的进程放到外存（PCB不外放），提高内存利用率和系统吞吐量，进程状态为挂起状态，形成挂起队列</p>
+<p>低级调度（进程调度）</p>
+<p>最基本，用算法为进程分配处理机资源，几十ms一次</p>
+<p>三层调度的联系、对比</p>
+<p>进程的“挂起态”</p>
+<p>七状态模型</p>
+<p>五状态前面学了，挂起分为就绪挂起、阻塞挂起</p>
+<p>2.2_2 进程调度的时机、切换与过程调度方式<br>1、时机</p>
+<p>什么时候需要进程调度？</p>
+<p>主动放弃（进程正常终止、运行过程中发生异常而终止、进程主动请求阻塞）<br>被动放弃（分给进程的时间片用完、有更紧急的事需要处理、有更高优先级的进程进入就绪队列）<br>什么时候不能进行进程调度？</p>
+<p>在处理中断的过程中<br>在操作系统内核程序临界区中<br>临界资源：一个时段段内各进程互斥地访问临界资源<br>临界区：访问临界资源的那段代码<br>内核程序临界区会访问就绪队列，导致其上锁<br>在原子操作过程中（原语）<br>2、切换与过程</p>
+<p>“狭义的调度”与“进程切换”的区别</p>
+<p>狭义：选择一个进程<br>广义：狭义+进程切换<br>进程切换的过程需要做什么？</p>
+<p>对原来运行进程各种数据的保存<br>对新的进程各种数据的恢复<br>3、方式</p>
+<p>非剥夺调度方式（非抢占式）</p>
+<p>只允许进程主动放弃处理机<br>剥夺调度方式（抢占式）</p>
+<p>进程被动放弃，可以优先处理紧急任务，适合分时操作系统、实时操作系统<br>2.2_3 调度算法的评价指标<br>1、CPU利用率</p>
+<p>CPU利用率&#x3D;CPU忙碌的时间&#x2F;总时间</p>
+<p>2、系统吞吐量</p>
+<p>&#x3D;总共完成了多少道作业&#x2F;总共画了多少时间</p>
+<p>3、周转时间</p>
+<p>周转时间（提交作业到完成作业花费的时间）、平均周转时间（各作业周转时间之和&#x2F;作业数）<br>带权周转时间（作业周转时间&#x2F;作业实际运行的时间）、平均带权周转时间（各作业带权周转时间&#x2F;作业数）<br>4、等待时间</p>
+<p>进程或作业等待处理机状态时间的和</p>
+<p>进程：等待被服务的时间之和</p>
+<p>作业：建立后的等待时间+作业在外存后备队列中等待的时间</p>
+<p>5、响应时间</p>
+<p>从用户提交请求到首次产生响应所用的时间</p>
+<p>2.2_4 FCFS、SJF、HRRN调度算法<br>1、先来先服务（FCFS）</p>
+<p>先到达先进行服务</p>
+<p>作业-后备队列；进程-就绪队列</p>
+<p>非抢占式</p>
+<p>公平、算法简单</p>
+<p>对长作业有利、对短作业不利、不会饥饿</p>
+<p>2、短作业优先（SJF，shortest job first）</p>
+<p>最短（服务时间最短）的作业优先得到服务，时间相同，先到达的先被服务</p>
+<p>非抢占式（SJF）：选最短需要时间的作业先进入运行态</p>
+<p>抢占式（SRTN）：有新作业进入就绪队列或有作业完成了，考察队列中的最小需要时间的作业</p>
+<p>在所有进程都几乎同时到达时，采用SJP调度算法的平均等待时间、平均周转时间最少</p>
+<p>若无红色前提，抢占式的短作业&#x2F;进程的平均时间最少</p>
+<p>优点：“最短的”平均等待时间，平均周转时间</p>
+<p>缺点：对短作业有利，对长作业不利，可能产生饥饿现象</p>
+<p>3、高响应比优先（HRRN）</p>
+<p>要综合考虑作业&#x2F;进程的等待时间和要求服务的时间</p>
+<p>在每次调度时先计算各个作业&#x2F;进程的响应比，选择响应比最高的作业&#x2F;进程为其服务</p>
+<p>响应比&#x3D;（等待时间+要求服务时间）&#x2F;要求服务时间</p>
+<p>非抢占式</p>
+<p>进程主动放弃CPU时，需要该算法选取就绪队列的作业</p>
+<p>不会饥饿</p>
+<p>2.2_5 时间片轮转、优先级调度、多级反馈队列（适合交互式系统）<br>1、时间片轮转算法（RR）</p>
+<p>算法思想：公平轮流地位各个进程服务，让每个进程在一定时间间隔内都可以得到响应</p>
+<p>算法规则：按照各进程到达就绪队列的顺序，轮流让各个进程执行一个时间片（如100ms）。若进程未在一个时间片内执行完，则剥夺处理机，将进程重新放到就绪队列对位重新排队。</p>
+<p>只能用于进程调度</p>
+<p>抢占式</p>
+<p>优点：响应块，适用于分时操作系统</p>
+<p>缺点：由于高频率的进程切换，因此有一定的开销；不区分任务的紧急程度</p>
+<p>不会饥饿</p>
+<p>2、优先级调度算法</p>
+<p>算法思想：根据任务的紧急程度来决定处理顺序</p>
+<p>算法规则：每个进程&#x2F;作业有各自的优先级，调度时选择优先级最高的作业&#x2F;进程</p>
+<p>适用：作业&#x2F;进程&#x2F;IO</p>
+<p>抢占式&#x2F;不可抢占均有</p>
+<p>静态优先级：不变</p>
+<p>动态优先级：可以变</p>
+<p>通常：系统进程优先级高于用户进程，前台进程优先级高于后台进程，操作系统更偏好I&#x2F;O进程</p>
+<p>可以从追求公平、提升资源利用率等角度考虑改变优先级</p>
+<p>可能会饥饿</p>
+<p>3、多级反馈队列调度算法</p>
+<p>算法思想：对其它算法调度的这种权衡</p>
+<p>算法实现：设置多级就绪队列，各级队列优先级从高到低，时间片从小到大。新进程到达时先进入第一级队列，按照FCFS原则排队等待被分配时间片。若用完时间片进程还未结束，则进程进入下一级队列对位。如果此时已经在最下级的队列，则重新放回最下级队列末尾。啊只有第K级队头的进程为空时，才会为K+1级对头的进程分配时间片，被抢占处理机的进程重新放回原队列队尾。</p>
+<p>优点：对各个进程相对公平（FCFS的优点），每个新到达的进程都可以很快就得到响应（RR的优点）；短进程只用较少的时间就可以完成（SPF的优点）；不必实现估计进程的运行时间（避免用户作假）；可灵活地调整对各类进程的偏好程度，比如CPU密集型进程、IO密集型进程</p>
+<p>默认抢占式</p>
+<p>会饥饿</p>
+<p>2.3_1 进程同步、进程互斥<br>1、进程同步</p>
+<p>指为了完成某种任务而建立的两个或多个进程，这些进程因为需要在某些位置上协调他们的工作次序而产生的制约关系。进程间的直接制约关系就是源于它们之间的相互合作。</p>
+<p>2、进程互斥</p>
+<p>把一个时间段内只允许一个进程使用的资源称为临界资源。</p>
+<p>对临界资源的互斥访问，可以在逻辑上分为四个部分：</p>
+<p>do{<br>  entry section;  &#x2F;&#x2F;进入区  对访问的资源检查或进行上锁<br>  critical section; &#x2F;&#x2F;临界区(段) 访问临界资源的那部分代码<br>  exit section;   &#x2F;&#x2F;退出区  负责解锁<br>  remainder section; &#x2F;&#x2F;剩余区  其它处理<br>} while(true)<br>1、空闲让进。 空的可以直接进去</p>
+<p>2、忙则等待。 繁忙不能进去</p>
+<p>3、有限等待。 不能让进程等待无限长时间</p>
+<p>4、让权等待。 不能进去，不要堵着</p>
+<p>2.3_2 进程互斥的软件实现方法<br>1、单标志法</p>
+<p>两个进程在访问完临界区后会把使用临界区的权限教给另一个进程。也就是说每个进程进入临界区的权限只能被另一个进程赋予</p>
+<p>int turn &#x3D;0;<br>&#x2F;&#x2F;p0进程<br>while(turn!&#x3D;0);<br>critical section;<br>turn &#x3D; 1;<br>remainder section;<br>&#x2F;&#x2F;p1进程<br>while(turn!&#x3D;1);<br>critical section;<br>turn &#x3D; 0;<br>remainder section;<br>可以实现互斥</p>
+<p>存在的问题：p1要访问的话，必须p0先访问，违背：空闲让进原则</p>
+<p>2、双标志先检查 </p>
+<p>算法思想:设置一个bool数组flag[]来标记自己是否想要进入临界区的意愿</p>
+<p>bool flag[2]&#x3D;{false,false};<br>&#x2F;&#x2F;p1进程<br>while(flag[1]);<br>flag[0]&#x3D;true;<br>critical section;<br>flag[0]&#x3D;false;<br>remainder section;<br>&#x2F;&#x2F;p2进程<br>while(flag[0]);<br>flag[0]&#x3D;true;<br>critical section;<br>flag[1]&#x3D;false;<br>remainder section;<br>主要问题：由于进程是并发进行的，可能会违背忙则等待的原则</p>
+<p>3、双标志后检查</p>
+<p>算法思想:设置一个bool数组flag[]来标记自己是否想要进入临界区的意愿,不过是先上锁后检查</p>
+<p>bool flag[2]&#x3D;{false,false};<br>&#x2F;&#x2F;p1进程<br>flag[0]&#x3D;true;<br>while(flag[1]);<br>critical section;<br>flag[0]&#x3D;false;<br>remainder section;<br>&#x2F;&#x2F;p2进程<br>flag[0]&#x3D;true;<br>while(flag[0]);<br>critical section;<br>flag[1]&#x3D;false;<br>remainder section;<br>主要问题：由于进程是并发进行的，可能会两个同时上锁，都进不去，违反空闲让进和有限等待原则</p>
+<p>会饥饿</p>
+<p>4、Peterson 算法</p>
+<p>主动让对方先使用处理器</p>
+<p>bool flag[2]&#x3D;{false,false};<br>int turn&#x3D;0;<br>&#x2F;&#x2F;p1进程<br>flag[0]&#x3D;true;<br>turn&#x3D;1;<br>while(flag[1]&amp;&amp;turn&#x3D;&#x3D;1);<br>critical section;<br>flag[0]&#x3D;false;<br>remainder section;<br>&#x2F;&#x2F;p2进程<br>flag[1]&#x3D;true;<br>turn&#x3D;0;<br>while(flag[0]&amp;&amp;turn&#x3D;&#x3D;0);<br>critical section;<br>flag[1]&#x3D;false;<br>remainder section;<br>遵循空闲让进、忙则等待、有限等待三个原则</p>
+<p>但是未遵循让权等待的原则</p>
+<p>2.3_3 进程互斥的硬件实现方法<br>1、中断屏蔽方法</p>
+<p>关中断（不允许进程中断）</p>
+<p>临界区</p>
+<p>开中断</p>
+<p>简单、高校</p>
+<p>多处理机，可能会同时访问临界资源</p>
+<p>使用OS内核进程</p>
+<p>2、TestAndSet（TSL指令）</p>
+<p>TSL是用硬件实现的，上锁、检查一气呵成</p>
+<p>不满足让权等待，会盲等</p>
+<p>C语言描述逻辑：</p>
+<p>&#x2F;&#x2F;true表示已经上锁<br>bool TestAndSet(bool *lock){<br>  bool old;<br>  old&#x3D;*lock;<br>  *lock&#x3D;true;<br>  return old;<br>}<br>​<br>&#x2F;&#x2F;以下是使用TSL指令实现互斥的算法逻辑<br>while(TestAndSet (&amp;lock));&#x2F;&#x2F;上锁并检查<br>临界区代码段<br>lock&#x3D;false; &#x2F;&#x2F;解锁<br>​<br>3、Swap指令</p>
+<p>别称：Exchange指令、XCHG指令</p>
+<p>Swap指令是用硬件实现的</p>
+<p>&#x2F;&#x2F;true表示已经上锁<br>void Swap(bool *a,bool *b){<br>  bool temp;<br>  temp&#x3D;*a;<br>  *a&#x3D;*b;<br>  *b&#x3D;temp;<br>}<br>​<br>&#x2F;&#x2F;以下是使用Swap指令实现互斥的算法逻辑<br>bool old&#x3D;true;<br>while(old&#x3D;true)<br>  Swap(&amp;lock,&amp;old);<br>临界区代码段<br>lock&#x3D;false; &#x2F;&#x2F;解锁<br>&#x2F;&#x2F;剩余代码段<br>简单</p>
+<p>适用多处理机</p>
+<p>不能让权等待</p>
+<p>2.3_4 信号量机制<br>信号量：</p>
+<p>信号量是一种变量，表示系统中某种资源的数量</p>
+<p>一对原语：wait（S）原语和signal（S）原语，分别简称P（S）、V（S）</p>
+<p>1、整形信号量</p>
+<p>用一个整数表示系统资源的变量，用来表示系统中某种资源的数量</p>
+<p>int S&#x3D;1;<br>void wait(int S){ &#x2F;&#x2F;wait原语，相当于：进入区<br>  while(S&lt;&#x3D;0); &#x2F;&#x2F;如果资源数不够，就意志循环等待<br>  S&#x3D;S-1;    &#x2F;&#x2F;如果资源数够，则占用一个资源<br>}<br>​<br>void signal(int S){&#x2F;&#x2F;signal原语，相当于“退出区”<br>  S&#x3D;S+1;    &#x2F;&#x2F;使用完资源后，在退出区释放资源<br>}<br>可能会出现盲等</p>
+<p>2、记录型信号量</p>
+<p>记录型数据结构表示的信号量</p>
+<p>&#x2F;&#x2F;记录型信号量的定义<br>typedef struct{<br>  int value;<br>  struct process *L;<br>} semaphore;<br>&#x2F;&#x2F;某进程需要使用资源时，通过wait原语申请<br>void wait (semaphore S){<br>  S.value–;<br>  if(S.value&lt;0){<br>    block (S.L);&#x2F;&#x2F;将该进程加入到消息队列中<br> }<br>}<br>&#x2F;&#x2F;进程使用完资源后，通过signal原语释放<br>void signal (semaphore S){<br>  S.value++;<br>  if(S.valie&lt;&#x3D;0){<br>    wakeup(S.L);<br> }<br>}<br>除非特别说明，否则默认S为记录型信号量</p>
+<p>2.3_5 用信号量机制实现进程互斥、同步、前驱关系<br>1、实现进程互斥</p>
+<p>设置互斥信号量mutex，初值为1</p>
+<p>对不同的临界资源需要设置不同的互斥信号量</p>
+<p>PV必须成对出现</p>
+<p>2、实现进程同步</p>
+<p>保证一前一后的操作顺序</p>
+<p>设置同步信号量S，初始为0</p>
+<p>在“前操作”之后执行V（S）</p>
+<p>在“后操作”之后执行（V）</p>
+<p>3、实现进程的前驱关系</p>
+<p>1、要为每一对前驱关系各设置一个同步变量</p>
+<p>2、在“前操作”之后对相应的同步变量执行V操作</p>
+<p>3、在“后操作”之前对相应的同步变量执行P操作</p>
+<p>2.3_6 生产者-消费者问题<br>（好像很幼稚的逻辑</p>
+<p>只有缓冲区没满时，生产者才能把产品放入缓冲区，否则必须等待</p>
+<p>只有缓冲区不空时，消费者才能从中取出产品，否则必须等待</p>
+<p>缓冲区是临界资源，各个进程互斥访问</p>
+<p>实现互斥的P操作要放在实现同步的P操作之后，不然会发生死锁</p>
+<p>V操作不会导致进程发生阻塞的状态，所以可以交换</p>
+<p>使用操作不要放在临界区，不然并发度会降低</p>
+<p>2.3_7 多生产者-多消费者模型<br>在生产-消费者问题中，如果缓冲区大小为1，那么有可能不需要设置互斥信号量就可以实现互斥访问缓冲区</p>
+<p>分析同步问题是，应该从“事件”的角度来考虑</p>
+<p>2.3_8 吸烟者问题<br>解决“可以让生产多个产品的单生产者”问题提供一个思路；</p>
+<p>若一个生产者要生产多种产品（或者说会引发多种前驱事件），那么各个V操作应该放在各自对应的“事件”发生之后的位置</p>
+<p>2.3_9 读者-写者问题<br>1、允许多个读者同时对文件执行读操作</p>
+<p>2、只允许一个写者往文件中写信息</p>
+<p>3、任一写者在完成写操作之前不允许其他读者或写者工作</p>
+<p>4、写者执行写操作前，应让已有的读者和写者全部退出</p>
+<p>semaphore rw&#x3D;1;&#x2F;&#x2F;用于实现对文件的互斥访问。表示当前是否有进程在访问共享文件<br>int count&#x3D;0;&#x2F;&#x2F;记录当前有几个读进程在访问文件<br>semaphore mutex&#x3D;1;&#x2F;&#x2F;用于保证对count变量的互斥访问<br>semaphore w&#x3D;1; &#x2F;&#x2F;用于实现“写优先”</p>
+<p>writer(){<br>  while(1){<br>    P（w）;<br>    P(rw); &#x2F;&#x2F;写之前“加锁”<br>    写文件。。。<br>    V（rw);&#x2F;&#x2F;写之后“解锁”<br>  V(w);<br> }<br>}<br>​<br>reader(){<br>  while(1){<br>    P(w);<br>   P(mutex); &#x2F;&#x2F;各读进程互斥访问count<br>    if(count&#x3D;&#x3D;0)<br>      P(rw); &#x2F;&#x2F;第一个读进程的读进程数+1<br>    count++; &#x2F;&#x2F;访问文件的读进程数+1<br>    V(mutex);<br>    V(w);<br>    读文件…<br>    P(mutex); &#x2F;&#x2F;各读进程互斥访问count<br>    count–; &#x2F;&#x2F;访问文件的读进程数-1<br>    if(count&#x3D;&#x3D;0)<br>      V(rw); &#x2F;&#x2F;最后一个读进程负责“解锁”<br>    V(mutex);<br> }<br>}<br>2.3_10 哲学家进餐问题<br>五个人，必须拿左右的筷子才能吃饭</p>
+<p>避免死锁发生</p>
+<p>解决方案：</p>
+<p>1、可以对哲学家进程施加一些限制条件，比如最多允许四个哲学家同时进餐，这样可以保证至少有一个哲学家是可以拿到左右两只筷子的。</p>
+<p>2、要求奇数号哲学家先拿左边的筷子，然后再拿右边的筷子，而偶数号哲学家刚好相反。用这种方法可以保证如果相邻的两个奇偶号哲学家都想吃饭，那么只会有其中一个可以拿起第一只筷子，另一个会直接阻塞。这就避免了占有一只后再等待另一只的情况。</p>
+<p>3、仅当一个哲学家左右两只筷子都可用时才允许他抓起筷子。</p>
+<p>semaphore chopstick[5]&#x3D;{1,1,1,1,1};<br>semaphore mutex &#x3D; 1; &#x2F;&#x2F;互斥地取筷子<br>Pi(){     &#x2F;&#x2F;i号哲学家的进程<br>  while(1){<br>    P(mutex);<br>    p(chopstick[i]);   &#x2F;&#x2F;拿右<br>    p(chopstick[(i+1)%5]);&#x2F;&#x2F;拿左<br>    V(mutex);<br>    吃饭…<br>    V(chopstick[i]);<br>    V(chopstick[(i+1)%5]);<br>    思考…<br> }<br>}<br>2.3_11 管程<br>1、为什么要引入管程</p>
+<p>PV操作容易出错、困难</p>
+<p>2、管程的定义和基本特征</p>
+<p>定义：</p>
+<p>局部于管程的共享数据结构说明<br>对该数据结构进程操作的一组过程<br>对局部于管程的共享数据设置初始值的语句<br>管程有一个名字<br>基本特征：</p>
+<p>局部于管程数据结构只能被局部于管程的过程所访问<br>一个进程只有通过调用管程内的过程才能进入管程访问共享数据<br>每次仅允许一个进程在管程内执行某个内部过程<br>心得：相当于C++的类，管程是数据放在private中，函数放在public中</p>
+<p>拓展1：用管程解决生产者消费者问题</p>
+<p>monitor producerconsumer<br>  condition full,empty;<br>  int count &#x3D; 0;<br>  void insert(Item item){<br>    if(count &#x3D;&#x3D; N)<br>      wait(full);<br>    count++;<br>    insert_item (item);<br>    if(count &#x3D;&#x3D; 1)<br>      signal(empty);<br> }<br>  Item remove(){<br>    if(count &#x3D;&#x3D; 0)<br>      wait(empty);<br>    count–;<br>    if(count &#x3D;&#x3D; N-1)<br>      signal(full);<br>    return remove_item();<br> }<br>  end monitor;<br>​<br>&#x2F;&#x2F;使用<br>producer(){<br>  while(1){<br>    item &#x3D; 生产一个产品;<br>    producerconsumer.insert(item);<br> }<br>}<br>​<br>consumer(){<br>  while(1){<br>    item &#x3D; producerconsumer.remove();<br>    消费产品 item;<br> }<br>}<br>拓展2：Java中类似于管程的机制</p>
+<p>java中用synchronized来描述一个函数,这个函数同一时间只能被一个线程调用</p>
+<p>2.4_1 死锁的概念<br>1、什么是死锁</p>
+<p>各进程互相等待对方手里的资源，导致各进程都阻塞，无法向前推进的现象。</p>
+<p>2、进程死锁、饥饿、死循环的区别</p>
+<p>死锁：</p>
+<p>定义：各进程互相等待对方手里的资源，导致各进程都阻塞，无法向前推进的现象。</p>
+<p>区别：至少两个或两个的进程同时发生死锁</p>
+<p>饥饿：</p>
+<p>定义：由于长期得不到想要的资源，某进程无法向前推进的现象。</p>
+<p>区别：可能只有一个进程发生饥饿</p>
+<p>死循环：</p>
+<p>定义：某进程执行过程中一直跳不出某个循环的现象。</p>
+<p>区别：死循环是程序员的问题</p>
+<p>3、死锁产生的必要条件</p>
+<p>互斥条件：多个进程争夺资源发生死锁<br>不剥夺条件：进程获得的资源不能由其它进程强行抢夺<br>请求和保持条件：某个进程有了资源，还在请求资源<br>循环等待条件：存在资源的循环等待链<br>4、什么时候会发生死锁</p>
+<p>对系统资源的竞争<br>进程推进顺序非法<br>信号量的使用不当也会造成死锁<br>5、死锁的处理策略</p>
+<p>预防死锁<br>避免死锁<br>死锁的检测和解除<br>2.4_2 死锁的处理策略——预防死锁<br>1、不允许死锁发生</p>
+<p>静态策略：预防死锁<br>破坏互斥条件（有些不能破坏）<br>    把互斥的资源改造为共享资源<br>破坏不剥夺条件（复杂，造成之前工作失效，降低系统开销，会全部放弃、导致饥饿）<br>    方案1：当请求得不到满足的时候，立即释放手里的资源<br>    方案2：由系统介入，强行帮助剥夺<br>破坏请求和保持条件（资源利用率极低，可能会导致某些进程饥饿）<br>    采用静态分配方法，一次性全部申请，如果申请不到，不要允许<br>破坏循环等待条件（不方便增加新的设备，实际使用与递增顺序不一致，会导致资源的浪费，必须按规定次序申请资源）<br>    顺序资源分配法：对资源编号，进程按编号递增顺序请求资源<br>动态检测：避免死锁<br>2、允许死锁发生</p>
+<p>死锁的检测和解除<br>2.4_3 死锁的处理策略——避免死锁<br>动态检测：避免死锁</p>
+<p>什么是安全序列<br>进行后面的某些情况，不会使系统发生死锁<br>什么是系统的不安全状态，与死锁有何联系<br>如果系统处于安全状态，就一定不会发生死锁。如果系统进入不安全状态，就可能发生死锁（处于不安全状态未必就是发生了死锁，但发生死锁时一定时在不安全状态）<br>如何避免系统进入不安全状态——银行家算法<br>初始分配完成后，优先全部分配给最少的，并且拿回资源<br>        步骤：</p>
+<pre><code>        1、检查此次申请是否超过了之前声明的最大需求数
+
+        2、检查此时系统剩余的可用资源是否还能满足这次请求
+
+        3、试探着分配，更改各数据结构
+
+        4、用安全性算法检查此次所分配是否会导致系统进入不安全状态
+</code></pre>
+<p>2.4_4 死锁的处理策略——检测和解除<br>死锁的检测</p>
+<p>1、用某种数据结构来保存资源的请求和分配信息</p>
+<p>2、提供一种算法，利用上述信息来检测系统是否已进入死锁状态</p>
+<p>死锁的解除</p>
+<p>1、资源剥夺法：挂起某些死锁进程，并抢占它的资源，将这些资源分配给其他的死锁进程。</p>
+<p>2、撤销进程法：强制撤销部分，甚至全部死锁进程，并剥夺这些进程的资源。</p>
+<p>3、进程回退法：让一个或多个死锁进程回退到足以避免死锁的地步。</p>
+<p>3.1_1 内存的基础知识<br>1、什么是内存</p>
+<p>存储单元：每个地址对应一个存储单元</p>
+<p>内存地址：</p>
+<p>2、进程运行的基本原理</p>
+<p>指令的工作原理：</p>
+<p>逻辑地址vs物理地址：逻辑地址就是相对地址</p>
+<p>从写程序到程序运行：编辑-编译-链接-装入</p>
+<p>三种链接方式：静态链接（在程序运行前，先将各目标模块及它们所需的库函数连接成一个完整的可执行文件）、装入时动态链接（将各目标模块装入内存时，边装入边链接的链接方式）、运行时动态链接（在程序执行中需要该模块时，才对它进行链接，其优点时便于修改和更新。）</p>
+<p>三种装入方式：绝对装入（在编译的时候就知道程序放在内存的哪个位置）、静态重定位（装入时将逻辑地址转表为物理地址）、动态重定位（把地址转化推迟到程序真正要执行时才进行）</p>
+<p>3.1_2 内存管理的概念<br>1、内存空间的分配与回收</p>
+<p>2、内存空间的扩充</p>
+<p>内存的虚拟性</p>
+<p>3、地址转换</p>
+<p>逻辑地址和物理地址转换</p>
+<p>4、存储保护</p>
+<p>设置上下限寄存器<br>采用重定位寄存器（基址寄存器）和界地址寄存器（限长寄存器）<br>3.1_3 覆盖与交换<br>内存空间的扩充</p>
+<p>覆盖技术：将程序分为多个段，内存分为”固定区“和”覆盖区“，需要常驻的放在”固定区“，调入后就不再调出，不常用的段放在”覆盖区“，需要用到时调入内存，用不到时掉出内存</p>
+<p>交换技术：内存空间紧张时，系统将内存中某些进程暂时换出外存，把外存中某些已具备运行条件的进程换入内存（PCB会常驻内存，不会被患处）</p>
+<p>虚拟存储技术：</p>
+<p>3.1_4 连续分配管理方式<br>连续分配方式</p>
+<p>单一连续分配：内存被分配为系统区和用户区，系统区在低地址，用户区是一个用户独享</p>
+<p>固定分区分配：将用户区分割为若干固定分区给各道程序，分割策略有分区大小相等和分区大小不相等，可以建议一个分区说明表来管理各个分区</p>
+<p>动态分区分配：可变分区分配，不会预先划分内存分区，而是在进程装入内存时，根据进程的大小动态地建立分区，并使分区的大小正好适合进程的需要。</p>
+<p>内部碎片：分配给某进程的内存区域中，如果有些部分没有用上</p>
+<p>外部碎片：是指内存中的某些空闲分区由于太小而难以利用（如果有外部碎片，可以采用紧凑技术）</p>
+<p>3.1_5 动态分区分配算法<br>1、首次适应算法（First Fit)</p>
+<p>算法思想：每次从低地址开始查找，找到第一个能满足大小的空闲分区</p>
+<p>2、最佳适应算法(Best Fit)</p>
+<p>算法思想：为了保证“大进程”到来时能有连续的大片区域，可以尽可能留下大片的空闲区，优先使用更小的空闲区。</p>
+<p>空闲分区按容量递增次序链接，分配内存时顺序查找空闲分区链</p>
+<p>缺点：会留下小碎片</p>
+<p>3、最坏适应算法(Worst Fit)</p>
+<p>算法思想：和最佳适应算法相反，按容量递减次序排列，每次尽可能用大的分区</p>
+<p>4、领近适应算法(Next Fit)</p>
+<p>算法思想：每次从上次查找结束的位置开始检索</p>
+<p>缺点：大空间容易被用完</p>
+<p>3.1_6 基本分页存储管理的基本概念<br>允许一个进程分散地装入道许多不相邻的位置</p>
+<p>连续分配：为用户进程分配连续的内存空间</p>
+<p>非连续分配：为用户进程分配分散的内存空间</p>
+<p>将内存分为大小相等的小分区“页框”，将用户的进程空间也分为大小相等的一个个区域，以页框的基本单位分配给每个进程片</p>
+<p>分页管理：物理地址&#x3D;页面的其实位置+偏移量</p>
+<p>计算机中用2的整数倍表示页面的大小</p>
+<p>页表：存放页号和块号的对应关系</p>
+<p>3.1_7 基本地址变换机构<br>页表寄存器（PTR），存放页表在内存中的起始地址F和页表长度M，进程未执行时，页表的起始地址和页表的长度放在进程控制块（PCB）中，当进程被调度时，操作系统内核会把它们放在页表寄存器中。</p>
+<p>3.1_8 具有快表的地址变换机构<br>1、局部性原理</p>
+<p>时间局部性：访问某个变量后，在不久的将来还会被访问</p>
+<p>空间局部性：程序访问了某个存储单元，不久之后，其附近的存储单元也很有可能被访问</p>
+<p>2、什么是快表（TLB）</p>
+<p>快表：又称联想寄存器（TLB），是一种访问速度比内存快很多的高速缓冲存储器，用来存放当前访问的若干页表项，以加速地址变换的过程。与此对应，内存中的页表常称为慢表。</p>
+<p>3、引入快表后，地址的变换过程</p>
+<p>3.1_9 两级页表<br>1、单级页表存在什么问题？如何解决？</p>
+<p>所有页表项必须连续存放，页表过大时需要很大的连续空间</p>
+<p>在一段时间内并非所有页面都用得到，因此没必要让整个页表常驻内存</p>
+<p>2、两级页表的原理、逻辑地址结构</p>
+<p>将长长的页表再分页</p>
+<p>逻辑地址结构：（一级页号、二级页号、页内偏移量）</p>
+<p>页目录表、外层页表、顶级页表</p>
+<p>3、如何实现地址变换？</p>
+<p>按照地址结构将逻辑地址拆分成三部分</p>
+<p>从PCB中读出页目录表始址，根据一级页号查页目录表，找到下一级页表在内存中的存放位置</p>
+<p>根据二级页号查表，找到最终想访问的内存块号</p>
+<p>结合页内偏移量得到物理地址</p>
+<p>4、两级页表问题需要注意的几个细节</p>
+<p>多级页表中，各级页表的大小不能超过一个页面。若两级页表不够，可以分更多级</p>
+<p>多级页表的访问次数（假设没有快表结构）——N级页表访问一个逻辑地址需要N+1次访存</p>
+<p>3.1_10 基本分段存储管理方式<br>1、什么是分段？</p>
+<p>进程的地址空间：按照程序自身的逻辑关系划分为若干个段，每段有段名，每段从0开始编址</p>
+<p>段号的位数决定了每个进程最多可以分几个段</p>
+<p>段内地址位数决定了每个段的最大长度是多少</p>
+<p>2、什么是段表</p>
+<p>段表：段映射表</p>
+<p>每个程序被分段后，用段表记录该程序在内存中存放的位置</p>
+<p>段表：段号 段长 基址 </p>
+<p>3、如何实现地址变换</p>
+<p>4、分段、分页管理的对比</p>
+<p>页：信息的物理单位，实现离散分配，提高内存利用率，地址是一维的，访存两次</p>
+<p>段：信息的逻辑单位，对系统可见，地址是二维的，访存3次</p>
+<p>分段比分页更容易实现信息的共享和保护（不能被修改的代码称为纯代码和可重入代码，不属于临界资源）</p>
+<p>3.1_11 段页式的管理方式<br>1、分页、分段管理方式最大的优缺点</p>
+<p>分页：利用率高，碎片少，不方便进行信息共享和保护</p>
+<p>分段：方便信息共享和保护，如果段长大，容易产生外部碎片</p>
+<p>2、分段+分页的结合——段页式管理方式</p>
+<p>先分段再分页</p>
+<p>段号+页号+页内偏移量</p>
+<p>地址结构是二维的</p>
+<p>3、段表、页表</p>
+<p>4、如何实现地址变换</p>
+<p>3.2_1 虚拟内存的基本概念<br>1、传统存储管理方式的特征、缺点</p>
+<p>之前讲的</p>
+<p>一次性：作业必须全部装入内存后才能开始运行，并发性下降</p>
+<p>驻留性：一旦作业被装入内存，就会一直驻留在内存</p>
+<p>2、局部性原理</p>
+<p>时间局部性<br>空间局部性<br>高速缓存技术<br>3、虚拟内存的定义和特征</p>
+<p>虚拟内存最大容量是计算机地址结构确定的</p>
+<p>虚拟内存的实际容量&#x3D;min(内存和外存容量之和，CPU寻址范围)</p>
+<p>eg：某计算机地址结构为32位，按字节编址，内存大小为512MB，外存大小为2DB.</p>
+<p>则虚拟内存的最大容量为 2^32B&#x3D;4GB</p>
+<p>虚拟内存的实际容量&#x3D;min(2^32B,512MB+2GB)&#x3D;2GB+512MB </p>
+<p>多次性：无需在作业运行时一次性全部装入内存，而是允许被分成多次调用内存</p>
+<p>对换性：在作业运行时无需一直常驻内存，而是允许在作业运行过程中，将作业换入换出</p>
+<p>虚拟性：从逻辑上扩充了内存的容量，使用户看到的内存容量，远大于实际的容量</p>
+<p>4、如何实现虚拟内存技术</p>
+<p>在程序执行过程中，当所访问的信息不再内存时，由操作系统负责将所需信息从外存调入内存，然后继续执行程序。</p>
+<p>若内存空间不够，由操作系统负责将内存中暂时用不到的信息换出到外存。</p>
+<p>3.2_2 请求分页管理方式<br>1、页表机制</p>
+<p> 请求分页存储的页表：</p>
+<p>内存块号  状态位 访问字段 修改位 外存地址</p>
+<p>2、缺页中断机构</p>
+<p>内中断，可被修复</p>
+<p>3、地址变换机构</p>
+<p>3.2_3 页面置换算法<br>1、最佳置换算法（OPT）</p>
+<p>每次选择淘汰的页面是以后永不使用或者在最长时间内不再被访问的页面，这样可以保证最低的缺页率。</p>
+<p>实际上不知道后面的序列</p>
+<p>2、先进先出置换算法（FIFO）</p>
+<p>每次选择淘汰的页面是最早进入内存的页面</p>
+<p>Belady异常，当分配的内存块增大时，缺页次数反而增加</p>
+<p>3、最近最久未使用置换算法（LRU）</p>
+<p>每次淘汰最近最久未使用的页面</p>
+<p>4、时钟置换算法（最近未用算法，CLOCK）</p>
+<p>简单的：最多经历两轮扫描，初始为1，扫一下为0，再扫一下被踢</p>
+<p>5、改进型的时钟置换算法</p>
+<p>优先淘汰没有被修改过的，因为没有修改过的不用进行IO操作00-&gt;01（改）-&gt;00-&gt;01</p>
+<p>3.2_4 页面分配策略<br>1、驻留集</p>
+<p>指请求分页存储管理中给进程分配的物理块的集合</p>
+<p>2、页面分配、置换策略</p>
+<p>固定分配局部替换：驻留集大小不可改变<br>可变分配全局替换：可以将操作系统保留的空闲物理块分配给缺页进程<br>可变分配局部替换：只能选进程自己的物理块置换<br>3、调入页面的时机</p>
+<p>预调页策略：一次调用若干个相邻页面，运行前调入</p>
+<p>请求调页策略：运行时缺页再调入</p>
+<p>4、从何处调页</p>
+<p>对换区：快，采用连续分配方式</p>
+<p>文件区：慢，采用离散分配方式</p>
+<p>5、抖动（颠簸）现象</p>
+<p>刚刚换出的又要换入，刚刚换入的又要换出，物理块不够</p>
+<p>6、工作集</p>
+<p>指在某段时间间隔里，进程实际访问页面的集合</p>
+<p>4.1_1 初识文件管理<br>提供的功能：</p>
+<p>处理机管理</p>
+<p>存储器管理</p>
+<p>文件管理</p>
+<p>设备管理</p>
+<p>目标：安全高效</p>
+<p>4.1_2 文件的逻辑结构<br>1、无结构文件</p>
+<p>文件由一系列二进制文件流组成</p>
+<p>2、有结构文件（记录式文件）</p>
+<p>顺序文件：文件中的记录一个接一个顺序排列，定长或变长，可以顺序存储或者链式存储</p>
+<p>按照是否与关键字顺序有关，可以分为串结构和顺序结构</p>
+<p>链式：无法随机存取</p>
+<p>顺序存储：</p>
+<p>可变长：无法随机存取<br>定长：可以随机存取，采用串结构，无法快速找到关键字；采用顺序结构，可以快速查找关键字<br>索引文件：索引表本身是定长的顺序文件</p>
+<p>索引顺序文件：多级索引表嵌套查找</p>
+<p>4.1_3 文件目录<br>1、文件控制块（FCB）</p>
+<p>搜索、创建文件、删除文件、显示目录、修改目录</p>
+<p>2、目录结构</p>
+<p>单级目录结构<br>两级目录结构<br>        主文件目录（MFD）+用户文件目录（UFD）</p>
+<p>多级目录结构（树形目录结构）<br>        当代操作系统采用方法、不便于文件共享</p>
+<p>无环图目录结构<br>可以共享<br>3、索引节点（对文件控制块</p>
+<p>压缩文件名和信息</p>
+<p>4.1_4 文件的物理结构（文件分配方式）<br>1、对非空闲磁盘块的管理</p>
+<p>连续分配：连续分配方式要求每个文件在磁盘上占有一组连续的块，对文件的拓展不方便，有很多磁盘碎片</p>
+<p>链接分配</p>
+<p>隐式分配：采用链接分配方式的文件，只支持顺序访问，不支持随机访问，方便拓展<br>显示分配：文件分配表显式记录下一块物理块的位置，方便拓展，支持随机访问，文件表会占内存空间<br>4.1_4 文件的物理结构（文件分配方式）<br>索引分配</p>
+<p>索引分配允许文件离散地分配在各个磁盘块中，系统会为每个文件建立一张索引表，索引表记录了文件的各个逻辑块对应的物理块</p>
+<p>支持随机访问</p>
+<p>链接方案<br>多层索引<br>混合索引<br>4.1_5 文件存储空间管理<br>1、存储空间的划分与初始化</p>
+<p>文件卷（逻辑卷）的概念<br>目录区与文件区<br>2、几种管理方法</p>
+<p>空闲表法：首位置+长度，回收时注意修改<br>空闲链表法（空闲盘块链、空闲盘区链）<br>位示图法<br>成组链接法：文件卷的目录区中专门用一个磁盘块作为超级块，当系统启动时需要将超级内存块读入内存。并且保证内存与外存中的超级块数据一致。<br>4.1_6 文件的基本操作<br>创建文件（create）</p>
+<p>1、在外存中找到文件所需的空间</p>
+<p>2、创建该文件对应的目录项</p>
+<p>删除文件(delete)</p>
+<p>1、找到文件名对应的目录项</p>
+<p>2、回收文件占用的磁盘块</p>
+<p>3、删除文件对应的目录项</p>
+<p>读文件(read)</p>
+<p>写文件(write)</p>
+<p>打开文件(open)</p>
+<p>1、找到文件名对应的目录项</p>
+<p>2、将目录项复制到内存中的“打开文件”中</p>
+<p>关闭文件(close)</p>
+<p>4.1_7 文件共享<br>1、基于索引结点的共享方式（硬链接）</p>
+<p>直接指向文件的索引节点</p>
+<p>2、基于符号链的共享方式（软链接）</p>
+<p>相当于win的快捷方式</p>
+<p>4.1_8 文件保护<br>1、口令保护</p>
+<p>2、加密保护</p>
+<p>保密性强，不需要在系统中存储“密码”</p>
+<p>编码&#x2F;译码，需要花费一定时间</p>
+<p>3、访问控制</p>
+<p>在每个文件的FCB中增加一个访问控制表（ACL），该表记录了各个用户可以对该文件执行哪些操作</p>
+<p>4.1_9 文件系统的层次结构<br>用户&#x2F;应用接口</p>
+<p>用户接口</p>
+<p>文件目录系统</p>
+<p>存取控制模块</p>
+<p>逻辑文件系统与文件信息缓冲区</p>
+<p>物理文件系统</p>
+<p>辅助分配模块       设备管理模块</p>
+<pre><code>                                设备
+</code></pre>
+<p>4.2_1 磁盘的结构<br>磁盘、磁道、扇区的概念</p>
+<p>如何在磁盘中读写数据</p>
+<p>盘面柱面的概念</p>
+<p>磁盘的物理地址</p>
+<p>磁盘的分类</p>
+<p>4.2_2 磁盘调度算法<br>    1、一次磁盘读&#x2F;写操作需要的时间</p>
+<p>寻找时间Ts&#x3D;s+m*n<br>延迟时间Tr&#x3D;1&#x2F;(2r)<br>传输时间Tt&#x3D;b&#x2F;(rN)<br>2、磁盘调度算法</p>
+<p>先来先服务（FCFS）<br>最短寻找时间优先（SSTF）<br>        优先处理最近的磁道，可能会产生饥饿现象</p>
+<p>扫描算法（SCAN）	<br>        只有磁头移动到最外侧磁道的时候才能往内移动，移动到最内侧磁道的时候才能往外移动</p>
+<pre><code>    LOOK，如果在磁头移动方向上已经没有别的请求，就可以立即改变磁头移动方向
+</code></pre>
+<p>循环扫描算法（C-SCAN）<br>返回时直接快速移动至起始端而不处理任何请求</p>
+<pre><code>C-LOOK，如果在磁头移动方向上已经没有别的请求，就可以立即改变磁头移动方向
+</code></pre>
+<p>4.2_3 减小磁盘延迟时间的方法<br>1、寻找时间（寻道时间）：启动磁臂、移动磁头所花的时间</p>
+<p>2、延迟时间：将目标扇区转到磁头下面所化的时间</p>
+<p>磁头读取一块内容后，需要一小段的时间处理</p>
+<p>采用交替编号策略</p>
+<p>柱面号在盘面号之前，可以减少磁头移动消耗的时间</p>
+<p>错位命名</p>
+<p>3、传输时间：读&#x2F;写 数据花费的时间</p>
+<p>4.2_4 磁盘的管理<br>1、磁盘初始化</p>
+<p>低级格式化&#x2F;物理分区</p>
+<p>2、引导块</p>
+<p>ROM不可修改，ROM中只存放很小的“自举装入程序”</p>
+<p>3、坏块的管理</p>
+<p>在FAT表上标明（坏块对操作系统不透明）</p>
+<p>5.1_1 I-O设备的概念和分类<br>1、什么是I-O设备</p>
+<p>输入&#x2F;输出</p>
+<p>2、按使用特性分类</p>
+<p>人机交互的外部设备</p>
+<p>存储设备</p>
+<p>网络通信设备</p>
+<p>3、按传输速率分类</p>
+<p>低俗设备、中速设备、高速设备</p>
+<p>4、按信息交换的单位分类</p>
+<p>块设备、字符设备</p>
+<p>5.1_2 I-O控制器<br>机械部件：鼠标等</p>
+<p>电子部件</p>
+<p>功能：</p>
+<p>1、接受和识别CPU发出的命令</p>
+<p>控制寄存器</p>
+<p>2、向CPU报告设备的状态</p>
+<p>状态寄存器</p>
+<p>3、数据交换</p>
+<p>数据寄存器</p>
+<p>4、地址识别</p>
+<p>内存映射IO</p>
+<p>寄存器独立编制</p>
+<p>5.1_3 I-O控制方式<br>1、程序直接控制方式</p>
+<p>轮询：完成一次读&#x2F;写操作的流程</p>
+<p>CPU干预频繁</p>
+<p>每次读写一个字</p>
+<p>实现简单</p>
+<p>会使CPU忙等</p>
+<p>2、中断驱动方式</p>
+<p>让cpu发出io指令后做其它的事情</p>
+<p>大量中断会使cpu效率低</p>
+<p>每次读写一个字</p>
+<p>cpu和io可并行工作</p>
+<p>3、DMA方式：直接存储器存取</p>
+<p>数据单位：连续的多个块</p>
+<p>直接从设备到内存</p>
+<p>减少了cpu干预</p>
+<p>DR：数据寄存器</p>
+<p>MAR：内存地址寄存器</p>
+<p>DC：剩余读写字节数</p>
+<p>CR：命令&#x2F;状态寄存器</p>
+<p>4、通道控制方式</p>
+<p>弱鸡版cpu</p>
+<p>通道程序：任务清单</p>
+<p>cpu发送命令给通道，然后让通道处理IO操作就行了</p>
+<p>处理完了，向cpu发送中断信号</p>
+<p>5.1_4 I-O软件层次结构<br>1、用户层软件</p>
+<p>实现与用户交互的接口，向上提供方便易用的库函数</p>
+<p>2、设备独立性软件（设备无关性软件）</p>
+<p>向上层提供统一的调用接口（read&#x2F;write）</p>
+<p>设备的保护</p>
+<p>差错处理</p>
+<p>设备的分配与回收</p>
+<p>数据缓冲区管理</p>
+<p>建立逻辑设备名到物理设备名的映射关系</p>
+<p>根据设备类型选择调用相应的驱动程序</p>
+<p>3、设备驱动程序（比如打印机驱动）</p>
+<p>设置设备寄存器、检查设备状态</p>
+<p>4、中断处理程序</p>
+<p>进行中断处理</p>
+<p>5、硬件</p>
+<p>执行IO操作，有机械部件、电子部件组成</p>
+<p>5.1_5 I-O核心子系统<br>1、用户层软件</p>
+<p>假脱机系统</p>
+<p>2、设备独立性软件（设备无关性软件）</p>
+<p>IO调度、设备保护、设备分配与回收、缓冲区管理</p>
+<p>3、设备驱动程序（比如打印机驱动）</p>
+<p>4、中断处理程序</p>
+<p>5、硬件</p>
+<p>5.1_6 假脱机技术<br>1、什么是脱机技术，脱机技术可以解决什么问题</p>
+<p>脱离主机的控制进行输入&#x2F;输出控制</p>
+<p>SPPOLing系统：必须要有多道程序并发进行</p>
+<p>2、假脱机技术的实现原理</p>
+<p>输入井和输出井<br>输入进程和输出进程<br>输入缓冲区和输出缓冲区<br>3、共享打印机的原理分析</p>
+<p>5.1_7 设备的分配与回收<br>1、设备分配时应考虑的因素</p>
+<p>设备的固有属性：独占设备、共享设备、虚拟设备</p>
+<p>设备分配算法：</p>
+<p>设备分配中的安全：为进程分配一个设备后就将进程阻塞，本次IO完成后才将进程唤醒</p>
+<p>2、静态分配与动态分配</p>
+<p>静态分配：进程运行前为其分配全部所需资源、运行结束后归还资源</p>
+<p>动态分配：运行中动态分配</p>
+<p>3、设备分配管理中的数据结构</p>
+<p>树</p>
+<p>系统设备表SDT，表目：（设备类型、设备标识符、DCT、驱动程序入口）</p>
+<p>设备控制表DCT（设备类型、设备标识符、设备状态、指向控制器表的指针、重复执行次数或事件、设备队列的队首指针）</p>
+<p>控制器控制表COCT（控制器标识符、控制器状态、指向通道表的指针设备队列的队首指针、控制器队列的队尾指针）</p>
+<p>通道控制表CHCT（通道标识符、通道状态、与通道连接的控制器表首址、通道队列的队首指针、通道队列的队尾指针）</p>
+<p>4、设备分配的步骤</p>
+<p>根据进程请求的物理设备名——&gt;设备控制表——&gt;控制器控制表——&gt;通道</p>
+<p>5、设备分配步骤的改进方法</p>
+<p>建立逻辑设备名和设备的映射</p>
+<p>5.1_8 缓冲区管理<br>1、什么时缓冲区？有什么作用？</p>
+<p>缓冲区是一个存储区域</p>
+<p>缓和CPU与IO设备之间速度不匹配的矛盾</p>
+<p>减少对CPU的中断频率</p>
+<p>解决数据粒度不匹配的问题</p>
+<p>提高CPU与IO设备之间的并行性</p>
+<p>2、单缓冲</p>
+<p>在内存中分配一块缓冲区</p>
+<p>处理一块时间&#x3D;max（C,T)+M</p>
+<p>3、双缓冲</p>
+<p>在内存中分配两块缓冲区</p>
+<p>max(T,C+M)</p>
+<p>4、循环缓冲</p>
+<p>5、缓冲池</p>
+<p>由系统中共用的缓冲区组成。这些缓冲区可以分为：空缓冲队列、装满输入数据的缓冲队列、装满输出数据的缓冲队列</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Alan</div><div class="post-copyright__author_desc">每个终点都是新的起点</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://www.alandodo.cn/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://www.alandodo.cn/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/')">单片机简介</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x127.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x128.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://www.alandodo.cn/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=单片机简介&amp;url=https://www.alandodo.cn/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&amp;pic=https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.alandodo.cn" target="_blank">Alan</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Stm32/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Stm32<span class="tagsPageCount">2</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/26/2023-11-26-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x264.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据结构小复习</div></div></a></div><div class="next-post pull-right"><a href="/2023/12/10/2024-1-10-Stm32%E5%8D%95%E7%89%87%E6%9C%BA%E7%AE%80%E4%BB%8B/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">单片机简介</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/12/10/2024-1-10-Stm32%E5%8D%95%E7%89%87%E6%9C%BA%E7%AE%80%E4%BB%8B/" title="单片机简介"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-12-10</div><div class="title">单片机简介</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-top" title="点击展开"><div class="card-info-avatar"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-status-box"><div class="author-status"><g-emoji class="g-emoji" alias="writing_hand" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/270d.png">✍️</g-emoji><span>on Studying</span></div></div></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">我将分享关于<b style="color:#fff">Code、Robot</b>的文章、教程和经验总结。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Alan</h1><div class="author-info__desc">每个终点都是新的起点</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/AlanDoDo/AlanDoDo.github.io" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1116074436?spm_id_from=333.1007.0.0" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x129.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/12/10/2023-12-10-%E8%87%AA%E5%88%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="自制操作系统"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自制操作系统"/></a><div class="content"><a class="title" href="/2023/12/10/2023-12-10-%E8%87%AA%E5%88%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="自制操作系统">自制操作系统</a><time datetime="2023-12-10T02:52:00.000Z" title="发表于 2023-12-10 10:52:00">2023-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/10/2024-1-10-Stm32%E5%8D%95%E7%89%87%E6%9C%BA%E7%AE%80%E4%BB%8B/" title="单片机简介"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="单片机简介"/></a><div class="content"><a class="title" href="/2023/12/10/2024-1-10-Stm32%E5%8D%95%E7%89%87%E6%9C%BA%E7%AE%80%E4%BB%8B/" title="单片机简介">单片机简介</a><time datetime="2023-12-10T02:52:00.000Z" title="发表于 2023-12-10 10:52:00">2023-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="单片机简介"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x266.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="单片机简介"/></a><div class="content"><a class="title" href="/2023/12/10/2024-1-20-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="单片机简介">单片机简介</a><time datetime="2023-12-10T02:52:00.000Z" title="发表于 2023-12-10 10:52:00">2023-12-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/26/2023-11-26-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/" title="数据结构小复习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x264.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构小复习"/></a><div class="content"><a class="title" href="/2023/11/26/2023-11-26-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0/" title="数据结构小复习">数据结构小复习</a><time datetime="2023-11-26T06:17:00.000Z" title="发表于 2023-11-26 14:17:00">2023-11-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/14/2023-10-22-Nodejs%E5%9C%A8%E5%AD%A6/" title="Node.js入门指南：从零开始构建高性能的Web应用"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x39.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Node.js入门指南：从零开始构建高性能的Web应用"/></a><div class="content"><a class="title" href="/2023/10/14/2023-10-22-Nodejs%E5%9C%A8%E5%AD%A6/" title="Node.js入门指南：从零开始构建高性能的Web应用">Node.js入门指南：从零开始构建高性能的Web应用</a><time datetime="2023-10-14T12:51:00.000Z" title="发表于 2023-10-14 20:51:00">2023-10-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2024 By <a class="footer-bar-link" href="/" title="Alan" target="_blank">Alan</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/AlanDoDo/AlanDoDo.github.io" title="Hexo">Hexo</a></div></div></div></footer></div></div></div><div id="sidebar"><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x83.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">65</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">44</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">23</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:-31px;"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于我</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8805965276" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/#/playlist?id=8805965276&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.6/translate/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.14/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script><script>var meting_api = "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r";
+</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("07/01/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.5.3",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Alan 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "visitor@anheyu.com";</script><script>//动态标题
+let leaveTitle = 'w(ﾟДﾟ)w 不要走！再看看嘛！';
+let backTitle = '♪(^∇^*)欢迎回来！';
+let OriginTitile = document.title
+let titleTime
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = leaveTitle
+    clearTimeout(titleTime)
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = backTitle + OriginTitile
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile
+    }, 2000)
+  }
+})</script><script async data-pjax src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/waterfall.js/1.1.0/waterfall.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script>// 初始化函数
+let rm = {};
+
+//禁止图片与超链接拖拽
+let aElements = document.getElementsByTagName("a");
+for (let i = 0; i < aElements.length; i++) {
+  aElements[i].setAttribute("draggable", "false");
+  let imgElements = aElements[i].getElementsByTagName("img");
+  for (let j = 0; j < imgElements.length; j++) {
+    imgElements[j].setAttribute("draggable", "false");
+  }
+}
+
+// 显示菜单
+rm.showRightMenu = function (isTrue, x = 0, y = 0) {
+  console.info(x, y)
+  let rightMenu = document.getElementById("rightMenu");
+  rightMenu.style.top = x + "px";
+  rightMenu.style.left = y + "px";
+  if (isTrue) {
+    rightMenu.style.display = "block";
+    stopMaskScroll();
+  } else {
+    rightMenu.style.display = "none";
+  }
+};
+
+// 隐藏菜单
+rm.hideRightMenu = function () {
+  rm.showRightMenu(false);
+  let rightMenuMask = document.querySelector("#rightmenu-mask");
+  rightMenuMask.style.display = "none";
+};
+
+// 尺寸
+let rmWidth = document.getElementById("rightMenu").offsetWidth;
+let rmHeight = document.getElementById("rightMenu").offsetHeight;
+
+// 重新定义尺寸
+rm.reloadrmSize = function () {
+  rightMenu.style.visibility = "hidden";
+  rightMenu.style.display = "block";
+  // 获取宽度和高度
+  rmWidth = document.getElementById("rightMenu").offsetWidth;
+  rmHeight = document.getElementById("rightMenu").offsetHeight;
+  rightMenu.style.visibility = "visible";
+};
+
+// 获取点击的href
+let domhref = "";
+let domImgSrc = "";
+let globalEvent = null;
+
+var oncontextmenuFunction = function (event) {
+  if (document.body.clientWidth > 768) {
+    let pageX = event.clientX + 10; //加10是为了防止显示时鼠标遮在菜单上
+    let pageY = event.clientY;
+
+    //其他额外菜单
+    const $rightMenuOther = document.querySelector(".rightMenuOther");
+    const $rightMenuPlugin = document.querySelector(".rightMenuPlugin");
+    const $rightMenuCopyText = document.querySelector("#menu-copytext");
+    const $rightMenuPasteText = document.querySelector("#menu-pastetext");
+    const $rightMenuCommentText = document.querySelector("#menu-commenttext");
+    const $rightMenuNewWindow = document.querySelector("#menu-newwindow");
+    const $rightMenuNewWindowImg = document.querySelector("#menu-newwindowimg");
+    const $rightMenuCopyLink = document.querySelector("#menu-copylink");
+    const $rightMenuCopyImg = document.querySelector("#menu-copyimg");
+    const $rightMenuDownloadImg = document.querySelector("#menu-downloadimg");
+    const $rightMenuSearch = document.querySelector("#menu-search");
+    const $rightMenuSearchBaidu = document.querySelector("#menu-searchBaidu");
+    const $rightMenuMusicToggle = document.querySelector("#menu-music-toggle");
+    const $rightMenuMusicBack = document.querySelector("#menu-music-back");
+    const $rightMenuMusicForward = document.querySelector("#menu-music-forward");
+    const $rightMenuMusicPlaylist = document.querySelector("#menu-music-playlist");
+    const $rightMenuMusicCopyMusicName = document.querySelector("#menu-music-copyMusicName");
+
+    let href = event.target.href;
+    let imgsrc = event.target.currentSrc;
+
+    // 判断模式 扩展模式为有事件
+    let pluginMode = false;
+    $rightMenuOther.style.display = "block";
+    globalEvent = event;
+
+    // 检查是否需要复制 是否有选中文本
+    if (selectTextNow && window.getSelection()) {
+      pluginMode = true;
+      $rightMenuCopyText.style.display = "block";
+      $rightMenuCommentText.style.display = "block";
+      $rightMenuSearch.style.display = "block";
+      $rightMenuSearchBaidu.style.display = "block";
+    } else {
+      $rightMenuCopyText.style.display = "none";
+      $rightMenuCommentText.style.display = "none";
+      $rightMenuSearchBaidu.style.display = "none";
+      $rightMenuSearch.style.display = "none";
+    }
+
+    //检查是否右键点击了链接a标签
+    if (href) {
+      pluginMode = true;
+      $rightMenuNewWindow.style.display = "block";
+      $rightMenuCopyLink.style.display = "block";
+      domhref = href;
+    } else {
+      $rightMenuNewWindow.style.display = "none";
+      $rightMenuCopyLink.style.display = "none";
+    }
+
+    //检查是否需要复制图片
+    if (imgsrc) {
+      pluginMode = true;
+      $rightMenuCopyImg.style.display = "block";
+      $rightMenuDownloadImg.style.display = "block";
+      $rightMenuNewWindowImg.style.display = "block";
+      document.getElementById("rightMenu").style.width="12rem"
+      domImgSrc = imgsrc;
+    } else {
+      $rightMenuCopyImg.style.display = "none";
+      $rightMenuDownloadImg.style.display = "none";
+      $rightMenuNewWindowImg.style.display = "none";
+    }
+
+    // 判断是否为输入框
+    if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {
+      pluginMode = true;
+      $rightMenuPasteText.style.display = "block";
+    } else {
+      $rightMenuPasteText.style.display = "none";
+    }
+    const navMusicEl = document.querySelector("#nav-music");
+    //判断是否是音乐
+    if (navMusicEl && navMusicEl.contains(event.target)) {
+      pluginMode = true;
+      $rightMenuMusicToggle.style.display = "block";
+      $rightMenuMusicBack.style.display = "block";
+      $rightMenuMusicForward.style.display = "block";
+      $rightMenuMusicPlaylist.style.display = "block";
+      $rightMenuMusicCopyMusicName.style.display = "block";
+    } else {
+      $rightMenuMusicToggle.style.display = "none";
+      $rightMenuMusicBack.style.display = "none";
+      $rightMenuMusicForward.style.display = "none";
+      $rightMenuMusicPlaylist.style.display = "none";
+      $rightMenuMusicCopyMusicName.style.display = "none";
+    }
+
+    // 如果不是扩展模式则隐藏扩展模块
+    if (pluginMode) {
+      $rightMenuOther.style.display = "none";
+      $rightMenuPlugin.style.display = "block";
+    } else {
+      $rightMenuPlugin.style.display = "none";
+    }
+
+    rm.reloadrmSize();
+
+    // 鼠标默认显示在鼠标右下方，当鼠标靠右或靠下时，将菜单显示在鼠标左方\上方
+    if (pageX + rmWidth > window.innerWidth) {
+      pageX -= rmWidth + 10;
+    }
+    if (pageY + rmHeight > window.innerHeight) {
+      pageY -= pageY + rmHeight - window.innerHeight;
+    }
+
+    rm.showRightMenu(true, pageY, pageX);
+    document.getElementById("rightmenu-mask").style.display = "flex";
+    return false;
+  }
+};
+
+// 监听右键初始化
+window.oncontextmenu = oncontextmenuFunction
+
+// 下载图片状态
+rm.downloadimging = false;
+
+// 复制图片到剪贴板
+rm.writeClipImg = function (imgsrc) {
+  console.log("按下复制");
+  rm.hideRightMenu();
+  anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+  if (rm.downloadimging == false) {
+    rm.downloadimging = true;
+    setTimeout(function () {
+      copyImage(imgsrc);
+      anzhiyu.snackbarShow("复制成功！图片已添加盲水印，请遵守版权协议");
+      rm.downloadimging = false;
+    }, "10000");
+  }
+};
+
+function imageToBlob(imageURL) {
+  const img = new Image();
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  img.crossOrigin = "";
+  img.src = imageURL;
+  return new Promise(resolve => {
+    img.onload = function () {
+      c.width = this.naturalWidth;
+      c.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      c.toBlob(
+        blob => {
+          // here the image is a blob
+          resolve(blob);
+        },
+        "image/png",
+        0.75
+      );
+    };
+  });
+}
+
+async function copyImage(imageURL) {
+  const blob = await imageToBlob(imageURL);
+  const item = new ClipboardItem({ "image/png": blob });
+  navigator.clipboard.write([item]);
+}
+
+rm.copyUrl = function (id) {
+  const input = document.createElement("input"); // Create a new <input> element
+  input.id = "copyVal"; // Set the id of the new element to "copyVal"
+  document.body.appendChild(input); // Append the new element to the end of the <body> element
+  
+  const text = id;
+  input.value = text;
+  input.select();
+  input.setSelectionRange(0, input.value.length);
+  document.execCommand("copy");
+  
+  input.remove(); // Remove the <input> element from the DOM
+};
+
+function stopMaskScroll() {
+  if (document.getElementById("rightmenu-mask")) {
+    let xscroll = document.getElementById("rightmenu-mask");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      { passive: true }
+    );
+  }
+  if (document.getElementById("rightMenu")) {
+    let xscroll = document.getElementById("rightMenu");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      { passive: true }
+    );
+  }
+}
+
+rm.rightmenuCopyText = function (txt) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt);
+  }
+  rm.hideRightMenu();
+};
+
+rm.copyPageUrl = function (url) {
+  if (!url) {
+    url = window.location.href;
+  }
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+rm.sharePage = function () {
+  var content = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+// 复制当前选中文本
+var selectTextNow = "";
+document.onmouseup = document.ondblclick = selceText;
+
+function selceText() {
+  var txt;
+  if (document.selection) {
+    txt = document.selection.createRange().text;
+  } else {
+    txt = window.getSelection().toString();
+  }
+  selectTextNow = txt !== "" ? txt : "";
+}
+
+// 读取剪切板
+rm.readClipboard = function () {
+  if (navigator.clipboard) {
+    navigator.clipboard.readText().then(clipText => rm.insertAtCaret(globalEvent.target, clipText));
+  }
+};
+
+// 粘贴文本到焦点
+rm.insertAtCaret = function (elemt, value) {
+  const startPos = elemt.selectionStart,
+    endPos = elemt.selectionEnd;
+  if (document.selection) {
+    elemt.focus();
+    var sel = document.selection.createRange();
+    sel.text = value;
+    elemt.focus();
+  } else {
+    if (startPos || startPos == "0") {
+      var scrollTop = elemt.scrollTop;
+      elemt.value = elemt.value.substring(0, startPos) + value + elemt.value.substring(endPos, elemt.value.length);
+      elemt.focus();
+      elemt.selectionStart = startPos + value.length;
+      elemt.selectionEnd = startPos + value.length;
+      elemt.scrollTop = scrollTop;
+    } else {
+      elemt.value += value;
+      elemt.focus();
+    }
+  }
+};
+
+//粘贴文本
+rm.pasteText = function () {
+  const result = rm.readClipboard() || "";
+  rm.hideRightMenu();
+};
+
+//引用到评论
+rm.rightMenuCommentText = function (txt) {
+  rm.hideRightMenu();
+  const postCommentDom = document.getElementById("post-comment");
+  var domTop = postCommentDom.offsetTop;
+  window.scrollTo(0, domTop - 80);
+  if (txt == "undefined" || txt == "null") txt = "好棒！";
+  function setText() {
+    setTimeout(() => {
+      var input = document.getElementsByClassName("el-textarea__inner")[0];
+      if (!input) setText();
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("input", true, true);
+      let inputValue = replaceAll(txt, "\n", "\n> ");
+      input.value = "> " + inputValue + "\n\n";
+      input.dispatchEvent(evt);
+      input.focus();
+      input.setSelectionRange(-1, -1);
+      if (document.getElementById("comment-tips")) {
+        document.getElementById("comment-tips").classList.add("show");
+      }
+    }, 100);
+  }
+  setText();
+};
+
+//替换所有内容
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}
+
+// 百度搜索
+rm.searchBaidu = function () {
+  anzhiyu.snackbarShow("即将跳转到百度搜索", false, 2000);
+  setTimeout(function () {
+    window.open("https://www.baidu.com/s?wd=" + selectTextNow);
+  }, "2000");
+  rm.hideRightMenu();
+};
+
+//分享链接
+rm.copyLink = function () {
+  rm.rightmenuCopyText(domhref);
+  anzhiyu.snackbarShow("已复制链接地址");
+};
+
+function addRightMenuClickEvent() {
+  // 添加点击事件
+  document.getElementById("menu-backward").addEventListener("click", function () {
+  window.history.back();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-forward").addEventListener("click", function () {
+    window.history.forward();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-refresh").addEventListener("click", function () {
+    window.location.reload();
+  });
+
+  document.getElementById("menu-top").addEventListener("click", function () {
+    anzhiyu.scrollToDest(0, 500);
+    rm.hideRightMenu();
+  });
+
+  const menuLinks = document.querySelectorAll(".menu-link");
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", rm.hideRightMenu);
+  });
+
+  document.getElementById("menu-darkmode").addEventListener("click", anzhiyu.switchDarkMode);
+
+  document.getElementById("menu-home") && document.getElementById("menu-home").addEventListener("click", function () {
+    window.location.href = window.location.origin;
+  });
+
+  document.getElementById("menu-randomPost").addEventListener("click", function () {
+    toRandomPost();
+  });
+
+  document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
+
+  document.getElementById("rightmenu-mask").addEventListener("click", rm.hideRightMenu);
+
+  document.getElementById("rightmenu-mask").addEventListener("contextmenu", function (event) {
+    rm.hideRightMenu();
+    event.preventDefault(); // Prevent the default context menu from appearing
+  });
+
+  document.getElementById("menu-copy").addEventListener("click", rm.copyPageUrl);
+
+  document.getElementById("menu-pastetext").addEventListener("click", rm.pasteText);
+
+  document.getElementById("menu-copytext").addEventListener("click", function () {
+    rm.rightmenuCopyText(selectTextNow);
+    anzhiyu.snackbarShow("复制成功，复制和转载请标注本文地址");
+  });
+
+  document.getElementById("menu-commenttext").addEventListener("click", function () {
+    rm.rightMenuCommentText(selectTextNow);
+  });
+
+  document.getElementById("menu-newwindow").addEventListener("click", function () {
+    window.open(domhref, "_blank");
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copylink").addEventListener("click", rm.copyLink);
+
+  document.getElementById("menu-downloadimg").addEventListener("click", function () {
+    anzhiyu.downloadImage(domImgSrc, "anzhiyu");
+  });
+
+  document.getElementById("menu-newwindowimg").addEventListener("click", function () {
+    window.open(domImgSrc, "_blank");
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copyimg").addEventListener("click", function () {
+    rm.writeClipImg(domImgSrc);
+  });
+
+  document.getElementById("menu-searchBaidu").addEventListener("click", rm.searchBaidu);
+
+  //音乐
+  document.getElementById("menu-music-toggle").addEventListener("click", anzhiyu.musicToggle);
+
+  document.getElementById("menu-music-back").addEventListener("click", anzhiyu.musicSkipBack);
+
+  document.getElementById("menu-music-forward").addEventListener("click", anzhiyu.musicSkipForward);
+
+  document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
+    rm.rightmenuCopyText(anzhiyu.musicGetName());
+    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
+  });
+
+}
+
+addRightMenuClickEvent();</script><script data-pjax>var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+var pageHeaderEl = document.getElementById("page-header");
+var navMusicEl = document.getElementById("nav-music");
+var consoleEl = document.getElementById("console");
+// 已随机的歌曲
+var selectRandomSong = [];
+// 音乐默认声音大小
+var musicVolume = 0.8;
+// 是否切换了周杰伦音乐列表
+var changeMusicListFlag = false;
+// 当前默认播放列表
+var defaultPlayMusicList = [];
+
+document.getElementById("page-name").innerText = document.title.split(" | Alan")[0];
+anzhiyu.initIndexEssay();
+anzhiyu.changeTimeInEssay();
+anzhiyu.removeBodyPaceClass();
+anzhiyu.qrcodeCreate();
+anzhiyu.changeTimeInAlbumDetail();
+anzhiyu.reflashEssayWaterFall();
+anzhiyu.sayhi();
+anzhiyu.stopImgRightDrag();
+anzhiyu.addNavBackgroundInit();
+anzhiyu.setValueToBodyType();
+anzhiyu.catalogActive();
+anzhiyu.tagsPageActive();
+anzhiyu.categoriesBarActive();
+anzhiyu.topCategoriesBarScroll();
+anzhiyu.switchRightClickMenuHotReview();
+anzhiyu.getCustomPlayList();
+anzhiyu.addEventListenerConsoleMusicList(false);
+setTimeout(() => {if (typeof addFriendLinksInFooter === "function") {addFriendLinksInFooter();}}, 200)</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://npm.elemecdn.com/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div></body></html>
